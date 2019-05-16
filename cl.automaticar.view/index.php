@@ -21,9 +21,9 @@
 			<nav id="menu">
 				<ul class="links">
 					<li><a href="index.html">Inicio</a></li>
-					<li><a href="generic.html">iniciar sesión</a></li>
-					<li><a href="elements.html">¿no estás registrado?registrate aqui</a></li>
-                                        <li><a href="fullcalendar.html">FullCalendar</a></li>
+					<li><a href="generic.html">Iniciar sesión</a></li>
+					<li><a href="elements.html">¿No estás registrado?registrate aqui</a></li>
+                                        <li><a href="fullcalendar.html">Servicios</a></li>
 				</ul>
 			</nav>
 
