@@ -9,21 +9,21 @@
 		<title>AutomatiCar</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
 	</head>
 	<body>
 
 			<header id="header" class="alt">
-				<div class="logo"><a href="index.html">AutomatiCar <span>by cochinosculiaoscrew</span></a></div>
+				<div class="logo"><a href="index.html">AutomatiCar </a></div>
 				<a href="#menu" class="toggle"><span>Menú</span></a>
 			</header>
             
 			<nav id="menu">
 				<ul class="links">
-					<li><a href="index.html">Inicio</a></li>
-					<li><a href="generic.html">Iniciar sesión</a></li>
-					<li><a href="elements.html">¿No estás registrado?registrate aqui</a></li>
-                                        <li><a href="fullcalendar.html">Servicios</a></li>
+					<li><a href="index.php">Inicio</a></li>
+					<li><a href="Login.php">Iniciar sesión</a></li>
+                                        <li><a href="CrearCuenta.php">¿No estás registrado? registrate aquí</a></li>
+                                        <li><a href="fullcalendar.php">Servicios</a></li>
 				</ul>
 			</nav>
 
@@ -193,12 +193,12 @@
 			</footer>
 
 
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/skel.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
 
 	</body>
 </html>

@@ -19,7 +19,7 @@
                 <li><a href="index.php">Home</a></li>
                 <li><a href="UserLogin.php">Login</a></li>
                 <li><a href="fullcalendar.php">Calendario</a></li>
-                <li><a href="fullcalendar.php">Formulario</a></li>
+                <li><a href="generic.php">"generic.php" ¿Formulario?</a></li>
             </ul>
         </nav>
 
@@ -28,13 +28,12 @@
             <div class="inner">
                 <div class="box">
                     <div class="content">
-
-                        <h2 id="elements">Elements</h2>
+<hr /> <!-- Linea para separar -->
+                        <h2 id="elements">Formulario</h2>
                         <div class="row 200%">
                             <div class="6u 12u(medium)">
 
-                                <!-- Form -->
-                                <h3>Form</h3>
+                                <!-- Formulario -->                               
 
                                 <form method="post" action="#">
                                     <div class="row uniform">
@@ -44,45 +43,43 @@
                                         <div class="6u 12u(xsmall)">
                                             <input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
                                         </div>
-                                        <!-- Break -->
+                                        <!-- servicios que ofrece el taller -->
                                         <div class="12u">
                                             <div class="select-wrapper">
                                                 <select name="demo-category" id="demo-category">
-                                                    <option value="">- Category -</option>
-                                                    <option value="1">Manufacturing</option>
-                                                    <option value="1">Shipping</option>
-                                                    <option value="1">Administration</option>
-                                                    <option value="1">Human Resources</option>
+                                                    <option value="">- Servicio -</option>
+                                                    <option value="1">Cambio de aceite</option>
+                                                    <option value="1">linea 52</option>
+                                                    <option value="1">linea 53</option>
+                                                    <option value="1">linea 54</option>
                                                 </select>
                                             </div>
                                         </div>
-                                        <!-- Break -->
+<!-- preguntar si es a domicilio, falta programar un form oculto que aparesca al poner "Si" -->
+                                        <p>¿Servicio a domicilio?</p>
                                         <div class="4u 12u(small)">
                                             <input type="radio" id="demo-priority-low" name="demo-priority" checked>
-                                            <label for="demo-priority-low">Low Priority</label>
-                                        </div>
-                                        <div class="4u 12u(small)">
-                                            <input type="radio" id="demo-priority-normal" name="demo-priority">
-                                            <label for="demo-priority-normal">Normal Priority</label>
+                                            <label for="demo-priority-low">Si</label>
                                         </div>
                                         <div class="4u 12u(small)">
                                             <input type="radio" id="demo-priority-high" name="demo-priority">
-                                            <label for="demo-priority-high">High Priority</label>
+                                            <label for="demo-priority-high">No</label>
                                         </div>
-                                        <!-- Break -->
+ <!-- cuadradito para preguntar si se envía copia al correo -->
                                         <div class="6u 12u(small)">
                                             <input type="checkbox" id="demo-copy" name="demo-copy">
-                                            <label for="demo-copy">Email me a copy of this message</label>
+                                            <label for="demo-copy">Enviar una copia a mi correo</label>
                                         </div>
+<!-- cuadradito para preguntar si eres un robot -->
                                         <div class="6u 12u(small)">
                                             <input type="checkbox" id="demo-human" name="demo-human" checked>
-                                            <label for="demo-human">I am a human and not a robot</label>
+                                            <label for="demo-human">Soy humano y no soy un robot</label>
                                         </div>
-                                        <!-- Break -->
+<!-- espacio para comentar -->
                                         <div class="12u">
-                                            <textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+                                            <textarea name="demo-message" id="demo-message" placeholder="Ingresa tu mensage" rows="6"></textarea>
                                         </div>
-                                        <!-- Break -->
+<!-- botones para enviar y rehacer  formulario -->
                                         <div class="12u">
                                             <ul class="actions">
                                                 <li><input type="submit" value="Send Message" /></li>
@@ -92,12 +89,12 @@
                                     </div>
                                 </form>
 
-                                <hr />
+                                <hr /> <!-- Linea para separar el formulario con lo demás -->
 
                                 <form method="post" action="#">
                                     <div class="row uniform">
                                         <div class="9u 12u(small)">
-                                            <input type="text" name="query" id="query" value="" placeholder="Query" />
+                                            <input type="text" name="query" id="query" value="" placeholder="Matricula" />
                                         </div>
                                         <div class="3u 12u(small)">
                                             <input type="submit" value="Search" class="fit" />
@@ -105,49 +102,22 @@
                                     </div>
                                 </form>
 
-                                <!-- Image -->
-                                <h3>Image</h3>
+                                <!-- Imagen -->
+                                <h3>Imagen</h3>
 
-                                <h4>Fit</h4>
-                                <span class="image fit"><img src="images/pic01.jpg" alt="" /></span>
-                                <div class="box alt">
-                                    <div class="row 50% uniform">
-                                        <div class="4u"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-                                        <div class="4u"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-                                        <div class="4u"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-                                        <!-- Break -->
-                                        <div class="4u"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-                                        <div class="4u"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-                                        <div class="4u"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-                                        <!-- Break -->
-                                        <div class="4u"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-                                        <div class="4u"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-                                        <div class="4u"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-                                    </div>
-                                </div>
+                                <h4>Vehículo</h4>
+                                <span class="image fit"><img src="images/auto azul.jpg" alt="" /></span>
+                                <img src="images/auto azul.jpg" />
 
-                                <h4>Left &amp; Right</h4>
-                                <p><span class="image left"><img src="images/pic02.jpg" alt="" /></span>Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Vestibulum ante ipsum primis in faucibus magna blandit adipiscing eu felis iaculis volutpat lorem ipsum dolor sit amet dolor consequat.</p>
-                                <p><span class="image right"><img src="images/pic02.jpg" alt="" /></span>Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Vestibulum ante ipsum primis in faucibus magna blandit adipiscing eu felis iaculis volutpat lorem ipsum dolor sit amet dolor consequat.</p>
+                                <hr />
 
-                                <!-- Box -->
-                                <h3>Box</h3>
-                                <div class="box">
-                                    <p>Felis sagittis eget tempus primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Magna sed etiam ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus lorem ipsum dolor sit amet nullam.</p>
-                                </div>
-
-                                <!-- Preformatted Code -->
-                                <h3>Preformatted</h3>
-                                <pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';
-</code></pre>
+<!-- estructura de código predefinido -->
+                                <h3>Código predefinido</h3>
+<pre>
+    <code>
+        
+</code>
+</pre>
 
                             </div>
                         </div>
@@ -156,53 +126,42 @@ print 'It took ' + i + ' iterations to sort the deck.';
             </div>
         </section>
 
-        <!-- Four -->
-        <section id="four" class="wrapper style3">
-            <div class="inner">
+        
 
-                <header class="align-center">
-                    <h2>Morbi interdum mollis sapien</h2>
-                    <p>Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh a libero pharetra elementum. Maecenas feugiat ex purus, quis volutpat lacus placerat malesuada. Praesent in sem ex. Morbi mattis sapien pretium tellus venenatis, at egestas urna ornare.</p>
-                </header>
-
-            </div>
-        </section>
-
-        <!-- Footer -->
+<!-- otro formulario -->
         <footer id="footer" class="wrapper">
             <div class="inner">
                 <section>
                     <div class="box">
-                        <div class="content">
-                            <h2 class="align-center">Get in Touch</h2>
+                        <div class="content">                            
                             <hr />
                             <form action="#" method="post">
                                 <div class="field half first">
-                                    <label for="name">Name</label>
-                                    <input name="name" id="name" type="text" placeholder="Name">
+                                    <label for="name">Nombre</label>
+                                    <input name="name" id="name" type="text" placeholder="Nombre">
                                 </div>
                                 <div class="field half">
-                                    <label for="email">Email</label>
-                                    <input name="email" id="email" type="email" placeholder="Email">
+                                    <label for="email">Correo</label>
+                                    <input name="email" id="email" type="email" placeholder="Correo">
                                 </div>
                                 <div class="field">
-                                    <label for="dept">Department</label>
+                                    <label for="dept">Lista</label>
                                     <div class="select-wrapper">
                                         <select name="dept" id="dept">
-                                            <option value="">- Category -</option>
-                                            <option value="1">Manufacturing</option>
-                                            <option value="1">Shipping</option>
-                                            <option value="1">Administration</option>
-                                            <option value="1">Human Resources</option>
+                                            <option value="">- Servicios -</option>
+                                            <option value="1">Linea 152</option>
+                                            <option value="1">Linea 153</option>
+                                            <option value="1">Linea 154</option>
+                                            <option value="1">Linea 155</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="field">
-                                    <label for="message">Message</label>
-                                    <textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
+                                    <label for="message">Mensaje</label>
+                                    <textarea name="message" id="message" rows="6" placeholder="Escriba aquí"></textarea>
                                 </div>
                                 <ul class="actions align-center">
-                                    <li><input value="Send Message" class="button special" type="submit"></li>
+                                    <li><input value="Enviar" class="button special" type="submit"></li>
                                 </ul>
                             </form>
                         </div>

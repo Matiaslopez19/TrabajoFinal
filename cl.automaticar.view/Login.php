@@ -7,7 +7,10 @@
  */
 ?>
 <html>
+    <head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="../assets/css/main.css" />
+    </head>
     <body>
     <form action="../cl.automaticar.controller/userController.php" method="post">
         <label>usuario: </label>
