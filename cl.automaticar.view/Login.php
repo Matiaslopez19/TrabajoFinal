@@ -21,7 +21,7 @@
         <br/>
         <input type="submit" value="ingresar" id="user"/>
         <a href="">Visit our HTML tutorial</a>
-        <a href="https://www.w3schools.com/html/">Visit our HTML tutorial</a>
+        <a href="https://www.w3schools.com/html/">probando cambios por Luchonga</a>
         
     </form>
         </body>
