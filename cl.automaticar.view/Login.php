@@ -13,10 +13,10 @@
     </head>
     <body>
     <form action="../cl.automaticar.controller/userController.php" method="post">
-        <label>usuario: </label>
+        <label>Correo electronico: </label>
         <input type="text" name="username" placeholder="email"/>
         <br/>
-        <label>clave: </label>
+        <label>Contraseña: </label>
         <input type="password" name="userpass"/>
         <br/>
         <input type="submit" value="ingresar" id="user"/>
