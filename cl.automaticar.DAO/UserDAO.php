@@ -9,6 +9,8 @@ class UserDAO{
 public function login(string $mail, string $pass){
     $conexion = mysqli_connect('localhost','root','','automaticar');
     $sql ="SELECT * FROM USUARIO WHERE USUARIO_mail=$mail and USUARIO_constraseña=$pass";
+    $registros = mysqli_query($conexion, $sql);
+    
     
     
 }
