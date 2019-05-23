@@ -20,8 +20,8 @@
         <input type="password" name="userpass"/>
         <br/>
         <input type="submit" value="ingresar" id="user"/>
-        <a href="">Visit our HTML tutorial</a>
-        <a href="https://www.w3schools.com/html/">probando cambios por Luchonga</a>
+        <a href="CrearCuenta.php">Crear cuenta</a>
+        <a href="RecuperarContrasenia.php">Recuperar contraseña</a>
         
     </form>
         </body>
