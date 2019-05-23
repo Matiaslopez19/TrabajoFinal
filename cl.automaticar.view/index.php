@@ -21,7 +21,7 @@
 			<nav id="menu">
 				<ul class="links">
 					<li><a href="index.php">Inicio</a></li>
-					<li><a href="Login.php">Iniciar sesión</a></li>
+					<li><a href="Login.php">Iniciar sesión 2</a></li>
                                         <li><a href="CrearCuenta.php">¿No estás registrado? registrate aquí</a></li>
                                         <li><a href="fullcalendar.php">Servicios</a></li>
 				</ul>
@@ -42,7 +42,7 @@
 					<div>
 						<div class="box">
 							<div class="image fit">
-								<img src="images/pic01.jpg" alt="" />
+								<img src="images/pic02.jpg" alt="" />
 							</div>
 							<div class="content">
 								<header class="align-center">
