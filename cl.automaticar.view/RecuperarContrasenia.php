@@ -6,10 +6,35 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <meta charset="UTF-8">
+        <title>AutomatiCar</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+
         <title></title>
     </head>
     <body>
+        <div class="content">
+
+                                                                    
+                                                                    <h2 class="align-center">Recuperar contraseña</h2>
+								<hr />
+								<form action="#" method="post">
+									<div class="field half">
+										<label>Ingrese el correo electrónico para buscar tu cuenta </label>
+										<input name="email" id="email" type="email" placeholder="">
+									</div>
+                                                                    <br>
+									
+                                                                        <ul class="actions align-center">
+										<li><input value="Aceptar" class="button special" type="submit"></li>
+									</ul>
+									<ul class="actions align-center">
+										<li><input value="Volver al inicio" class="button special" type="submit"></li>
+									</ul>
+                                                                        
+								</form>
+							</div>
         <?php
         // put your code here
         ?>
