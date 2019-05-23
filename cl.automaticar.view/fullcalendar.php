@@ -234,10 +234,10 @@
 <div style='clear:both'></div>
 <nav id="menu">
     <ul class="links">
-	<li><a href="index.html">Inicio</a></li>
-	<li><a href="generic.html">Ya veremos que poner aquí</a></li>
-	<li><a href="elements.html">Lo mismo de arriba </a></li>
-        <li><a href="fullcalendar.html">FullCalendar</a></li>
+        <li><a href="index.php">Inicio</a></li>
+	<li><a href="generic.php">Ya veremos que poner aquí</a></li>
+	<li><a href="elements.php">Lo mismo de arriba </a></li>
+        <li><a href="fullcalendar.php">FullCalendar</a></li>
     </ul>
 </nav>
 </div>
