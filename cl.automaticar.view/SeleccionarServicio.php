@@ -16,36 +16,7 @@ and open the template in the editor.
     <body>
         <div class="content">
 
-                                                                    <h2 class="align-center">Agendar Hora 2</h2>
-								<hr />
-								<form action="#" method="post">
-									<div class="field half first">
-										<label for="name">Número de patente</label>
-										<input name="name" id="name" type="text" placeholder="Patente">
-									</div>
-									<div class="field half">
-										<label for="email">E-mail</label>
-										<input name="email" id="email" type="email" placeholder="Email">
-									</div>
-									<div class="field">
-										<label for="dept">Department</label>
-										<div class="select-wrapper">
-											<select name="dept" id="dept">
-												<option value="">- linea 170 -</option>
-												<option value="1">linea 171</option>
-												<option value="1">linea 172</option>
-												<option value="1">linea 173</option>
-												<option value="1">linea 174</option>
-											</select>
-										</div>
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
-									</div>
-									<ul class="actions align-center">
-										<li><input value="Send Message" class="button special" type="submit"></li>
-									</ul>
+                                                                    
                                                                     <h2 class="align-center">Seleccionar Servicio</h2>
 								<hr />
 								<form action="#" method="post">
