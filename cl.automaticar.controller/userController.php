@@ -10,7 +10,7 @@ $userPass = _POST['userpass'];
 $userDAO = new UserDAO();
 $us = $userDAO->login($userName, $userPass);
 if (u != NULL) {
-    header("http://localhost:81/TrabajoFinal/");
+    header("Location: http://localhost:81/TrabajoFinal/");
 }else{
     
 }
