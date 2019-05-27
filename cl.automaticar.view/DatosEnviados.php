@@ -20,6 +20,8 @@ and open the template in the editor.
                                                                     <h2 class="align-center">Cambiar contraseña</h2>
 								<hr />
 								<form action="#" method="post">
+                                                                    <label>Los datos para la confirmación se enviarán a su correo electrónico.  
+                                                                        Ingrese el código electrónico para la confirmación</label>
 		
 									<div class="field half">
 										<label>Código</label>
@@ -36,7 +38,7 @@ and open the template in the editor.
 										<li><input value="Cambiar contraseña" class="button special" type="submit"><a</li>
 									</ul>
 									<ul class="actions align-center">
-                                                                                <li><input value="Volver" class="button special" type="submit"><a</li>
+                                                                                <li><input type="button" class="button special" value="Atrás" onClick=" window.location.href='RecuperarContrasenia.php' "></li> 
                                                                             
                                                                           
 									</ul>
