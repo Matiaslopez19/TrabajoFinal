@@ -14,10 +14,10 @@
     <body>
     <form action="../cl.automaticar.controller/userController.php" method="post">
         <label>Correo electronico: </label>
-        <input type="text" name="username" placeholder="email"/>
+        <input type="email" name="username" placeholder="Email"/>
         <br/>
         <label>Contraseña: </label>
-        <input type="password" name="userpass"/>
+        <input type="password" name="userpass" placeholder="Contraseña"/>
         <br/>
         <input type="submit" value="ingresar" id="user"/>
         <a href="CrearCuenta.php">Crear cuenta</a>
