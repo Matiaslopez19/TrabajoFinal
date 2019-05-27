@@ -30,7 +30,7 @@ and open the template in the editor.
 										<li><input value="Aceptar" class="button special" type="submit"></li>
 									</ul>
 									<ul class="actions align-center">
-										<li><input value="Volver al inicio" class="button special" type="submit"></li>
+                                                                                <li><input type="button" class="button special" value="Volver al inicio" onClick=" window.location.href='Login.php' "></li> 
 									</ul>
                                                                         
 								</form>
