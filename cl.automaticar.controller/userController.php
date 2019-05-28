@@ -13,11 +13,11 @@ if (empty($userName) || empty($userPass)) {
 }else{
 $userDAO = new UserDAO();
 $us = $userDAO->login($userName, $userPass);
-//if (u != NULL) {
-    //header("Location: http://localhost:81/TrabajoFinal/");
-    echo 'funciona';
-//}else{
+if (u != NULL) {
+    header("Location: http://localhost:81/TrabajoFinal/");
+    
+}else{
     
 }
-
+}
 ?>
