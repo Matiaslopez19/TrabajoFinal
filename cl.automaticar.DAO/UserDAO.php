@@ -14,7 +14,7 @@ class UserDAO{
         $result = mysqli_query($conexion, $sql);
         $row = mysqli_fetch_object($result);
         if($row =! NULL){
-            $u = new User($row->USUARIO_id , $row->USUARIO_nombre, $row->USUARIO_apellido_m, $row->USUARIO_apellido_m, $row->USUARIO_mail, $userPass, $cuentaId);            
+            $u = new User($row->USUARIO_id , $row->USUARIO_nombre, $row->USUARIO_apellido_m, $row->USUARIO_apellido_m, $row->USUARIO_mail, $row->USUARIO_clave, $row->CUENTA_CUENTA_id);            
         }else{
         }
         return u;
