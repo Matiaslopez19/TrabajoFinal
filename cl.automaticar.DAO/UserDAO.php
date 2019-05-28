@@ -7,7 +7,7 @@ include '../cl.automaticar.data/user.php';
  */
 class UserDAO{
     public function login($mail, $pass){
-        $u= new User(); 
+        //$u= new User(); 
         $conexion = mysqli_connect('localhost','root','','automaticar');
         $sql ="SELECT * FROM usuario WHERE USUARIO_mail='$mail' and USUARIO_constraseña='$pass'";
         $result = mysqli_query($conexion, $sql);
@@ -18,7 +18,7 @@ class UserDAO{
             echo 'usuario encontrado';
         }else{
         }
-        return u;
+        //return u;
     }
     public function agregarUsuario($nombre, $apellidoP, $apellidoM, $mail, $contraseña, $cuenta_cuentaId) {
        $conexion = mysqli_connect('localhost', 'root', '', 'automaticar');
