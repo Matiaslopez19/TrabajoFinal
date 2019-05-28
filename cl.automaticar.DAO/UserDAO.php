@@ -5,4 +5,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+class UserDAO{
+public function login(string $mail, string $pass){
+    User:: $u= new User(); 
+    $conexion = mysqli_connect('localhost','root','','automaticar');
+    $sql ="SELECT * FROM USUARIO WHERE USUARIO_mail=$mail and USUARIO_constraseña=$pass";
+    $registros = mysqli_query($conexion, $sql);
+    if($registro=!NULL){
+        return u;
+    }else{
+        
+        
+    }
+    
+    
+}
+
+}
 

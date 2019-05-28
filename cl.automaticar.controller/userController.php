@@ -5,4 +5,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+$userName = _POST['username'];
+$userPass = _POST['userpass'];
+$userDAO = new UserDAO();
+$us = $userDAO->login($userName, $userPass);
+if (u != NULL) {
+    header("Location: http://localhost:81/TrabajoFinal/");
+}else{
+    
+}
 ?>

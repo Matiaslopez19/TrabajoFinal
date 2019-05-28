@@ -10,9 +10,14 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        ....
+    <center><h1>Contraseña cambiada</h1>
+        <h2>En 5 segundos sera redirigido a Login</h2></center>
+    
+    
         <?php
-        // put your code here
+            echo    '<script type="text/javascript">
+         setTimeout("location.href=\'Login.php\'",5000)
+         </script>'
         ?>
     </body>
 </html>
