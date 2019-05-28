@@ -16,7 +16,7 @@ class UserDAO{
         if($row =! NULL){
             //$u= new User($registros->);
         }else{
-        
+        es
         }
         return u;
     }
