@@ -6,8 +6,8 @@ include '../cl.automaticar.DAO/UserDAO.php';
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-$userName = _POST['username'];
-$userPass = _POST['userpass'];
+$userName = $_POST['username'];
+$userPass = $_POST['userpass'];
 if (empty($userName) || empty($userPass)) {
     header("Location: http://localhost:81/TrabajoFinal/index.php");   
 }else{
