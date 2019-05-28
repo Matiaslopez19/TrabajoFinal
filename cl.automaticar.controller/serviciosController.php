@@ -6,9 +6,10 @@ $servicios = mysqli_query($conexion, "select AGENDAR_hora,AGENDAR_fecha,AGENDAR_
         . ",AGENDAR_ruta_foto,AGENDAR_region from agendar") or
                 die("Problemas en el select:" . mysqli_error($conexion));
 // 
-        while ($reg = mysqli_fetch_array($registros)) {
-            echo "Nombre del post:" . $reg['post_nombre'] . "<br>";
-            echo "Descripción:" . $reg['post_descg'] . "<br>";
-            echo "<br>";
-            echo "<hr>";
+        while ($reg = mysqli_fetch_array($servicios)) {
+            echo "Hora: " . $reg['AGENDAR_hora'] . "<br>";
+            echo "Fecha: " . $reg['AGENDAR_fecha'] . "<br>";
+            echo "Servicio: " . $reg['AGENDAR_tipo_servicio'] . "<br>";
+            echo "Patente: " . $reg['AGENDAR_patente'] . "<hr>";
+            echo "Dirección: " . $reg['AGENDAR_direccion'] . "<hr>";
         }
