@@ -69,6 +69,9 @@
 					<div class="form-group">
 						<input type="submit" value="Siguiente" class="btn float-right login_btn">
 					</div>
+                                        <div class="form-group">
+                                            <input type="button" value="Atrás" class="btn float-left login_btn" onClick=" window.location.href='Login.php' ">
+					</div>
 				</form>
 			</div>
 		</div>
