@@ -26,6 +26,7 @@
                                         <li><a href="fullcalendar.php">Servicios</a></li>
 				</ul>
 			</nav>
+            hols
 
 			<section id="banner" data-video="images/banner">
 				<div class="inner">
