@@ -31,7 +31,7 @@
 					<h1>AutomatiCar</h1>
 					<p>Nuestro software te brindará el control y el manejo indispensable<br/>
 					que necesitas para tu<a href="#"> Taller mecánico </a></p>
-					<a href="Login.php" class="button special scrolly">Iniciar sesión/Regístrate</a>
+					<a href="Login2.php" class="button special scrolly">Iniciar sesión/Regístrate</a>
 				</div>
 			</section>
 
