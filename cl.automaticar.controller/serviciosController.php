@@ -12,4 +12,5 @@ $servicios = mysqli_query($conexion, "select AGENDAR_hora,AGENDAR_fecha,AGENDAR_
             echo "Servicio: " . $reg['AGENDAR_tipo_servicio'] . "<br>";
             echo "Patente: " . $reg['AGENDAR_patente'] . "<hr>";
             echo "Dirección: " . $reg['AGENDAR_direccion'] . "<hr>";
+            echo "Dirección: " . $reg['AGENDAR_direccion'] . "<hr>";
         }
