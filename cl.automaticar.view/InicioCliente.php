@@ -17,14 +17,14 @@ and open the template in the editor.
         <div class="content">
 
                                                                     
-                                                                    <h2 class="align-center">Home Administrador</h2>
+                                                                    <h2 class="align-center">Home Cliente</h2>
 								<hr />
 								<form action="#" method="post">
 									
                                                                     <br>
                                                                         <div class="field half">
                                                                         <ul class="actions align-center">
-										<li><input type="button" class="button special" value="Ver horas reservadas" onClick=" window.location.href='.php' "></li> 
+										<li><input type="button" class="button special" value="Agendar hora" onClick=" window.location.href='.php' "></li> 
 									</ul>
                                                                         </div>
                                                                         <div class="field half">
@@ -34,13 +34,9 @@ and open the template in the editor.
                                                                         </div>
                                                                         <div class="field half">
 									<ul class="actions align-center">
-										<li><input value="Subir PDF" class="button special" type="submit"></li>
+										<li><input type="button" class="button special" value="Descargar historial" onClick=" window.location.href='Historial.php' "></li>
 									</ul>
-                                                                        </div>    
-                                                                        <div class="field half">
-                                                                                    <input name="Dirección" id="direccion" type="file" placeholder="Dirección">
-									</div>
-                                                                        
+                                                                        </div>                 
 								</form>
 							</div>
         <?php
