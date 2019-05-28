@@ -24,7 +24,7 @@ and open the template in the editor.
                                                                     <br>
                                                                         <div class="field half">
                                                                         <ul class="actions align-center">
-										<li><input type="button" class="button special" value="Agendar hora" onClick=" window.location.href='.php' "></li> 
+										<li><input type="button" class="button special" value="Agendar hora" onClick=" window.location.href='full.php' "></li> 
 									</ul>
                                                                         </div>
                                                                         <div class="field half">
