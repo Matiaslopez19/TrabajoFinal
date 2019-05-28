@@ -14,6 +14,7 @@ class UserDAO{
         $result = mysqli_query($conexion, $sql);
         $row = mysqli_fetch_object($result);
         
+        
         if($row =! NULL){
             //$u= new User($registros->);
             echo 'usuario encontrado';
