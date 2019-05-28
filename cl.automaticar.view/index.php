@@ -21,9 +21,8 @@
 			<nav id="menu">
 				<ul class="links">
 					<li><a href="index.php">Inicio</a></li>
-					<li><a href="Login.php">Iniciar sesión 2</a></li>
-                                        <li><a href="CrearCuenta.php">¿No estás registrado? registrate aquí</a></li>
-                                        <li><a href="fullcalendar.php">Servicios</a></li>
+					<li><a href="#one">Servicios</a></li>
+                                        <li><a href="#three">Nuestra empresa</a></li>
 				</ul>
 			</nav>
 
@@ -31,8 +30,8 @@
 				<div class="inner">
 					<h1>AutomatiCar</h1>
 					<p>Nuestro software te brindará el control y el manejo indispensable<br/>
-					que necesitas para tu<a href="#"> Taller mecánico</a></p>
-					<a href="#one" class="button special scrolly">Iniciar sesión</a>
+					que necesitas para tu<a href="#"> Taller mecánico 2</a></p>
+					<a href="#one" class="button special scrolly">Iniciar sesión/Regístrate</a>
 				</div>
 			</section>
 
@@ -46,8 +45,7 @@
 							</div>
 							<div class="content">
 								<header class="align-center">
-									<h2>h2 en Linea 56 de index.html</h2>
-									<p>Parrafo en Linea 57 de index.html</p>
+									<h2>Nuestros servicios</h2>
 								</header>
 								<hr />
 								<p>Parrafo en Linea 60 de index.html.</p>
@@ -105,7 +103,7 @@
 								</div>
 								<div class="content">
 									<header class="align-center">
-										<h2>h2 en Linea 115 de index.html</h2>
+										<h2>Nuestra empresa</h2>
 										<p>Parrafo en Linea 116 de index.html</p>
 									</header>
 									<hr />
@@ -121,7 +119,7 @@
 								</div>
 								<div class="content">
 									<header class="align-center">
-										<h2>h2 en Linea 131 de index.html</h2>
+										<h2>Nuestra empresa</h2>
 										<p>Parrafo en Linea 132 de index.html</p>
 									</header>
 									<hr />
