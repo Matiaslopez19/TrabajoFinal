@@ -26,7 +26,7 @@
 	<div class="d-flex justify-content-center h-100">
 		<div class="card">
 			<div class="card-header">
-				<h3>Iniciar sesión</h3>
+				<h3>Crear cuenta</h3>
 			</div>
 			<div class="card-body">
 				<form action="#" method="post">
@@ -67,17 +67,9 @@
                                             <input type="password" class="form-control" name="userpass" placeholder="Repetir contraseña">
 					</div>
 					<div class="form-group">
-						<input type="submit" value="Ingresar" class="btn float-right login_btn">
+						<input type="submit" value="Siguiente" class="btn float-right login_btn">
 					</div>
 				</form>
-			</div>
-			<div class="card-footer">
-				<div class="d-flex justify-content-center links">
-                                    No tienes cuenta?<a href="CrearCuenta.php">Registrate</a>
-				</div>
-				<div class="d-flex justify-content-center">
-                                    <a href="RecuperarContrasenia.php">Olvidaste tu contraseña?</a>
-				</div>
 			</div>
 		</div>
 	</div>
