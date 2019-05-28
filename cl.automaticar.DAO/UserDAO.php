@@ -9,10 +9,11 @@ class UserDAO{
     public function login($mail, $pass){
         //$u= new User(); 
         $conexion = mysqli_connect('localhost','root','','automaticar');
-        $sql ="SELECT * FROM usuario WHERE USUARIO_mail='$mail' and USUARIO_constraseña='$pass'";
+        
+        $sql ="SELECT * FROM usuario WHERE USUARIO_mail='$mail' and USUARIO_clave='$pass'";
         $result = mysqli_query($conexion, $sql);
         $row = mysqli_fetch_object($result);
-        print_r($row); exit;
+        
         if($row =! NULL){
             //$u= new User($registros->);
             echo 'usuario encontrado';
