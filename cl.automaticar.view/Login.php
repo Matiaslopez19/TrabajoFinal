@@ -19,7 +19,7 @@
         <label>Contraseña: </label>
         <input type="password" name="userpass" placeholder="Contraseña"/>
         <br/>
-        <input type="submit" value="ingresar" id="user"/>
+        <input type="submit" value="ingresar" id="user" class="Button special"/>
         <a href="CrearCuenta.php">Crear cuenta</a>
         <a href="RecuperarContrasenia.php">Recuperar contraseña</a>
         

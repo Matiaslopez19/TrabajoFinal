@@ -69,8 +69,7 @@ class User{
         $this->cuentaId = $cuentaId;
     }
 
-    function __construct($userId, $userName, $userApellidoP, $userApellidoM, $userMail, $userPass, $cuentaId) {
-        $this->userId = $userId;
+    function __construct($userName, $userApellidoP, $userApellidoM, $userMail, $userPass, $cuentaId) {
         $this->userName = $userName;
         $this->userApellidoP = $userApellidoP;
         $this->userApellidoM = $userApellidoM;

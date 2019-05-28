@@ -30,7 +30,7 @@ and open the template in the editor.
 										<li><input value="Buscar y descargar" class="button special" type="submit"></li>
 									</ul>
 									<ul class="actions align-center">
-										<li><input value="Atrás" class="button special" type="submit"></li>
+										<li><input type="button" class="button special" value="Atrás" onClick=" window.location.href='.php' "></li> 
 									</ul>
                                                                         
 								</form>
