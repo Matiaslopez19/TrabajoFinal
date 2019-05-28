@@ -36,33 +36,13 @@
 			</section>
 
 		<!-- One -->
+			
+
+
+
+
+
 			<section id="one" class="wrapper style2">
-				<div class="inner">
-					<div>
-						<div class="box">
-							<div class="image fit">
-								<img src="images/pic02.jpg" alt="" />
-							</div>
-							<div class="content">
-								<header class="align-center">
-									<h2>Nuestros servicios</h2>
-								</header>
-								<hr />
-								<p>Parrafo en Linea 60 de index.html.</p>
-								<p>Parrafo en Linea 61 de index.html</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-
-			<section id="two" class="wrapper style3">
-
-			</section>
-
-
-			<section id="three" class="wrapper style2">
 				<div class="inner">
 					<div class="grid-style">
 
@@ -73,11 +53,24 @@
 								</div>
 								<div class="content">
 									<header class="align-center">
-										<h2>Nuestra empresa</h2>
-										<p>Parrafo en Linea 116 de index.html</p>
+										<h2>Reparación</h2>
 									</header>
 									<hr />
-									<p> Parrafo en Linea 119 de index.html</p>
+									<p> Cambiar kit de embrague</p>
+                                                                        <p> Cambiar kit de distribución</p>
+                                                                        <p> Cambiar pastillas de freno</p>
+                                                                        <p> Cambiar inyectores</p>
+                                                                        <p> Cambiar junta de culata</p>
+                                                                        <p> Cambiar caja de cambios</p>
+                                                                        <p> Cambiar amortiguadores</p>
+                                                                        <p> Cambiar cuerpo de aceleración</p>
+                                                                        <p> Cambiar alternador</p>
+                                                                        <p> Cambiar batería</p>
+                                                                        <p> Cambiar retenes de válvula</p>
+                                           				<p> Cambiar cables de bujías</p>
+                                                                        <p> Cambiar radiador</p>
+                                                                        <p> Cambiar silenciador</p>
+                                                                        <p> Cambiar catalítico</p>
 								</div>
 							</div>
 						</div>
@@ -89,15 +82,48 @@
 								</div>
 								<div class="content">
 									<header class="align-center">
-										<h2>Nuestra empresa</h2>
-										<p>Parrafo en Linea 132 de index.html</p>
+										<h2>Mantención</h2>
 									</header>
 									<hr />
-									<p> Parrafo en Linea 135 de index.html</p>
+                                                                        <p> Cambiar aceite de motor</p>
+                                                                        <p> Cambiar filtro de aceite</p>
+                                                                        <p> Cambiar filtro de aire</p>
+                                                                        <p> Cambiar líquido de frenos</p>
+                                                                        <p> Cambiar líquido refrigerante</p>
+                                                                        <p> Cambiar bujías</p>
+                                                                        <p> Cambiar aceite de caja</p>
 								</div>
 							</div>
 						</div>
 
+					</div>
+				</div>
+			</section>
+                			<section id="two" class="wrapper style3">
+
+			</section>
+                <section id="three" class="wrapper style2">
+				<div class="inner">
+					<div>
+						<div class="box">
+							<div class="image fit">
+								<img src="images/pic02.jpg" alt="" />
+							</div>
+							<div class="content">
+								<header class="align-center">
+									<h2>Nuestra empresa</h2>
+								</header>
+								<hr />
+                                                                    <label>
+                                                                    Actualmente en los talleres modernos se puede recurrir al uso de herramientas informáticas en infinidad de tareas. 
+                                                                    Desde consultar catálogos electrónicos a comprar recambios online, encontrar información técnica, usar herramientas de valoración o software de gestión.
+                                                                    No obstante, Las tecnologías que utilizan la mayoría de los talleres son de baja calidad, ya que, generalmente los talleres no cuentan con la implementación optima y/o actual. 
+                                                                    La tecnología avanza a pasos agigantados y los automóviles se ven contemplados dentro de estos pasos. Pocos talleres cuentan con la totalidad de implementación para atender todas las necesidades de un auto actual. 
+                                                                    Nuestro proyecto apunta a talleres mecánicos los cuales busquen automatizar sus procesos y aumentar su eficiencia, talleres los cuales no cuenten con softwares de gestión y se vean atareados con las planificaciones, en este caso, 
+                                                                    UrbanCar entra dentro de esta amplia bolsa de talleres, en la cual nuestra solución brindará asistencia y beneficios del tipo monetarios y horarios.
+                                                                    </label>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
