@@ -6,20 +6,19 @@
  * and open the template in the editor.
  */
 class UserDAO{
-public function login(string $mail, string $pass){
-    User:: $u= new User(); 
-    $conexion = mysqli_connect('localhost','root','','automaticar');
-    $sql ="SELECT * FROM USUARIO WHERE USUARIO_mail=$mail and USUARIO_constraseña=$pass";
-    $registros = mysqli_query($conexion, $sql);
-    if($registro=!NULL){
-        $u= new User();
-    }else{
-        
-        
+    public function login(string $mail, string $pass){
+        $u= new User(); 
+        $conexion = mysqli_connect('localhost','root','','automaticar');
+        $sql ="SELECT * FROM USUARIO WHERE USUARIO_mail='$mail' and USUARIO_constraseña='$pass'";
+        $result = mysqli_query($conexion, $sql);
+        $row = mysqli_fetch_object($result);
+        print_r($row); exit;
+        if($row=!NULL){
+            //$u= new User($registros->);
+        }else{
+        }
+        return u;
     }
-    return u;
-    
-}
 
 }
 
