@@ -1,5 +1,6 @@
 <?php
-
+session_start();
+include '../cl.automaticar.DAO/UserDAO.php';
 /* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -13,6 +14,7 @@ if (empty($userName) || empty($userPass)) {
 $userDAO = new UserDAO();
 $us = $userDAO->login($userName, $userPass);
 if (u != NULL) {
+    
     header("Location: http://localhost:81/TrabajoFinal/");
 }else{
     
