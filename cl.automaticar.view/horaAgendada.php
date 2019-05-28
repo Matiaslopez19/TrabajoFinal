@@ -10,8 +10,15 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
+    <center><h1>Hora agendada</h1>
+        <h2>Hora agendada. Recibirá un correo con la información</h2>
+        <h2>En 5 segundos sera redirigido a Login</h2></center>
+    
+    
         <?php
-        // put your code here
+            echo    '<script type="text/javascript">
+         setTimeout("location.href=\'Login.php\'",5000)
+         </script>'
         ?>
     </body>
 </html>
