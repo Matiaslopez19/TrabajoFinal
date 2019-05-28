@@ -15,6 +15,7 @@ class UserDAO{
         print_r($row); exit;
         if($row =! NULL){
             //$u= new User($registros->);
+            echo 'usuario encontrado';
         }else{
         }
         return u;
