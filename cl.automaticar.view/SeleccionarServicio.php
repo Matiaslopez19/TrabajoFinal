@@ -132,6 +132,7 @@ and open the template in the editor.
 									</ul>
                                                                         
 								</form>
+                                                                
 							</div>
         <?php
         // put your code here
