@@ -22,7 +22,7 @@
 <body background="../images/544750.jpg">
 <div class="container">
 	<div class="d-flex justify-content-center h-100">
-		<div class="card">
+		<div class="card2">
 			<div class="card-header">
 				<h3>Iniciar sesión</h3>
 			</div>
@@ -45,8 +45,9 @@
 						<input type="submit" value="Ingresar" class="btn float-right login_btn">
 					</div>
 				</form>
+                            
 			</div>
-			<div class="card-footer">
+                    <div class="card-footer">
 				<div class="d-flex justify-content-center links">
                                     No tienes cuenta?<a href="CrearCuenta.php">Registrate</a>
 				</div>
@@ -54,6 +55,7 @@
                                     <a href="RecuperarContrasenia.php">Olvidaste tu contraseña?</a>
 				</div>
 			</div>
+			
 		</div>
 	</div>
 </div>
