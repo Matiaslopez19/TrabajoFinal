@@ -6,7 +6,7 @@ include '../cl.automaticar.data/user.php';
  * and open the template in the editor.
  */
 class UserDAO{
-    public function login(string $mail, string $pass){
+    public function login($mail, $pass){
         $u= new User(); 
         $conexion = mysqli_connect('localhost','root','','automaticar');
         $sql ="SELECT * FROM usuario WHERE USUARIO_mail='$mail' and USUARIO_constraseña='$pass'";
