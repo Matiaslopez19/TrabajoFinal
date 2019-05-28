@@ -7,11 +7,15 @@
  */
 $userName = _POST['username'];
 $userPass = _POST['userpass'];
+if (empty($userName) || empty($userPass)) {
+    header("Location: http://localhost:81/TrabajoFinal/index.php");   
+}else{
 $userDAO = new UserDAO();
 $us = $userDAO->login($userName, $userPass);
 if (u != NULL) {
     header("Location: http://localhost:81/TrabajoFinal/");
 }else{
     
+}
 }
 ?>
