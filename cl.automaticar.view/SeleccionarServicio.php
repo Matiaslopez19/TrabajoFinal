@@ -20,7 +20,7 @@ and open the template in the editor.
                                                                     <h2 class="align-center">Seleccionar Servicio</h2>
 								<hr />
 								<form action="#" method="post">
-									<div class="field">
+									<div class="field half">
 										<label for="dept">¿Que servicio necesita?</label>
 										<div class="select-wrapper">
 											<select name="dept" id="dept">
@@ -47,7 +47,7 @@ and open the template in the editor.
 											</select>
 										</div>
 									</div>
-                                                                    <div class="field">
+                                                                    <div class="field half">
 										<label for="dept">¿Servicio a domicilio?</label>
 										<div class="select-wrapper">
 											<select name="dept" id="dept">
@@ -60,7 +60,7 @@ and open the template in the editor.
 										<label>Patente</label>
 										<input name="patente" id="email" type="email" placeholder="AA0000 - AAAA0000">
 									</div>
-									<div class="field">
+									<div class="field half">
 										<label for="dept">Comuna</label>
 										<div class="select-wrapper">
 											<select name="dept" id="dept">
@@ -125,7 +125,7 @@ and open the template in the editor.
 									</div>
 									
                                                                         <ul class="actions align-center">
-										<li><input value="Atrás" class="button special" type="submit"></li>
+										<li><input type="button" class="button special" value="Atrás" onClick=" window.location.href='.php' "></li> 
 									</ul>
 									<ul class="actions align-center">
 										<li><input value="Agendar" class="button special" type="submit"></li>
