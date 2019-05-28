@@ -27,25 +27,22 @@
 				<h3>Iniciar sesión</h3>
 			</div>
 			<div class="card-body">
-				<form>
+				<form action="../cl.automaticar.controller/userController.php" method="post">
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
-                                            <input type="email" class="form-control" placeholder="Email">
+                                            <input type="email" class="form-control" name="username" placeholder="Email">
 						
 					</div>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
-						<input type="password" class="form-control" placeholder="Contraseña">
-					</div>
-					<div class="row align-items-center remember">
-						<input type="checkbox">Remember Me
+						<input type="password" class="form-control" name="userpass" placeholder="Contraseña">
 					</div>
 					<div class="form-group">
-						<input type="submit" value="Login" class="btn float-right login_btn">
+						<input type="submit" value="Ingresar" class="btn float-right login_btn">
 					</div>
 				</form>
 			</div>
