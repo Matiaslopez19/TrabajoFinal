@@ -15,7 +15,7 @@ $userDAO = new UserDAO();
 $us = $userDAO->login($userName, $userPass);
 if (u != NULL) {
     $ux=u;
-    include('InicioCliente.php');
+    include('../cl.automaticar.view/InicioCliente.php');
 }else{
     
 }
