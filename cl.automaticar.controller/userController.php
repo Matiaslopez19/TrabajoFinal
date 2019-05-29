@@ -14,6 +14,7 @@ if (empty($userName) || empty($userPass)) {
 $userDAO = new UserDAO();
 $us = $userDAO->login($userName, $userPass);
 if (u != NULL) {
+    $ux=u;
     include('InicioCliente.php');
 }else{
     
