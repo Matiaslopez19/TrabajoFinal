@@ -27,7 +27,7 @@ and open the template in the editor.
                                                                     <br>
 									
                                                                         <ul class="actions align-center">
-										<li><input value="Buscar y descargar" class="button special" type="submit"></li>
+										<li><input value="Buscar y descargar1" class="button special" type="submit"></li>
 									</ul>
 									<ul class="actions align-center">
 										<li><input type="button" class="button special" value="Atrás" onClick=" window.location.href='.php' "></li> 
