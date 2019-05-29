@@ -16,7 +16,7 @@ class UserDAO{
             $u = new User($row["USUARIO_id"] , $row["USUARIO_nombre"], $row["USUARIO_apellido_p"], $row["USUARIO_apellido_m"], $row["USUARIO_amil"], $row["USUARIO_clave"], $row["CUENTA_CUENTA_id"]);            
         }else{
         }
-        return u;
+        return $u;
         }
     public function agregarUsuario($nombre, $apellidoP, $apellidoM, $mail, $contraseña, $cuenta_cuentaId) {
        $conexion = mysqli_connect('localhost', 'root', '', 'automaticar');
