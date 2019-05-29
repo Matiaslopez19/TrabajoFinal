@@ -13,8 +13,8 @@ if (empty($userName) || empty($userPass)) {
 }else{
 $userDAO = new UserDAO();
 $us = $userDAO->login($userName, $userPass);
-if (u != NULL) {
-    $ux=u;
+if ($u != NULL) {
+    $ux=$u;
     include('../cl.automaticar.view/InicioCliente.php');
 }else{
     
