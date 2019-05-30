@@ -19,7 +19,8 @@ if ($us != NULL) {
     //echo 'funciona';
     include('../cl.automaticar.view/InicioCliente.php');
 }else{
-   
+   $error;
+   include('../cl.automaticar.view/login2.php');
 }
 }
 ?>
