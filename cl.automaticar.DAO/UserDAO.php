@@ -19,7 +19,7 @@ class UserDAO{
                     $row["USUARIO_mail"], $row["USUARIO_clave"],
                     $row["CUENTA_CUENTA_id"]);            
         }else{
-            
+            echo "no hubo resultados";
         }
         return $u;
         }
