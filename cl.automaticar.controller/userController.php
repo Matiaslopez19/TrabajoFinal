@@ -20,7 +20,7 @@ if ($us != NULL) {
     $arrayUsuario=$us;
     include('../cl.automaticar.view/InicioCliente.php');
 }else{
-    echo 'no funciona';
+   
 }
 }
 ?>
