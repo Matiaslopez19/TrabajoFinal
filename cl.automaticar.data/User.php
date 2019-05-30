@@ -12,8 +12,10 @@ class User{
     private $USUARIO_mail;
     private $USUARIO_clave;
     private $CUENTA_CUENTA_id;
-    
-    function getUSUARIO_id() {
+    public function  foo(){
+        return $this->USUARIO_nombre." --- Hola";
+    }
+            function getUSUARIO_id() {
         return $this->USUARIO_id;
     }
     function getUSUARIO_nombre() {
