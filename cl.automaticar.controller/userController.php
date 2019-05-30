@@ -9,7 +9,7 @@ include '../cl.automaticar.DAO/UserDAO.php';
  */
 
 if (!isset($_POST['username'])) {
-        header("Location: http://localhost:81/TallerInt1/index.php");
+        header("Location: http://localhost:81/TrabajoFinal/cl.automaticar.view/index.php");
 } else {
     $userName = $_POST['username'];
     $userPass = $_POST['userpass'];
