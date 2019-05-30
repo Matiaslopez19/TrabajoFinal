@@ -5,13 +5,14 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <html>
+    
     <head>
-        <title>AutomatiCar</title>
+        <title><?php
+        echo $arrayUsuario->foo();
+        ?></title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
-
-        <title></title>
     </head>
     <body>
         <div class="content">

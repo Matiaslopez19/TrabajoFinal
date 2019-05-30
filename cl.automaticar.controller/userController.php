@@ -8,16 +8,19 @@ include '../cl.automaticar.DAO/UserDAO.php';
  */
 $userName = $_POST['username'];
 $userPass = $_POST['userpass'];
+//echo 'recibidos';
 if (empty($userName) || empty($userPass)) {
     header("Location: http://localhost:81/TrabajoFinal/index.php");   
 }else{
+    //echo 'vamos';
 $userDAO = new UserDAO();
 $us = $userDAO->login($userName, $userPass);
-if (u != NULL) {
-    header("Location: http://localhost:81/TrabajoFinal/");
-    
+if ($us != NULL) {
+    //echo 'funciona';
+    $arrayUsuario=$us;
+    include('../cl.automaticar.view/InicioCliente.php');
 }else{
-    
+   
 }
 }
 ?>

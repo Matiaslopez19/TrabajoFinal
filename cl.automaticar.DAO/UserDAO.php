@@ -1,5 +1,5 @@
 <?php
-include '../cl.automaticar.data/user.php';
+include '../cl.automaticar.data/User.php';
 /* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -7,18 +7,17 @@ include '../cl.automaticar.data/user.php';
  */
 class UserDAO{
     public function login($mail, $pass){
-        $u= null; 
+        //$u= null; 
         $conexion = mysqli_connect('localhost','root','','automaticar');
-        
         $sql ="SELECT * FROM usuario WHERE USUARIO_mail='$mail' and USUARIO_clave='$pass'";
         $result = mysqli_query($conexion, $sql);
         $row = mysqli_fetch_object($result);
         if($row =! NULL){
-            $u = new User($row->USUARIO_id , $row->USUARIO_nombre, $row->USUARIO_apellido_m, $row->USUARIO_apellido_m, $row->USUARIO_mail, $row->USUARIO_clave, $row->CUENTA_CUENTA_id);            
+            $u = new User($row["USUARIO_id"] , $row["USUARIO_nombre"], $row["USUARIO_apellido_p"], $row["USUARIO_apellido_m"], $row["USUARIO_amil"], $row["USUARIO_clave"], $row["CUENTA_CUENTA_id"]);            
         }else{
         }
-        return u;
-    }
+        return $u;
+        }
     public function agregarUsuario($nombre, $apellidoP, $apellidoM, $mail, $contraseña, $cuenta_cuentaId) {
        $conexion = mysqli_connect('localhost', 'root', '', 'automaticar');
        $exquery="SELECT * FROM usuario WHERE USUARIO_mail='$mail'";
@@ -32,4 +31,4 @@ class UserDAO{
        
     }
 }
-
+?>
