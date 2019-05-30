@@ -8,7 +8,7 @@ and open the template in the editor.
     
     <head>
         <title><?php
-        echo $us->getUSUARIO_nombre();
+        echo $us->getUSUARIO_apellido_p();
         ?></title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
