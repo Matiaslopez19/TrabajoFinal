@@ -13,11 +13,12 @@ class UserDAO{
         $result = mysqli_query($conexion, $sql);
         $row = mysqli_fetch_array($result);
         if(!is_null($row)){
-            $u = new User($row["USUARIO_id"] , $row["USUARIO_nombre"], 
+            $u = new User($row["USUARIO_nombre"], 
                     $row["USUARIO_apellido_p"], $row["USUARIO_apellido_m"], 
                     $row["USUARIO_mail"], $row["USUARIO_clave"],
                     $row["CUENTA_CUENTA_id"]);            
         }else{
+            
         }
         return $u;
         }
