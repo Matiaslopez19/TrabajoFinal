@@ -1,18 +1,31 @@
 <?php
-   include_once  '../cl.automaticar.controller/serviciosController.php';
+   include  '../cl.automaticar.controller/serviciosController.php';
    
    ?>
-
-
 <html>
     <head>
-        <title>title</title>
+        <title>Empecé a editar aquí jiji</title>
     </head>
     <body>
         <table>
             <?php while ($reg = mysqli_fetch_array(getAgendar())): ?>
             <tr>
-                <td><?=$reg['AGENDAR_hora'] ?></td>
+                <td>Hora<?=$reg['AGENDAR_hora']?></td>
+            </tr>
+            <tr>
+                <td>Fecha<?=$reg['AGENDAR_fecha']?></td>
+            </tr>
+            <tr>
+                <td>Servicio<?=$reg['AGENDAR_tipo_servicio']?></td>
+            </tr>
+            <tr>
+                <td>Patente<?=$reg['AGENDAR_patente']?></td>
+            </tr>
+            <tr>
+                <td>Dirección<?=$reg['AGENDAR_comuna']?></td>
+            </tr>
+            <tr>
+                <td>Dirección<?=$reg['AGENDAR_direccion']?></td>
             </tr>
              <?php endwhile;?>
             <!--
