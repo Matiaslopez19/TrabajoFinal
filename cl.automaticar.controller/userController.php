@@ -17,7 +17,7 @@ if ($us != NULL) {
     $ux=$us;
     include('../cl.automaticar.view/InicioCliente.php');
 }else{
-    console.log("no funciona");
+    echo 'no funciona';
 }
 }
 ?>
