@@ -18,7 +18,7 @@
 
 	<!--Custom styles-->
 	<link rel="stylesheet" type="text/css" href="styles.css">
-        <?php=(isset($error))?"alert($error);":"";?>
+        <?php=(isset($error))?$error:"";?>
 </head>
 <body background="../images/544750.jpg">
 <div class="container">
