@@ -17,8 +17,8 @@ $userDAO = new UserDAO();
 $us = $userDAO->login($userName, $userPass);
 if ($us != NULL) {
     echo 'funciona';
-    $ux=$us;
-    echo $ux;
+    //$ux=$us;
+    //echo $ux;
     include(' ../cl.automaticar.view/InicioCliente.php');
 }else{
     echo 'no funciona';
