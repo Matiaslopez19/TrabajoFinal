@@ -36,10 +36,9 @@ class UserDAO{
            $resultado = mysqli_query($conexion, $query);
            $ultimoIsertado = mysqli_fetch_object($resultado);
            if (!is_null($result)) {
-               $u = new User($ultimoIsertado->id, $nombre, 
-                    $apellidoP, $apellidoM, 
-                $mail, $contraseña,
-                    $cuenta_cuentaId);
+               $u = new User($ultimoIsertado->id,$nombre,
+                       $apellidoP, $apellidoM,$mail,
+                       $contraseña,$cuenta_cuentaId);
                echo "esto es: ".var_dump($u);
            }else{
                echo "problemas: ".var_dump($u);
