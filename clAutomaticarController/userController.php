@@ -16,10 +16,10 @@ if (isset($_POST['2'])) {
         $us = $userDAO->login($userName, $userPass);
         if ($us != NULL) {
             $_SESSION['user'] = $us;
-            include('../cl.automaticar.view/InicioCliente.php');
+            include('../clAutomaticarView/InicioCliente.php');
         } else {
             $error = "Usuario o contraseña incorrecta";
-            include('../cl.automaticar.view/login2.php');
+            include('../clAutomaticarView/login2.php');
         }
     }
 } else if (isset($_POST['1'])) {
@@ -34,10 +34,10 @@ if (isset($_POST['2'])) {
             $userDAO2 = new UserDAO();
             $us = $userDAO2->agregarUsuario($nombre, $apellidoP, $apellidoM, $email, $userpass1, $userAccountType);
             if ($us != NULL) {
-                include ('../cl.automaticar.view/InicioCliente.php');
+                include ('../clAutomaticarView/InicioCliente.php');
             } else {
                 $errorRegistro = "error en los datos";
-                include ('../cl.automaticar.view/crearCuenta.php');
+                include ('../clAutomaticarView/crearCuenta.php');
             }
         } else {
             $errorClave = "las contraseñas no coinciden";
