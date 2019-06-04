@@ -12,8 +12,9 @@ if (isset($_POST['2'])) {
     } else {
         $userName = $_POST['username'];
         $userPass = $_POST['userpass'];
-        echo 'recibidos';
+        //echo 'recibidos';
         $userDAO = new UserDAO();
+        //var_dump($userDAO);
         $us = $userDAO->login($userName, $userPass);
         if ($us != NULL) {
             echo 'ingreso exitoso';
