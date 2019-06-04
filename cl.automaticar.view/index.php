@@ -14,7 +14,7 @@
 	<body>
 
 			<header id="header" class="alt">
-				<div class="logo"><a href="index.html">AutomatiCar </a></div>
+                            <div class="logo"><a href="index.php">AutomatiCar </a></div>
 				<a href="#menu" class="toggle"><span>Menú</span></a>
 			</header>
             
