@@ -44,8 +44,8 @@ class UserDAO{
                echo "problemas: ".var_dump($u);
            }
        }else{
-        echo "el usuario existe o faltan datos";
-           var_dump($comprobacion);   
+        //echo "el usuario existe o faltan datos";
+           //var_dump($comprobacion);   
        }
        return $u;
        
