@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Inicio AutomatiCar</title>
+  <title>Inicio AutomatiCar2</title>
 
 
   <!-- Bootstrap core CSS -->
