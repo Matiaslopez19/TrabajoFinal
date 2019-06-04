@@ -43,5 +43,5 @@ if (isset($_POST['2'])) {
             $errorClave = "las contraseñas no coinciden";
         }
     }
-
+    
 ?>
