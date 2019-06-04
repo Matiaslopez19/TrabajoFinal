@@ -12,9 +12,11 @@ if (isset($_POST['2'])) {
     } else {
         $userName = $_POST['username'];
         $userPass = $_POST['userpass'];
+        echo 'recibidos';
         $userDAO = new UserDAO();
         $us = $userDAO->login($userName, $userPass);
         if ($us != NULL) {
+            echo 'ingreso exitoso';
             $_SESSION['user'] = $us;
             include('../clAutomaticarView/InicioCliente.php');
         } else {
