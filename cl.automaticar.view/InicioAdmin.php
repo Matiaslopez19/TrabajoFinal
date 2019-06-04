@@ -24,7 +24,7 @@
 
     <!-- Sidebar -->
     <div class="bg-light border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading">AutomatiCar</div>
+      <div class="sidebar-heading">Administrador</div>
       <div class="list-group list-group-flush">
         <a href="SeleccionarServicio.html" class="list-group-item list-group-item-action bg-light">Horas Agendadas</a>
         <a href="Historial.html" class="list-group-item list-group-item-action bg-light">Subir Historial  </a>
