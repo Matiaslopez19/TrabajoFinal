@@ -58,16 +58,16 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
-                                            <input type="password" class="form-control" name="userpass" placeholder="Contraseña">
+                                            <input type="password" class="form-control" name="userpass1" placeholder="Contraseña">
 					</div>
                                         <div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
-                                            <input type="password" class="form-control" name="userpass" placeholder="Repetir contraseña">
+                                            <input type="password" class="form-control" name="userpass2" placeholder="Repetir contraseña">
 					</div>
 					<div class="form-group">
-						<input type="submit" value="Siguiente" class="btn float-right login_btn">
+                                            <button type="submit" name="1" class="btn float-right login_btn">Siguiente</button>
 					</div>
                                         <div class="form-group">
                                             <input type="button" value="Atrás" class="btn float-left login_btn" onClick=" window.location.href='Login.php' ">
