@@ -11,7 +11,7 @@ class UserDAO{
         $conexion = mysqli_connect('localhost','root','','automaticar');
         $sql ="SELECT * FROM usuario WHERE USUARIO_mail='$mail' and USUARIO_clave='$pass';";
         $result = mysqli_query($conexion, $sql);
-        //var_dump($result);exit;
+        exit;
         if($result){
             $row = mysqli_fetch_array($result);
             $u = new User($row["USUARIO_id"], $row["USUARIO_nombre"], 
@@ -30,11 +30,13 @@ class UserDAO{
        $exquery="SELECT * FROM usuario WHERE USUARIO_mail='$mail';";
        $sql = "INSERT INTO usuario (USUARIO_nombre, USUARIO_apellido_p, USUARIO_apellido_m, USUARIO_mail, USUARIO_clave, CUENTA_CUENTA_id) VALUES ('$nombre', '$apellidoP', '$apellidoM','$mail','$clave',$cuenta_cuentaId);";
        $comprobacion= mysqli_query($conexion, $exquery);
+       exit();
        $resultado = mysqli_fetch_object($comprobacion);
        if(is_null($resultado)){
            $result= mysqli_query($conexion, $sql);
            $query =  "select max(USUARIO_id) as id from  usuario";
            $resultado = mysqli_query($conexion, $query);
+           exit();
            $ultimoIsertado = mysqli_fetch_object($resultado);
            if (!is_null($result)) {
                $u = new User($ultimoIsertado->id,$nombre,
