@@ -41,7 +41,7 @@
 						<input type="password" class="form-control" name="userpass" placeholder="Contraseña">
 					</div>
 					<div class="form-group">
-						<input type="submit" value="Ingresar" class="btn float-right login_btn">
+                                            <button type="submit" name="2" class="btn float-right login_btn">Ingresar</button>
 					</div>
 				</form>
                             
