@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
         <title><?php
-        echo "Bienvenido ".$_SESSION ['USUARIO_nombre'];
+        echo "Bienvenido ".$_SESSION['user'];
         ?>
         </title>
 		<meta charset="utf-8" />
