@@ -1,52 +1,55 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
-    <head>
-        <title>AutomatiCar</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="../assets/css/main.css" />
+<head>
+    <meta charset="UTF-8">
+	<title>Login Page</title>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+   <!--Made with love by Mutiullah Samim -->
+   <link href="../assets/css/cssLogin.css" rel="stylesheet" type="text/css"/>
+	<!--Bootsrap 4 CDN-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <!--Fontawesome CDN-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-        <title></title>
-    </head>
-    <body>
-        <div class="content">
-
-                                                                    
-                                                                    <h2 class="align-center">Cambiar contraseña</h2>
-								<hr />
-								<form action="#" method="post">
-                                                                    <label>Los datos para la confirmación se enviarán a su correo electrónico.  
-                                                                        Ingrese el código electrónico para la confirmación</label>
-		
-									<div class="field half">
-										<label>Código</label>
-										<input name="Email" id="email" type="email" placeholder="">
-									</div>
-                                                                        <div class="field half">
-										<label>Nueva contraseña</label>
-										<input name="Email" id="email" type="email" placeholder="">
-									</div>
-	
-                                                                    <br>
-									
-                                                                        <ul class="actions align-center">
-										<li><input value="Cambiar contraseña" class="button special" type="submit"><a</li>
-									</ul>
-									<ul class="actions align-center">
-                                                                                <li><input type="button" class="button special" value="Atrás" onClick=" window.location.href='RecuperarContrasenia.php' "></li> 
-                                                                            
-                                                                          
-									</ul>
-                                                                        
-								</form>
-							</div>
-        <?php
-        // put your code here
-        ?>
-    </body>
+	<!--Custom styles-->
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body background="../images/544750.jpg">
+<div class="container">
+	<div class="d-flex justify-content-center h-100">
+		<div class="card2">
+			<div class="card-header">
+				<h3>Cambiar contraseña</h3>
+			</div>
+			<div class="card-body">
+				<form action="#" method="post">
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+                                            <input type="codigo" class="form-control" name="codigo" placeholder="Codigo">
+						
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+						<input type="password" class="form-control" name="password" placeholder="Nueva contraseña">
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Cambiar" class="btn float-right login_btn">
+					</div>
+                                        <div class="form-group">
+                                            <input type="button" value="Atrás" class="btn float-left login_btn" onClick=" window.location.href='RecuperarContrasenia.php' ">
+					</div>
+				</form>                           
+			</div>			
+		</div>
+	</div>
+</div>
+</body>
 </html>
