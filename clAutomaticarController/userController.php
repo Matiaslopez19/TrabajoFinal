@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../cl.automaticar.DAO/UserDAO.php';
+include '../clAutomaticarDAO/UserDAO.php';
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
