@@ -24,10 +24,10 @@ class UserDAO{
         }
         return $u;
         }
-    public function agregarUsuario($nombre, $apellidoP, $apellidoM, $mail, $contraseña, $cuenta_cuentaId) {
+    public function agregarUsuario($nombre, $apellidoP, $apellidoM, $mail, $clave, $cuenta_cuentaId) {
        $conexion = mysqli_connect('localhost', 'root', '', 'automaticar');
        $exquery="SELECT * FROM usuario WHERE USUARIO_mail='$mail';";
-       $sql = "INSERT INTO usuario (USUARIO_nombre, USUARIO_apellido_p, USUARIO_apellido_m, USUARIO_mail, USUARIO_clave, CUENTA_CUENTA_id) VALUES ('$nombre', '$apellidoP', '$apellidoM','$mail','$contraseña',$cuenta_cuentaId);";
+       $sql = "INSERT INTO usuario (USUARIO_nombre, USUARIO_apellido_p, USUARIO_apellido_m, USUARIO_mail, USUARIO_clave, CUENTA_CUENTA_id) VALUES ('$nombre', '$apellidoP', '$apellidoM','$mail','$clave',$cuenta_cuentaId);";
        $comprobacion= mysqli_query($conexion, $exquery);
        $resultado = mysqli_fetch_object($comprobacion);
        if(is_null($resultado)){
@@ -38,7 +38,7 @@ class UserDAO{
            if (!is_null($result)) {
                $u = new User($ultimoIsertado->id,$nombre,
                        $apellidoP, $apellidoM,$mail,
-                       $contraseña,$cuenta_cuentaId);
+                       $clave,$cuenta_cuentaId);
                echo "esto es: ".var_dump($u);
            }else{
                echo "problemas: ".var_dump($u);
