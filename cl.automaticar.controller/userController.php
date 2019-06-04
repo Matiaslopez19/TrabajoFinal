@@ -19,7 +19,7 @@ if (isset($_POST['2'])) {
             include('../cl.automaticar.view/InicioCliente.php');
         } else {
             $error = "Usuario o contraseña incorrecta";
-            include('../cl.automaticar.view/login.php');
+            include('../cl.automaticar.view/Login.php');
         }
     }
 } else if (isset($_POST['1'])) {
