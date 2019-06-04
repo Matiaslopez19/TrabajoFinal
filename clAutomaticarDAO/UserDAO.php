@@ -21,7 +21,6 @@ class UserDAO{
             echo "no hubo resultados";
             var_dump($result);
         }
-        exit();
         return $u;
         }
     public function agregarUsuario($nombre, $apellidoP, $apellidoM, $mail, $clave, $cuenta_cuentaId) {
