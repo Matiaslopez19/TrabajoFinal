@@ -3,13 +3,22 @@
 
 <head>
 
-
+<?php
+    
+   include '../clAutomaticarData/User.php'; 
+   session_start();
+?>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Agendar Hora</title>
+  <title><?php
+    //$usuario=$_SESSION ['user'];
+        
+              
+        echo "Bienvenido ".$_SESSION ['user']['nombre'];
+  ?></title>
 
     <!-- Bootstrap core CSS -->
   <link href="../assets/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
