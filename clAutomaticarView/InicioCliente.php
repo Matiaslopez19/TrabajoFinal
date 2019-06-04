@@ -6,8 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-        <title><?php
-        echo "Bienvenido ";
+        <title><?php $usuario=$_SESSION ['user'];
+        
+              
+        echo "Bienvenido ".$usuario->getUSUARIO_nombre();
         ?>
         </title>
 		<meta charset="utf-8" />
@@ -64,7 +66,6 @@
       </div>
     </div>
     <div>
-        <a><?php var_dump($_SESSION ['user']); ?></a>
     </div>
     <!-- /#page-content-wrapper -->
 
