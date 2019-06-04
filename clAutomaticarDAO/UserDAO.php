@@ -31,11 +31,10 @@ class UserDAO{
        $comprobacion= mysqli_query($conexion, $exquery);
        $resultado = mysqli_fetch_object($comprobacion);
        if(is_null($resultado)){
-           //$result= mysqli_query($conexion, $sql);
+           $result= mysqli_query($conexion, $sql);
            $query =  "select max(USUARIO_id) as id from  usuario";
            $resultado = mysqli_query($conexion, $query);
            $ultimoIsertado = mysqli_fetch_object($resultado);
-           
            if (!is_null($result)) {
                $u = new User($ultimoIsertado->id, $row[$nombre], 
                     $row[$apellidoP], $row[$apellidoM], 
