@@ -37,7 +37,7 @@ if (isset($_POST['2'])) {
                 include ('../cl.automaticar.view/InicioCliente.php');
             } else {
                 $errorRegistro = "error en los datos";
-                include ('../cl.automaticar.view/crearCuenta.php');
+                include ('../cl.automaticar.view/CrearCuenta.php');
             }
         } else {
             $errorClave = "las contraseñas no coinciden";
