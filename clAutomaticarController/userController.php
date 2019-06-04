@@ -34,6 +34,7 @@ if (isset($_POST['2'])) {
             $userDAO2 = new UserDAO();
             $us = $userDAO2->agregarUsuario($nombre, $apellidoP, $apellidoM, $email, $userpass1, $userAccountType);
             if ($us != NULL) {
+                $_SESSION['user']=$us;
                 include ('../clAutomaticarView/InicioCliente.php');
             } else {
                 $errorRegistro = "error en los datos";
