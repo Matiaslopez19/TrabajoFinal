@@ -57,7 +57,8 @@ class User{
     function setCUENTA_CUENTA_id($CUENTA_CUENTA_id) {
         $this->CUENTA_CUENTA_id = $CUENTA_CUENTA_id;
     }
-    function __construct($USUARIO_nombre, $USUARIO_apellido_p, $USUARIO_apellido_m, $USUARIO_mail, $USUARIO_clave, $CUENTA_CUENTA_id) {
+    function __construct($USUARIO_id,$USUARIO_nombre, $USUARIO_apellido_p, $USUARIO_apellido_m, $USUARIO_mail, $USUARIO_clave, $CUENTA_CUENTA_id) {
+        $this->USUARIO_id = $USUARIO_id;
         $this->USUARIO_nombre = $USUARIO_nombre;
         $this->USUARIO_apellido_p = $USUARIO_apellido_p;
         $this->USUARIO_apellido_m = $USUARIO_apellido_m;
