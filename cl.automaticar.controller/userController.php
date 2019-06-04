@@ -30,7 +30,6 @@ if (isset($_POST['2'])) {
         $userpass1 = $_POST['userpass1'];
         $userpass2 = $_POST['userpass2'];
         $userAccountType = 3;
-        echo 'datos recibidos bien';
         if ($userpass1 == $userpass2) {
             $userDAO2 = new UserDAO();
             $us = $userDAO2->agregarUsuario($nombre, $apellidoP, $apellidoM, $email, $userpass1, $userAccountType);
