@@ -64,7 +64,7 @@
       </div>
     </div>
     <div>
-        <a><?phpecho .$_SESSION; ?></a>
+        <a><?phpecho .$_SESSION ['user']; ?></a>
     </div>
     <!-- /#page-content-wrapper -->
 
