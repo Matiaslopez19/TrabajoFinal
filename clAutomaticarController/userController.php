@@ -40,8 +40,6 @@ if (isset($_POST['2'])) {
                 $errorRegistro = "error en los datos";
                 include ('../clAutomaticarView/crearCuenta.php');
             }
-        } else {
-            $errorClave = "las contraseñas no coinciden";
         }
     }
     
