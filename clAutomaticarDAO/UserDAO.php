@@ -25,6 +25,7 @@ class UserDAO{
         return $u;
         }
     public function agregarUsuario($nombre, $apellidoP, $apellidoM, $mail, $clave, $cuenta_cuentaId) {
+       $u = null;
        $conexion = mysqli_connect('localhost', 'root', '', 'automaticar');
        $exquery="SELECT * FROM usuario WHERE USUARIO_mail='$mail';";
        $sql = "INSERT INTO usuario (USUARIO_nombre, USUARIO_apellido_p, USUARIO_apellido_m, USUARIO_mail, USUARIO_clave, CUENTA_CUENTA_id) VALUES ('$nombre', '$apellidoP', '$apellidoM','$mail','$clave',$cuenta_cuentaId);";
