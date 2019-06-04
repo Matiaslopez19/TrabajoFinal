@@ -40,9 +40,9 @@ class UserDAO{
                $u = new User($ultimoIsertado->id,$nombre,
                        $apellidoP, $apellidoM,$mail,
                        $clave,$cuenta_cuentaId);
-               echo "esto es: ".var_dump($u);
+               //echo "esto es: ".var_dump($u);
            }else{
-               echo "problemas: ".var_dump($u);
+               //echo "problemas: ".var_dump($u);
            }
        }else{
         //echo "el usuario existe o faltan datos";
