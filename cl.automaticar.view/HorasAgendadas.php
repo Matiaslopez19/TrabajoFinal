@@ -27,7 +27,7 @@
       <div class="list-group list-group-flush">
           <a href="SeleccionarServicio.php" class="list-group-item list-group-item-action bg-light">Agendar Hora</a>
           <a href="Historial.php" class="list-group-item list-group-item-action bg-light">Descargar Historial</a>
-          <a href="HorasAgendadas.php class="list-group-item list-group-item-action bg-light">Horas Agendadas</a>
+          <a href="HorasAgendadas.php" class="list-group-item list-group-item-action bg-light">Horas Agendadas</a>
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
