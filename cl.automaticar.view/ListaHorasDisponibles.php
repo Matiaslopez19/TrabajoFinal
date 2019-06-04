@@ -3,15 +3,16 @@
 
 <head>
 
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Horas Agendadas</title>
+  <title>Agendar Hora</title>
 
-  <!-- Bootstrap core CSS -->
- <link href="../assets/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <!-- Bootstrap core CSS -->
+  <link href="../assets/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <!-- Custom styles for this template -->
   <link href="../assets/css/simple-sidebar.css" rel="stylesheet" type="text/css"/>
 
@@ -54,9 +55,9 @@
         </div>
       </nav>
 
-      <div class="container-fluid">
-        <h1 class="mt-4">Horas Agendadas</h1>
-      </div>
+      <div class="content"> 
+          <!-- Aqui agregar tabla-->
+              </div>
     </div>
     <!-- /#page-content-wrapper -->
 
@@ -64,7 +65,7 @@
   <!-- /#wrapper -->
 
   <!-- Bootstrap core JavaScript -->
-     <script src="../assets/css/vendor/jquery/jquery.min.js" type="text/javascript"></script>
+   <script src="../assets/css/vendor/jquery/jquery.min.js" type="text/javascript"></script>
   <script src="../assets/css/vendor/bootstrap/js/bootstrap.bundle.min.js" type="text/javascript"></script>
 
   <!-- Menu Toggle Script -->
