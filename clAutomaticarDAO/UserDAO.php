@@ -37,7 +37,7 @@ class UserDAO{
            $ultimoIsertado = mysqli_fetch_object($resultado);
            //echo $ultimoIsertado->id; 
            if (!is_null($result)) {
-               $u = new User($row [$ultimoIsertado->USUARIO_id],$row[$nombre], 
+               $u = new User($row [$ultimoIsertado->id],$row[$nombre], 
                     $row[$apellidoP], $row[$apellidoM], 
                     $row[$mail], $row[$contraseña],
                     $row[$cuenta_cuentaId]);
