@@ -165,7 +165,7 @@
 
                             <div class="field half">
                                 <label>Dirección</label>
-                                <input name="Dirección" id="direccion" type="text" placeholder="Dirección">
+                                <input name="direccion" id="direccion" type="text" placeholder="Dirección">
                             </div>
                         </section>
                         <br>
