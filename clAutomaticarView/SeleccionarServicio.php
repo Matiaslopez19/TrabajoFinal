@@ -177,7 +177,7 @@
                            <!-- <li><input type="button" class="button special" value="Atrás" onClick=" window.location.href = '.php'"></li> -->
                         </ul>
                         <ul class="actions align-center">
-                            <button type="submit" class="button special" type="submit">Agendar hora</button>
+                            <button type="submit" class="button special" name="horaA">Agendar hora</button>
                         </ul>
 
                     </form>
