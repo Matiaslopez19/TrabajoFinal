@@ -3,9 +3,8 @@
 
     <head>
 <?php
-    
-   include '../clAutomaticarData/User.php'; 
-   session_start();
+    session_start(); 
+   
 ?>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,8 +14,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
-  <title>agendar hora</title>
-        <title>Agendar Hora</title>
+        <title><?php $datos= $_SESSION['user'];
+        
+        echo $datos->getUSUARIO_nombre();?></title>
         <!-- Bootstrap core CSS -->
         <link href="../assets/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <!-- Custom styles for this template -->
