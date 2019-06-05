@@ -7,4 +7,5 @@
  */
 $servicio = $_POST['servicio'];
 $opcion = $_POST['opcion'];
-
+$patente = $_POST['patente'];
+$comuna = $_POST['comuna'];
