@@ -31,12 +31,11 @@
       <div class="sidebar-heading">AutomatiCar</div>
       <div class="list-group list-group-flush">
         <a href="../clAutomaticarView/SeleccionarServicio.php" class="list-group-item list-group-item-action bg-light">Agendar Hora</a>
-        <a href="Historial.php" class="list-group-item list-group-item-action bg-light">Descargar Historial</a>
-        <a href="HorasAgendadas.php" class="list-group-item list-group-item-action bg-light">Horas Agendadas</a>
+        <a href="../clAutomaticarView/Historial.php" class="list-group-item list-group-item-action bg-light">Descargar Historial</a>
+        <a href="../clAutomaticarView/HorasAgendadas.php" class="list-group-item list-group-item-action bg-light">Horas Agendadas</a>
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
-
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
