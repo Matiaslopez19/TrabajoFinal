@@ -66,30 +66,30 @@
 
                     <h2 class="align-center">Seleccionar Servicio</h2>
                     <hr />
-                    <form action="#" method="post">
+                    <form action="../clAutomaticarController/agendaController.php" method="post">
                         <div class="field half">
                             <label for="dept">¿Que servicio necesita?</label>
                             <div class="select-wrapper">
                                 <select name="dept" id="dept">
-                                    <option value="1">- Servicios -</option>
-                                    <option value="1">Cambiar kit de embrague</option>
-                                    <option value="1">Cambiar kit de distribución</option>
-                                    <option value="1">Cambiar pastillas de freno</option>
-                                    <option value="1">Cambiar inyectores</option>
-                                    <option value="1">Cambiar junta de culata</option>
-                                    <option value="">Cambiar caja de cambios</option>
-                                    <option value="1">Cambiar amortiguadores</option>
-                                    <option value="1">Cambiar cuerpo de aceleración</option>
-                                    <option value="1">Cambiar alternador</option>
-                                    <option value="1">Cambiar bateria</option>
-                                    <option value="">Cambiar retenes de válvulas</option>
-                                    <option value="1">Cambiar cables de bujías</option>
-                                    <option value="1">Cambiar radiador</option>
-                                    <option value="1">Cambiar silenciador</option>
-                                    <option value="1">Cambiar catalitico</option>
-                                    <option value="1">Cambiar aceite de motor</option>
-                                    <option value="1">Cambiar filtro de aceite</option>
-                                    <option value="1">Cambiar Bujías</option>
+                                    <option value="1" name="servicio">- Servicios -</option>
+                                    <option value="1" name="servicio">Cambiar kit de embrague</option>
+                                    <option value="1" name="servicio">Cambiar kit de distribución</option>
+                                    <option value="1" name="servicio">Cambiar pastillas de freno</option>
+                                    <option value="1" name="servicio">Cambiar inyectores</option>
+                                    <option value="1" name="servicio">Cambiar junta de culata</option>
+                                    <option value="" name="servicio">Cambiar caja de cambios</option>
+                                    <option value="1" name="servicio">Cambiar amortiguadores</option>
+                                    <option value="1" name="servicio">Cambiar cuerpo de aceleración</option>
+                                    <option value="1" name="servicio">Cambiar alternador</option>
+                                    <option value="1" name="servicio">Cambiar bateria</option>
+                                    <option value="1" name="servicio">Cambiar retenes de válvulas</option>
+                                    <option value="1" name="servicio">Cambiar cables de bujías</option>
+                                    <option value="1" name="servicio">Cambiar radiador</option>
+                                    <option value="1" name="servicio">Cambiar silenciador</option>
+                                    <option value="1" name="servicio">Cambiar catalitico</option>
+                                    <option value="1" name="servicio">Cambiar aceite de motor</option>
+                                    <option value="1" name="servicio">Cambiar filtro de aceite</option>
+                                    <option value="1" name="servicio">Cambiar Bujías</option>
 
                                 </select>
                             </div>
@@ -98,82 +98,81 @@
                             <label for="dept">¿Servicio a domicilio?</label>
                             <div class="select-wrapper">
                                 <select id="selectBox" onchange="changeFunc();">
-                                    <option value="1">No</option>
-                                    <option value="2">Si</option>
+                                    <option value="1" name="opcion">No</option>
+                                    <option value="2" name="opcion">Si</option>
                                 </select>
                             </div>
                         </div>
                         <div class="field half">
                             <label>Patente</label>
-                            <input name="patente" id="email" type="email" placeholder="AA0000 - AAAA0000">
+                            <input name="patente" type="text" placeholder="AA0000 - AAAA0000">
                         </div>
                         <section id = "caja">
                             <div class="field half">
                                 <label for="dept">Comuna</label>
                                 <div class="select-wrapper">
                                     <select name="dept" id="dept">
-                                        <option value="">- Comunas -</option>
-                                        <option value="">Cerrillos</option>
-                                        <option value="1">Cerro Navia</option>
-                                        <option value="1">Conchalí</option>
-                                        <option value="1">El Bosque</option>
-                                        <option value="1">Estación Central</option>
-                                        <option value="">Huechuraba</option>
-                                        <option value="1">Independencia</option>
-                                        <option value="1">La Cisterna</option>
-                                        <option value="1">La Florida</option>
-                                        <option value="1">La Granja</option>
-                                        <option value="">La Pintana</option>
-                                        <option value="1">La Reina</option>
-                                        <option value="1">Las Condes</option>
-                                        <option value="1">Lo Barnechea</option>
-                                        <option value="1">Lo Espejo</option>
-                                        <option value="1">Lo Prado</option>
-                                        <option value="1">Macul</option>
-                                        <option value="1">Maipú</option>
-                                        <option value="1">Nuñoa</option>
-                                        <option value="">Padre Hurtado</option>
-                                        <option value="1">Pedro Aguirre Cerda</option>
-                                        <option value="1">Peñalolén</option>
-                                        <option value="1">Providencia</option>
-                                        <option value="1">Pudahuel</option>
-                                        <option value="1">Puente Alto</option>
-                                        <option value="1">Quilicura</option>
-                                        <option value="1">Quinta Normal</option>
-                                        <option value="1">Recoleta</option>
-                                        <option value="1">Renca</option>
-                                        <option value="1">San Bernardo</option>
-                                        <option value="1">San Joaquín</option>
-                                        <option value="1">San Miguel</option>
-                                        <option value="1">San Ramón</option>
-                                        <option value="1">Santiago</option>
-                                        <option value="1">Vitacura</option>
-                                        <option value="1">Colina</option>
-                                        <option value="1">Lampa</option>
-                                        <option value="1">Buin</option>
-                                        <option value="1">Peñaflor</option>
-                                        <option value="1">Talagante</option>
-                                        <option value="1">Paine</option>
-                                        <option value="1">Isla de Maipo</option>
-                                        <option value="1">El Monte</option>
-                                        <option value="1">Pirque</option>
-                                        <option value="1">Calera de Tango</option>
-                                        <option value="1">San José de Maipo</option>
+                                        <option value="1" name="comuna">- Comunas -</option>
+                                        <option value="1" name="comuna">Cerrillos</option>
+                                        <option value="1" name="comuna">Cerro Navia</option>
+                                        <option value="1" name="comuna">Conchalí</option>
+                                        <option value="1" name="comuna">El Bosque</option>
+                                        <option value="1" name="comuna">Estación Central</option>
+                                        <option value="1" name="comuna">Huechuraba</option>
+                                        <option value="1" name="comuna">Independencia</option>
+                                        <option value="1" name="comuna">La Cisterna</option>
+                                        <option value="1" name="comuna">La Florida</option>
+                                        <option value="1" name="comuna">La Granja</option>
+                                        <option value="1" name="comuna">La Pintana</option>
+                                        <option value="1" name="comuna">La Reina</option>
+                                        <option value="1" name="comuna">Las Condes</option>
+                                        <option value="1" name="comuna">Lo Barnechea</option>
+                                        <option value="1" name="comuna">Lo Espejo</option>
+                                        <option value="1" name="comuna">Lo Prado</option>
+                                        <option value="1" name="comuna">Macul</option>
+                                        <option value="1" name="comuna">Maipú</option>
+                                        <option value="1" name="comuna">Nuñoa</option>
+                                        <option value="1" name="comuna">Padre Hurtado</option>
+                                        <option value="1" name="comuna">Pedro Aguirre Cerda</option>
+                                        <option value="1" name="comuna">Peñalolén</option>
+                                        <option value="1" name="comuna">Providencia</option>
+                                        <option value="1" name="comuna">Pudahuel</option>
+                                        <option value="1" name="comuna">Puente Alto</option>
+                                        <option value="1" name="comuna">Quilicura</option>
+                                        <option value="1" name="comuna">Quinta Normal</option>
+                                        <option value="1" name="comuna">Recoleta</option>
+                                        <option value="1" name="comuna">Renca</option>
+                                        <option value="1" name="comuna">San Bernardo</option>
+                                        <option value="1" name="comuna">San Joaquín</option>
+                                        <option value="1" name="comuna">San Miguel</option>
+                                        <option value="1" name="comuna">San Ramón</option>
+                                        <option value="1" name="comuna">Santiago</option>
+                                        <option value="1" name="comuna">Vitacura</option>
+                                        <option value="1" name="comuna">Colina</option>
+                                        <option value="1" name="comuna">Lampa</option>
+                                        <option value="1" name="comuna">Buin</option>
+                                        <option value="1" name="comuna">Peñaflor</option>
+                                        <option value="1" name="comuna">Talagante</option>
+                                        <option value="1" name="comuna">Paine</option>
+                                        <option value="1" name="comuna">Isla de Maipo</option>
+                                        <option value="1" name="comuna">El Monte</option>
+                                        <option value="1" name="comuna">Pirque</option>
+                                        <option value="1" name="comuna">Calera de Tango</option>
+                                        <option value="1" name="comuna">San José de Maipo</option>
                                     </select>
                                 </div>
                             </div>
 
                             <div class="field half">
                                 <label>Dirección</label>
-                                <input name="Dirección" id="direccion" type="email" placeholder="Dirección">
+                                <input name="Dirección" id="direccion" type="text" placeholder="Dirección">
                             </div>
                         </section>
                         <br>
                         <div class="field half">
                             <label>Imagen</label>
-                            <input name="Dirección" id="direccion" type="file" placeholder="Dirección">
+                            <input name="rutaImagen" id="direccion" type="file" placeholder="Dirección">
                         </div>
-
                         <ul class="actions align-center">
                            <!-- <li><input type="button" class="button special" value="Atrás" onClick=" window.location.href = '.php'"></li> -->
                         </ul>
