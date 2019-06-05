@@ -32,7 +32,6 @@
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
                                             <input type="email" class="form-control" name="username" placeholder="Email">
-						
 					</div>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
@@ -44,7 +43,6 @@
                                             <button type="submit" name="2" class="btn float-right login_btn">Ingresar</button>
 					</div>
 				</form>
-                            
 			</div>
                     <div class="card-footer">
 				<div class="d-flex justify-content-center links">
@@ -54,7 +52,6 @@
                                     <a href="RecuperarContrasenia.php">Olvidaste tu contraseña?</a>
 				</div>
 			</div>
-			
 		</div>
 	</div>
 </div>
