@@ -1,11 +1,13 @@
-<!DOCTYPE html>
+<?php
+    include '../clAutomaticarData/User.php';
+    session_start(); 
+    
+    $user = $_SESSION['user'];
+                    //var_dump($datos);
+?><!DOCTYPE html>
 <html lang="en">
 
     <head>
-<?php
-    session_start(); 
-   
-?>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
@@ -14,9 +16,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
-        <title><?php $datos= $_SESSION['user'];
-        
-        echo $datos->getUSUARIO_nombre();?></title>
+        <title><?= $user->getUSUARIO_nombre(); ?></title>
         <!-- Bootstrap core CSS -->
         <link href="../assets/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <!-- Custom styles for this template -->
@@ -62,7 +62,6 @@
                 </nav>
 
                 <div class="content">
-
 
                     <h2 class="align-center">Seleccionar Servicio</h2>
                     <hr />
