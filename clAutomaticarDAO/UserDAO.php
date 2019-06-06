@@ -1,5 +1,6 @@
 <?php
 include '../clAutomaticarData/User.php';
+include '../clAutomaticarData/conexion.php';
 /* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -8,9 +9,9 @@ include '../clAutomaticarData/User.php';
 class UserDAO{
     public function login($mail, $pass){
         $u= null; 
-        $conexion = mysqli_connect('localhost','root','','automaticar');
+        $conexion = new Conexion();
         $sql ="SELECT * FROM usuario WHERE USUARIO_mail='$mail' and USUARIO_clave='$pass';";
-        $result = mysqli_query($conexion, $sql);
+        $result = mysqli_query($conexion->conn(), $sql);
         
         if($result->num_rows == 1){
              var_dump($result);
@@ -28,13 +29,13 @@ class UserDAO{
         }
     public function agregarUsuario($nombre, $apellidoP, $apellidoM, $mail, $clave, $cuenta_cuentaId) {
        $u = null;
-       $conexion = mysqli_connect('localhost', 'root', '', 'automaticar');
+       $conexion = new Conexion();
        $exquery="SELECT * FROM usuario WHERE USUARIO_mail='$mail';";
        $sql = "INSERT INTO usuario (USUARIO_nombre, USUARIO_apellido_p, USUARIO_apellido_m, USUARIO_mail, USUARIO_clave, CUENTA_CUENTA_id) VALUES ('$nombre', '$apellidoP', '$apellidoM','$mail','$clave',$cuenta_cuentaId);";
-       $comprobacion= mysqli_query($conexion, $exquery);
+       $comprobacion= mysqli_query($conexion->conn(), $exquery);
        $resultado = mysqli_fetch_object($comprobacion);
        if(is_null($resultado)){
-           $result= mysqli_query($conexion, $sql);
+           $result= mysqli_query($conexion->conn(), $sql);
            $query =  "select max(USUARIO_id) as id from  usuario";
            $resultado = mysqli_query($conexion, $query);
            $ultimoIsertado = mysqli_fetch_object($resultado);
