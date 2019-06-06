@@ -20,7 +20,7 @@ class ServicioDAO{
         }
         return $se;
     }
-    public static function functionName() {
+    public static function findAllReparacion() {
         $conexion = new Conexion();
         $se=[];
         $sql="SELECT * FROM servicios WHERE SERVICIO_TIPO='reparacion' AND SERVICIO_estado=1;";
