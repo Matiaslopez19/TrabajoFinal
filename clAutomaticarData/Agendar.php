@@ -13,7 +13,6 @@ class Agendar{
     private $agendar_patente;
     private $agendar_comuna;
     private $agendar_direccion;
-    private $agendar_ruta_foto;
     private $servicios_servicios_id;
     private $usuario_usuario_id;
     
@@ -43,10 +42,6 @@ class Agendar{
 
     function getAgendar_direccion() {
         return $this->agendar_direccion;
-    }
-
-    function getAgendar_ruta_foto() {
-        return $this->agendar_ruta_foto;
     }
 
     function getServicios_servicios_id() {
@@ -85,10 +80,6 @@ class Agendar{
         $this->agendar_direccion = $agendar_direccion;
     }
 
-    function setAgendar_ruta_foto($agendar_ruta_foto) {
-        $this->agendar_ruta_foto = $agendar_ruta_foto;
-    }
-
     function setServicios_servicios_id($servicios_servicios_id) {
         $this->servicios_servicios_id = $servicios_servicios_id;
     }
@@ -97,14 +88,13 @@ class Agendar{
         $this->usuario_usuario_id = $usuario_usuario_id;
     }
 
-    function __construct($agendar_hora, $agendar_fecha, $agendar_tipo_servicio, $agendar_patente, $agendar_comuna, $agendar_direccion, $agendar_ruta_foto, $servicios_servicios_id, $usuario_usuario_id) {
+    function __construct($agendar_hora, $agendar_fecha, $agendar_tipo_servicio, $agendar_patente, $agendar_comuna, $agendar_direccion, $servicios_servicios_id, $usuario_usuario_id) {
         $this->agendar_hora = $agendar_hora;
         $this->agendar_fecha = $agendar_fecha;
         $this->agendar_tipo_servicio = $agendar_tipo_servicio;
         $this->agendar_patente = $agendar_patente;
         $this->agendar_comuna = $agendar_comuna;
         $this->agendar_direccion = $agendar_direccion;
-        $this->agendar_ruta_foto = $agendar_ruta_foto;
         $this->servicios_servicios_id = $servicios_servicios_id;
         $this->usuario_usuario_id = $usuario_usuario_id;
     }
