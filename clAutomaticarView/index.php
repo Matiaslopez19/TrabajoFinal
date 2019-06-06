@@ -57,22 +57,11 @@
 										<h2>Reparación</h2>
 									</header>
 									<hr />
+                                                                        <?php foreach(ServicioDAO::findAllMantencion() as $service):?>
+                                                                        <a href='../clAutomaticarController/ServicioController.php?ser=<?php echo $service->getSe_id();?>'>
+                                                                            <?php echo $service->getSe_nombre();?></a>
+                                                                        <?php endforeach;?>
                                                                         
-									<p> Cambiar kit de embrague</p>
-                                                                        <p> Cambiar kit de distribución</p>
-                                                                        <p> Cambiar pastillas de freno</p>
-                                                                        <p> Cambiar inyectores</p>
-                                                                        <p> Cambiar junta de culata</p>
-                                                                        <p> Cambiar caja de cambios</p>
-                                                                        <p> Cambiar amortiguadores</p>
-                                                                        <p> Cambiar cuerpo de aceleración</p>
-                                                                        <p> Cambiar alternador</p>
-                                                                        <p> Cambiar batería</p>
-                                                                        <p> Cambiar retenes de válvula</p>
-                                           				<p> Cambiar cables de bujías</p>
-                                                                        <p> Cambiar radiador</p>
-                                                                        <p> Cambiar silenciador</p>
-                                                                        <p> Cambiar catalítico</p>
 								</div>
 							</div>
 						</div>
