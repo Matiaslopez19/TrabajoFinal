@@ -92,6 +92,7 @@
                                                                             <?php echo $service->getSe_nombre();?></a>
                                                                         <?php endforeach;?>
 								</div>
+                                                            
 							</div>
 						</div>
 
