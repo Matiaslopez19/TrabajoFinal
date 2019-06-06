@@ -12,7 +12,7 @@ class ServicioDAO{
     public static function findAllMantencion() {
         $conexion = new Conexion();
         $se=[];
-        $sql="SELECT * FROM servicios WHERE SERVICIO_tipo='mantencion'";
+        $sql="SELECT * FROM servicios WHERE SERVICIO_tipo='mantencion' AND SERVICIO_estado=1";
         $result= mysqli_query($conexion->conn(), $sql);
         if ($result->num_rows >=1) {
             $row= mysqli_fetch_array($result);
@@ -23,7 +23,7 @@ class ServicioDAO{
     public static function functionName() {
         $conexion = new Conexion();
         $se=[];
-        $sql="SELECT * FROM servicios WHERE SERVICIO_TIPO='reparacion';";
+        $sql="SELECT * FROM servicios WHERE SERVICIO_TIPO='reparacion' AND SERVICIO_estado=1;";
         $result = mysqli_query($conexion->conn(), $sql);
         if ($result->num_rows >=1) {
             $row = mysqli_fetch_array($result);
