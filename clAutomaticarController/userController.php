@@ -16,8 +16,9 @@ if (isset($_POST['2'])) {
         $userDAO = new UserDAO();
         //var_dump($userDAO);
         $us = $userDAO->login($userName, $userPass);
-        if ($us != NULL) {
+        if ($us) {
             //echo 'ingreso exitoso';
+            var_dump($us);
             $_SESSION['user'] = $us;
             include('../clAutomaticarView/InicioCliente.php');
         } else {
