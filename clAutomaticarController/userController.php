@@ -6,23 +6,18 @@ include '../clAutomaticarDAO/UserDAO.php';
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-if (isset($_POST['2'])) {
-    if (!isset($_POST['username'])) {
-        header("Location: http://localhost:81/TrabajoFinal/clAutomaticarView/index.php");
+if (isset($_POST['2'])) { //se revise el name del boton del formulario
+    if (!isset($_POST['username'])) { //se verifica si el campo de nombre esta lleno o vacio
+        header("Location: http://localhost:81/TrabajoFinal/clAutomaticarView/index.php");// si no esta lleno, te redireccionara al index
     } else {
-        $userName = $_POST['username'];
-        $userPass = $_POST['userpass'];
-        //echo 'recibidos';
-        $userDAO = new UserDAO();
-        //var_dump($userDAO);
+        $userName = $_POST['username'];//toma el mail
+        $userPass = $_POST['userpass'];//toma la clave
+        $userDAO = new UserDAO();//llama a la clase DAO
         $us = $userDAO->login($userName, $userPass);
         if ($us) {
-            //echo 'ingreso exitoso';
-            var_dump($us);
             $_SESSION['user'] = $us;
             include('../clAutomaticarView/InicioCliente.php');
         } else {
-            $error = "Usuario o contraseña incorrecta";
             include('../clAutomaticarView/Login.php');
         }
     }
