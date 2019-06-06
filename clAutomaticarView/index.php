@@ -87,13 +87,10 @@
 										<h2>Mantención</h2>
 									</header>
 									<hr />
-                                                                        <p> Cambiar aceite de motor</p>
-                                                                        <p> Cambiar filtro de aceite</p>
-                                                                        <p> Cambiar filtro de aire</p>
-                                                                        <p> Cambiar líquido de frenos</p>
-                                                                        <p> Cambiar líquido refrigerante</p>
-                                                                        <p> Cambiar bujías</p>
-                                                                        <p> Cambiar aceite de caja</p>
+                                                                        <?php foreach(ServicioDAO::findAllMantencion() as $service):?>
+                                                                        <a href='../clAutomaticarController/ServicioController.php?ser="<?php $service->getSe_id();?>"'>
+                                                                            <?php echo $service->getSe_nombre();?></a>
+                                                                        <?php endforeach;?>
 								</div>
 							</div>
 						</div>
