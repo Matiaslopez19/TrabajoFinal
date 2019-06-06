@@ -11,13 +11,13 @@ include '../clAutomaticarData/conexion.php';
 class ServicioDAO{
     public static function findAllMantencion() {
         $conexion= new Conexion();
-        $se=null;
+        $se=[];
         $sql="SELECT * FROM servicios where SERVICIO_tipo='mantencion'";
         $result= mysqli_query($conexion->conn(), $sql);
         
         if ($result->num_rows >=1) {
             $row= mysqli_fetch_array($result);
-            $se= new Servicio($row["SERVICIOS_id"], $row["SERVICIO_nombre"], $row["SERVICIO_tipo"], $row["SERVICIO_estado"]);
+            $se[]= new Servicio($row["SERVICIOS_id"], $row["SERVICIO_nombre"], $row["SERVICIO_tipo"], $row["SERVICIO_estado"]);
         }
         return $se;
     }
