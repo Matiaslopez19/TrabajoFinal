@@ -21,7 +21,7 @@
 			<nav id="menu">
 				<ul class="links">
 					<li><a href="index.php">Inicio</a></li>
-					<li><a href="#one">Servicios</a></li>
+                                        <li><a href="Login.php">Login Admin/Trabajador</a></li>
                                         <li><a href="#three">Nuestra empresa</a></li>
 				</ul>
 			</nav>
@@ -31,7 +31,7 @@
 					<h1>AutomatiCar</h1>
 					<p>Nuestro software te brindará el control y el manejo indispensable<br/>
 					que necesitas para tu<a href="#"> Taller mecánico </a></p>
-					<a href="Login.php" class="button special scrolly">Iniciar sesión/Regístrate</a>
+					<a href="#one" class="button special scrolly">Servicios</a>
 				</div>
 			</section>
 
