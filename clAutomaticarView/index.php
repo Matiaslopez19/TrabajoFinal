@@ -4,6 +4,7 @@
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 -->
+<?php include '../clAutomaticarDAO/ServicioDAO.php';?>
 <html>
 	<head>
 		<title>AutomatiCar</title>
@@ -56,6 +57,7 @@
 										<h2>Reparación</h2>
 									</header>
 									<hr />
+                                                                        
 									<p> Cambiar kit de embrague</p>
                                                                         <p> Cambiar kit de distribución</p>
                                                                         <p> Cambiar pastillas de freno</p>
