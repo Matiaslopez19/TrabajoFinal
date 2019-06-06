@@ -168,10 +168,6 @@
                             </div>
                         </section>
                         <br>
-                        <div class="field half">
-                            <label>Imagen</label>
-                            <input name="rutaImagen" id="direccion" type="file" placeholder="Dirección">
-                        </div>
                         <ul class="actions align-center">
                            <!-- <li><input type="button" class="button special" value="Atrás" onClick=" window.location.href = '.php'"></li> -->
                         </ul>
