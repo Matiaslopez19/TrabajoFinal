@@ -10,14 +10,25 @@ include '../clAutomaticarData/conexion.php';
 
 class ServicioDAO{
     public static function findAllMantencion() {
-        $conexion= new Conexion();
+        $conexion = new Conexion();
         $se=[];
-        $sql="SELECT * FROM servicios where SERVICIO_tipo='mantencion'";
+        $sql="SELECT * FROM servicios WHERE SERVICIO_tipo='mantencion'";
         $result= mysqli_query($conexion->conn(), $sql);
-        
         if ($result->num_rows >=1) {
             $row= mysqli_fetch_array($result);
             $se[]= new Servicio($row["SERVICIOS_id"], $row["SERVICIO_nombre"], $row["SERVICIO_tipo"], $row["SERVICIO_estado"]);
+        }
+        return $se;
+    }
+    public static function functionName() {
+        $conexion = new Conexion();
+        $se=[];
+        $sql="SELECT * FROM servicios WHERE SERVICIO_TIPO='reparacion';";
+        $result = mysqli_query($conexion->conn(), $sql);
+        if ($result->num_rows >=1) {
+            $row = mysqli_fetch_array($result);
+            $se[]= new Servicio($row["SERVICIOS_id"], $row["SERVICIO_nombre"], 
+                    $row["SERVICIO_tipo"], $row["SERVICIO_estado"]);
         }
         return $se;
     }
