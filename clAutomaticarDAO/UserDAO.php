@@ -11,7 +11,7 @@ class UserDAO{
         $conexion = mysqli_connect('localhost','root','','automaticar');
         $sql ="SELECT * FROM usuario WHERE USUARIO_mail='$mail' and USUARIO_clave='$pass';";
         $result = mysqli_query($conexion, $sql);
-        if($result){
+        if($result != null){
             $row = mysqli_fetch_array($result);
             $u = new User($row["USUARIO_id"], $row["USUARIO_nombre"], 
                     $row["USUARIO_apellido_p"], $row["USUARIO_apellido_m"], 
