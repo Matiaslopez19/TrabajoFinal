@@ -14,7 +14,7 @@ class UserDAO{
         $result = mysqli_query($conexion->conn(), $sql);
         
         if($result->num_rows == 1){
-             var_dump($result);
+             //var_dump($result);
             $row = mysqli_fetch_array($result);
             $u = new User($row["USUARIO_id"], $row["USUARIO_nombre"], 
                     $row["USUARIO_apellido_p"], $row["USUARIO_apellido_m"], 
@@ -23,7 +23,7 @@ class UserDAO{
             
         }else{
            echo "no hubo resultados";
-            var_dump($result);
+            //var_dump($result);
         }
         return $u;
         }
