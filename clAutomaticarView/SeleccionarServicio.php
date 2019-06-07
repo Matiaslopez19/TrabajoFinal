@@ -1,9 +1,7 @@
 <?php
-    include '../clAutomaticarData/User.php';
-    session_start(); 
-    
+    //include '../clAutomaticarData/User.php';
+    session_start();
     $user = $_SESSION['user'];
-                    //var_dump($datos);
 ?><!DOCTYPE html>
 <html lang="en">
 
