@@ -19,7 +19,6 @@ class UserDAO{
                     $row["USUARIO_apellido_p"], $row["USUARIO_apellido_m"], 
                     $row["USUARIO_mail"], $row["USUARIO_clave"],
                     $row["CUENTA_CUENTA_id"]);
-            
         }else{
            echo "no hubo resultados";
             //var_dump($result);
