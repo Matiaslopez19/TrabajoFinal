@@ -72,10 +72,7 @@
 										<h2>Mantención</h2>
 									</header>
 									<hr />
-                                                                        <?php foreach(ServicioDAO::findAllMantencion() as $service):?>
-                                                                        <a href='../clAutomaticarController/ServicioController.php?ser=<?php echo $service->getSe_id();?>'>
-                                                                            <?php echo $service->getSe_nombre();?></a>
-                                                                        <?php endforeach;?>
+                                                                        <?php ServicioDAO::findAllMantencion()?>
 								</div>
                                                             
 							</div>
