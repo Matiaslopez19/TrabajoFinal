@@ -1,6 +1,6 @@
 <?php
      session_start();
-     include '../clAutomaticarData/Servicios';
+     include '../clAutomaticarData/Servicio';
      /*if (!$_SESSION["user"]) {
     
 }*/
