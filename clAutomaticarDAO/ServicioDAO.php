@@ -30,7 +30,7 @@ class ServicioDAO{
             $row = mysqli_fetch_array($result);
             $se[]= new Servicio($row["SERVICIOS_id"], $row["SERVICIO_nombre"], 
                     $row["SERVICIO_tipo"], $row["SERVICIO_estado"]);
-            var_dump($result);
+            var_dump($row);
         }
         return $se;
     }
