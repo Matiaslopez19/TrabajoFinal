@@ -1,8 +1,11 @@
 <?php
      session_start();
      include '../clAutomaticarData/Servicio.php';
+     include '../clAutomaticarDAO/ServicioDAO.php';
      /*if (!$_SESSION["user"]) {
     
 }*/
-$id=$_POST['ser'];
-echo $id;
+//echo $id;
+if (isset($_GET['ser'])) {
+    $id=$_GET['ser'];
+}
