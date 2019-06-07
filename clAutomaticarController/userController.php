@@ -18,7 +18,7 @@ if (isset($_POST['2'])) { //se revise el name del boton del formulario
         $userDAO = new UserDAO();//llama a la clase DAO
         $us = $userDAO->login($userName, $userPass);
         echo   "se llamo a la clase y su metodo";
-        var_dump($us);
+        //var_dump($us);
         if ($us) {
             $_SESSION['user'] = $us;
             include('../clAutomaticarView/SeleccionarServicio.php');
