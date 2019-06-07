@@ -31,7 +31,7 @@ class ServicioDAO{
             /*$se[]= new Servicio($row["SERVICIOS_id"], $row["SERVICIO_nombre"], 
                     $row["SERVICIO_tipo"], $row["SERVICIO_estado"]);*/
             //var_dump($row);
-            echo "<a href='../clAutomaticarController/ServicioController.php?ser='".$row["SERVICIOS_id"].">".$row["SERVICIO_nombre"]."</a>";
+            echo "<a href='../clAutomaticarController/ServicioController.php?ser=".$row["SERVICIOS_id"]."'>".$row["SERVICIO_nombre"]."</a>";
             echo "</br>";
         }
         //return $se;
