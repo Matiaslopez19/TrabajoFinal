@@ -15,7 +15,7 @@ class ServicioDAO{
         $result= mysqli_query($conexion->conn(), $sql);
         while ($row = mysqli_fetch_array($result)) {
             echo "<li>";
-            echo "<a href='../clAutomaticarController/ServicioController.php?ser=".$row["SERVICIOS_id"]."'>".$row["SERVICIO_nombre"]."</a>";
+            echo "<a href='../clAutomaticarController/serviciosController.php?ser=".$row["SERVICIOS_id"]."'>".$row["SERVICIO_nombre"]."</a>";
             echo "</br>";
             echo "</li>";
         }
@@ -27,7 +27,7 @@ class ServicioDAO{
         $result = mysqli_query($conexion->conn(), $sql);
         while ($row = mysqli_fetch_array($result)) {
             echo "<li>";
-            echo "<a href='../clAutomaticarController/ServicioController.php?ser=".$row["SERVICIOS_id"]."'>".$row["SERVICIO_nombre"]."</a>";
+            echo "<a href='../clAutomaticarController/serviciosController.php?ser=".$row["SERVICIOS_id"]."'>".$row["SERVICIO_nombre"]."</a>";
             echo "</br>";
             echo "</li>";
         }
