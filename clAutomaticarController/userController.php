@@ -16,7 +16,7 @@ if (isset($_POST['2'])) { //se revise el name del boton del formulario
         $us = $userDAO->login($userName, $userPass);
         if ($us) {
             $_SESSION['user'] = $us;
-            include('../clAutomaticarView/InicioCliente.php');
+            include('../clAutomaticarView/SeleccionarServicio.php');
         } else {
             include('../clAutomaticarView/Login.php');
         }
