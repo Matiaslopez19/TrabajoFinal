@@ -58,8 +58,8 @@
 									</header>
 									<hr />
                                                                         <?php foreach(ServicioDAO::findAllReparacion() as $service):?>
-                                                                        <a href='../clAutomaticarController/ServicioController.php?ser=<?php echo $service->getSe_id();?>'>
-                                                                            <?php echo $service->getSe_nombre();?></a>
+                                                                        <?php echo "<a href='../clAutomaticarController/ServicioController.php?ser=<?php".$service->getSe_id();">";?>
+                                                                            <?php echo $service->getSe_nombre()."</a>";?>
                                                                         <?php endforeach;?>
                                                                         
 								</div>
