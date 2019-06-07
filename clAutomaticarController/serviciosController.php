@@ -4,5 +4,5 @@
      /*if (!$_SESSION["user"]) {
     
 }*/
-$id=_POST["ser"];
+$id=_POST['ser'];
 echo $id;
