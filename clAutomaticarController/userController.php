@@ -7,13 +7,18 @@ include '../clAutomaticarDAO/UserDAO.php';
  * and open the template in the editor.
  */
 if (isset($_POST['2'])) { //se revise el name del boton del formulario
+    echo   "se recibio el click";
     if (!isset($_POST['username'])) { //se verifica si el campo de nombre esta lleno o vacio
-        header("Location: http://localhost:81/TrabajoFinal/clAutomaticarView/index.php");// si no esta lleno, te redireccionara al index
+        include('../clAutomaticarView/Login.php');// si no esta lleno, te redireccionara al index
     } else {
         $userName = $_POST['username'];//toma el mail
+        echo   "se recibio el mail";
         $userPass = $_POST['userpass'];//toma la clave
+        echo   "se recibio la password";
         $userDAO = new UserDAO();//llama a la clase DAO
         $us = $userDAO->login($userName, $userPass);
+        echo   "se llamo a la clase y su metodo";
+        var_dump($us);
         if ($us) {
             $_SESSION['user'] = $us;
             include('../clAutomaticarView/SeleccionarServicio.php');
