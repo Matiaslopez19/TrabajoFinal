@@ -1,6 +1,4 @@
 <?php
-    //include '../clAutomaticarData/User.php';
-    session_start();
     $user = $_SESSION['user'];
 ?><!DOCTYPE html>
 <html lang="en">
