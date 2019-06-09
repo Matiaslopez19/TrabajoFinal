@@ -27,7 +27,7 @@
 				</ul>
 			</nav>
 
-			<section id="banner" data-video="images/banner">
+			<section id="banner" data-video="../images/banner">
 				<div class="inner">
 					<h1>AutomatiCar</h1>
 					<p>Nuestro software te brindará el control y el manejo indispensable<br/>
@@ -50,7 +50,7 @@
 						<div>
 							<div class="box">
 								<div class="image fit">
-									<img src="images/pic02.jpg" alt="" />
+									<img src="../images/pic02.jpg" alt="" />
 								</div>
 								<div class="content">
 									<header class="align-center">
@@ -65,7 +65,7 @@
 						<div>
 							<div class="box">
 								<div class="image fit">
-									<img src="images/pic03.jpg" alt="" />
+									<img src="../images/pic03.jpg" alt="" />
 								</div>
 								<div class="content">
 									<header class="align-center">
@@ -89,7 +89,7 @@
 					<div>
 						<div class="box">
 							<div class="image fit">
-								<img src="images/pic02.jpg" alt="" />
+								<img src="../images/pic02.jpg" alt="" />
 							</div>
 							<div class="content">
 								<header class="align-center">
