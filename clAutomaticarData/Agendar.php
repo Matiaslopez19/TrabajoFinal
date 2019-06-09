@@ -7,11 +7,10 @@
  */
 class Agendar{
     private $agendar_id;
-    private $agendar_hora;
+    private $agendar_estado;
     private $agendar_fecha;
-    private $agendar_tipo_servicio;
+    private $agendar_lugar;
     private $agendar_patente;
-    private $agendar_comuna;
     private $agendar_direccion;
     private $servicios_servicios_id;
     private $usuario_usuario_id;
