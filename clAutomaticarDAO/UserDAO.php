@@ -38,7 +38,7 @@ class UserDAO{
            $ultimoIsertado = mysqli_fetch_object($resultado);
            if (!is_null($result)) {
                $u = new User($ultimoIsertado->id,$nombre,
-                       $apellidoP, $apellidoM,$mail,
+                       $mail, $apellidos,
                        $clave,$cuenta_cuentaId);
            }else{
            }
