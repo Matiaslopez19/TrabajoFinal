@@ -5,67 +5,65 @@
  * and open the template in the editor.
  */
 class User{
-    private $USUARIO_id;
-    private $USUARIO_nombre;
-    private $USUARIO_apellido_p;
-    private $USUARIO_apellido_m;
-    private $USUARIO_mail;
-    private $USUARIO_clave;
-    private $CUENTA_CUENTA_id;
-    public function  foo(){
-        return $this->USUARIO_nombre." --- Hola";
+    private $cli_id;
+    private $cli_nombre;
+    private $cli_apellidos;
+    private $cli_mail;
+    private $cli_clave;
+    private $cli_tipo;
+    function getCli_id() {
+        return $this->cli_id;
     }
-            function getUSUARIO_id() {
-        return $this->USUARIO_id;
+
+    function getCli_nombre() {
+        return $this->cli_nombre;
     }
-    function getUSUARIO_nombre() {
-        return $this->USUARIO_nombre;
+
+    function getCli_apellidos() {
+        return $this->cli_apellidos;
     }
-    function getUSUARIO_apellido_p() {
-        return $this->USUARIO_apellido_p;
+
+    function getCli_mail() {
+        return $this->cli_mail;
     }
-    function getUSUARIO_apellido_m() {
-        return $this->USUARIO_apellido_m;
+
+    function getCli_clave() {
+        return $this->cli_clave;
     }
-    function getUSUARIO_mail() {
-        return $this->USUARIO_mail;
+
+    function getCli_tipo() {
+        return $this->cli_tipo;
     }
-    function getUSUARIO_clave() {
-        return $this->USUARIO_clave;
+
+    function setCli_id($cli_id) {
+        $this->cli_id = $cli_id;
     }
-    function getCUENTA_CUENTA_id() {
-        return $this->CUENTA_CUENTA_id;
+
+    function setCli_nombre($cli_nombre) {
+        $this->cli_nombre = $cli_nombre;
     }
-    function setUSUARIO_id($USUARIO_id) {
-        $this->USUARIO_id = $USUARIO_id;
+
+    function setCli_apellidos($cli_apellidos) {
+        $this->cli_apellidos = $cli_apellidos;
     }
-    function setUSUARIO_nombre($USUARIO_nombre) {
-        $this->USUARIO_nombre = $USUARIO_nombre;
+
+    function setCli_mail($cli_mail) {
+        $this->cli_mail = $cli_mail;
     }
-    function setUSUARIO_apellido_p($USUARIO_apellido_p) {
-        $this->USUARIO_apellido_p = $USUARIO_apellido_p;
+
+    function setCli_clave($cli_clave) {
+        $this->cli_clave = $cli_clave;
     }
-    function setUSUARIO_apellido_m($USUARIO_apellido_m) {
-        $this->USUARIO_apellido_m = $USUARIO_apellido_m;
+    function setCli_tipo($cli_tipo) {
+        $this->cli_tipo = $cli_tipo;
     }
-    function setUSUARIO_mail($USUARIO_mail) {
-        $this->USUARIO_mail = $USUARIO_mail;
+    function __construct($cli_id, $cli_nombre, $cli_apellidos, $cli_mail, $cli_clave, $cli_tipo) {
+        $this->cli_id = $cli_id;
+        $this->cli_nombre = $cli_nombre;
+        $this->cli_apellidos = $cli_apellidos;
+        $this->cli_mail = $cli_mail;
+        $this->cli_clave = $cli_clave;
+        $this->cli_tipo = $cli_tipo;
     }
-    function setUSUARIO_clave($USUARIO_clave) {
-        $this->USUARIO_clave = $USUARIO_clave;
-    }
-    function setCUENTA_CUENTA_id($CUENTA_CUENTA_id) {
-        $this->CUENTA_CUENTA_id = $CUENTA_CUENTA_id;
-    }
-    function __construct($USUARIO_id,$USUARIO_nombre, $USUARIO_apellido_p, $USUARIO_apellido_m, $USUARIO_mail, $USUARIO_clave, $CUENTA_CUENTA_id) {
-        $this->USUARIO_id = $USUARIO_id;
-        $this->USUARIO_nombre = $USUARIO_nombre;
-        $this->USUARIO_apellido_p = $USUARIO_apellido_p;
-        $this->USUARIO_apellido_m = $USUARIO_apellido_m;
-        $this->USUARIO_mail = $USUARIO_mail;
-        $this->USUARIO_clave = $USUARIO_clave;
-        $this->CUENTA_CUENTA_id = $CUENTA_CUENTA_id;
-    }
-    
 }
 
