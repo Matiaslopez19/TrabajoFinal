@@ -11,11 +11,11 @@ include '../clAutomaticarData/conexion.php';
 class ServicioDAO{
     public static function findAllMantencion() {
         $conexion = new Conexion();
-        $sql="SELECT * FROM servicios WHERE SERVICIO_tipo='mantencion' AND SERVICIO_estado=1";
+        $sql="SELECT * FROM servicios WHERE ser_tipo='mantencion' AND ser_estado=1";
         $result= mysqli_query($conexion->conn(), $sql);
         while ($row = mysqli_fetch_array($result)) {
             echo "<li>";
-            echo "<a href='../clAutomaticarController/serviciosController.php?ser=".$row["SERVICIOS_id"]."'>".$row["SERVICIO_nombre"]."</a>";
+            echo "<a href='../clAutomaticarController/serviciosController.php?ser=".$row["ser_id"]."'>".$row["ser_nombre"]."</a>";
             echo "</br>";
             echo "</li>";
         }
@@ -23,11 +23,11 @@ class ServicioDAO{
     }
     public static function findAllReparacion() {
         $conexion = new Conexion();
-        $sql="SELECT * FROM servicios WHERE SERVICIO_TIPO='reparacion' AND SERVICIO_estado=1;";
+        $sql="SELECT * FROM servicios WHERE ser_tipo='reparacion' AND ser_estado=1;";
         $result = mysqli_query($conexion->conn(), $sql);
         while ($row = mysqli_fetch_array($result)) {
             echo "<li>";
-            echo "<a href='../clAutomaticarController/serviciosController.php?ser=".$row["SERVICIOS_id"]."'>".$row["SERVICIO_nombre"]."</a>";
+            echo "<a href='../clAutomaticarController/serviciosController.php?ser=".$row["ser_id"]."'>".$row["ser_nombre"]."</a>";
             echo "</br>";
             echo "</li>";
         }
