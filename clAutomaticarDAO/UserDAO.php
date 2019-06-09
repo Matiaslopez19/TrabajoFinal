@@ -28,7 +28,7 @@ class UserDAO{
        $u = null;
        $conexion = new Conexion();
        $exquery="SELECT * FROM cliente WHERE cli_mail='$mail';";
-       $sql = "INSERT INTO cliente (cli_nombre,USUARIO_mail, cli_apellidos, cli_clave, cli_tipo) VALUES ('$nombre','$mail','$apellidos',$clave',$cuenta_cuentaId);";
+       $sql = "INSERT INTO cliente (cli_nombre, cli_mail, cli_apellidos, cli_clave, cli_tipo) VALUES ('$nombre','$mail','$apellidos',$clave',$cuenta_cuentaId);";
        $comprobacion= mysqli_query($conexion->conn(), $exquery);
        $resultado = mysqli_fetch_object($comprobacion);
        if(is_null($resultado)){
