@@ -42,10 +42,9 @@ class UserDAO{
                        $clave,$cuenta_cuentaId);
            }else{
            }
-       }else{   
+       }else{
        }
        return $u;
-       
     }
 }
 ?>
