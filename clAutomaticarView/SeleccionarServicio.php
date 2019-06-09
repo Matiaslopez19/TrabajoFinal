@@ -1,30 +1,26 @@
-<?php
+  <?php
     include '../clAutomaticarDAO/ServicioDAO.php';
     $user = $_SESSION['user'];
-?><!DOCTYPE html>
+  ?>
+<!DOCTYPE html>
 <html lang="en">
-
-    <head>
+  <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <title><?= $user->getUSUARIO_nombre(); ?></title>
-        <!-- Bootstrap core CSS -->
-        <link href="../assets/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <!-- Custom styles for this template -->
-        <link href="../assets/css/simple-sidebar.css" rel="stylesheet" type="text/css"/>
-
-    </head>
-
-    <body>
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title><?= $user->getUSUARIO_nombre(); ?></title>
+  <!-- Bootstrap core CSS -->
+  <link href="../assets/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <!-- Custom styles for this template -->
+  <link href="../assets/css/simple-sidebar.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
         <div class="d-flex" id="wrapper">
-
             <!-- Sidebar -->
             <div class="bg-light border-right" id="sidebar-wrapper">
                 <div class="sidebar-heading">AutomatiCar</div>
