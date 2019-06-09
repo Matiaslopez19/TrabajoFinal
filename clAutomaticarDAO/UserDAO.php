@@ -41,10 +41,24 @@ class UserDAO{
                        $mail, $apellidos,
                        $clave,$cuenta_cuentaId);
            }else{
+           
            }
        }else{
        }
        return $u;
+    }
+    public function eliminarUsuario($mail) {
+        $conexion = new Conexion();
+        $exquery = "SELECT * FROM cliente WHERE cli_mail='$mail';";
+        $sql = "DELETE FROM cliente WHERE cli_mail='$mail';";
+        $comprobacion = mysqli_query($conexion, $exquery);
+        $u = null;
+        if (is_null($comprobacion)) {
+            $resultado= mysqli_query($conexion, $sql);
+            
+        }else{
+            echo '';
+        }
     }
 }
 ?>
