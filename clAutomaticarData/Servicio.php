@@ -1,47 +1,47 @@
 <?php
 class Servicio{
-    private $se_id;
-    private $se_nombre;
-    private $se_tipo;
-    private $se_estado;
+    private $ser_id;
+    private $ser_nombre;
+    private $ser_tipo;
+    private $ser_estado;
     
-    function getSe_id() {
-        return $this->se_id;
+    function getSer_id() {
+        return $this->ser_id;
     }
 
-    function getSe_nombre() {
-        return $this->se_nombre;
+    function getSer_nombre() {
+        return $this->ser_nombre;
     }
 
-    function getSe_tipo() {
-        return $this->se_tipo;
+    function getSer_tipo() {
+        return $this->ser_tipo;
     }
 
-    function getSe_estado() {
-        return $this->se_estado;
+    function getSer_estado() {
+        return $this->ser_estado;
     }
 
-    function setSe_id($se_id) {
-        $this->se_id = $se_id;
+    function setSer_id($ser_id) {
+        $this->ser_id = $ser_id;
     }
 
-    function setSe_nombre($se_nombre) {
-        $this->se_nombre = $se_nombre;
+    function setSer_nombre($ser_nombre) {
+        $this->ser_nombre = $ser_nombre;
     }
 
-    function setSe_tipo($se_tipo) {
-        $this->se_tipo = $se_tipo;
+    function setSer_tipo($ser_tipo) {
+        $this->ser_tipo = $ser_tipo;
     }
 
-    function setSe_estado($se_estado) {
-        $this->se_estado = $se_estado;
+    function setSer_estado($ser_estado) {
+        $this->ser_estado = $ser_estado;
     }
 
-    function __construct($se_id, $se_nombre, $se_tipo, $se_estado) {
-        $this->se_id = $se_id;
-        $this->se_nombre = $se_nombre;
-        $this->se_tipo = $se_tipo;
-        $this->se_estado = $se_estado;
+    function __construct($ser_id, $ser_nombre, $ser_tipo, $ser_estado) {
+        $this->ser_id = $ser_id;
+        $this->ser_nombre = $ser_nombre;
+        $this->ser_tipo = $ser_tipo;
+        $this->ser_estado = $ser_estado;
     }
 
 }
