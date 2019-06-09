@@ -1,4 +1,5 @@
 <?php
+    include '../clAutomaticarDAO/ServicioDAO.php';
     $user = $_SESSION['user'];
 ?><!DOCTYPE html>
 <html lang="en">
