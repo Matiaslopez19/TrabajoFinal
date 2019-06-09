@@ -11,7 +11,7 @@ include '../clAutomaticarData/conexion.php';
 class ServicioDAO{
     public static function findAllMantencion() {
         $conexion = new Conexion();
-        $sql="SELECT * FROM servicios WHERE ser_tipo='mantencion' AND ser_estado=1";
+        $sql="SELECT * FROM servicio WHERE ser_tipo='mantencion' AND ser_estado=1";
         $result= mysqli_query($conexion->conn(), $sql);
         while ($row = mysqli_fetch_array($result)) {
             echo "<li>";
@@ -23,7 +23,7 @@ class ServicioDAO{
     }
     public static function findAllReparacion() {
         $conexion = new Conexion();
-        $sql="SELECT * FROM servicios WHERE ser_tipo='reparacion' AND ser_estado=1;";
+        $sql="SELECT * FROM servicio WHERE ser_tipo='reparacion' AND ser_estado=1;";
         $result = mysqli_query($conexion->conn(), $sql);
         while ($row = mysqli_fetch_array($result)) {
             echo "<li>";
