@@ -6,67 +6,47 @@
  * and open the template in the editor.
  */
 class Administrador{
-    private $administrador_id;
-    private $administrador_nombre;
-    private $administrador_apellido_p;
-    private $administrador_mail;
-    private $administrador_contraseña;
-    private $cuenta_cuenta_id;
-    
-    function getAdministrador_id() {
-        return $this->administrador_id;
+    private $adm_id;
+    private $adm_nombre;
+    private $adm_usuario;
+    private $adm_clave;
+  
+    function getAdm_id() {
+        return $this->adm_id;
     }
 
-    function getAdministrador_nombre() {
-        return $this->administrador_nombre;
+    function getAdm_nombre() {
+        return $this->adm_nombre;
     }
 
-    function getAdministrador_apellido_p() {
-        return $this->administrador_apellido_p;
+    function getAdm_usuario() {
+        return $this->adm_usuario;
     }
 
-    function getAdministrador_mail() {
-        return $this->administrador_mail;
+    function getAdm_clave() {
+        return $this->adm_clave;
     }
 
-    function getAdministrador_contraseña() {
-        return $this->administrador_contraseña;
+    function setAdm_id($adm_id) {
+        $this->adm_id = $adm_id;
     }
 
-    function getCuenta_cuenta_id() {
-        return $this->cuenta_cuenta_id;
+    function setAdm_nombre($adm_nombre) {
+        $this->adm_nombre = $adm_nombre;
     }
 
-    function setAdministrador_id($administrador_id) {
-        $this->administrador_id = $administrador_id;
+    function setAdm_usuario($adm_usuario) {
+        $this->adm_usuario = $adm_usuario;
     }
 
-    function setAdministrador_nombre($administrador_nombre) {
-        $this->administrador_nombre = $administrador_nombre;
+    function setAdm_clave($adm_clave) {
+        $this->adm_clave = $adm_clave;
     }
 
-    function setAdministrador_apellido_p($administrador_apellido_p) {
-        $this->administrador_apellido_p = $administrador_apellido_p;
+    function __construct($adm_id, $adm_nombre, $adm_usuario, $adm_clave) {
+        $this->adm_id = $adm_id;
+        $this->adm_nombre = $adm_nombre;
+        $this->adm_usuario = $adm_usuario;
+        $this->adm_clave = $adm_clave;
     }
-
-    function setAdministrador_mail($administrador_mail) {
-        $this->administrador_mail = $administrador_mail;
-    }
-
-    function setAdministrador_contraseña($administrador_contraseña) {
-        $this->administrador_contraseña = $administrador_contraseña;
-    }
-
-    function setCuenta_cuenta_id($cuenta_cuenta_id) {
-        $this->cuenta_cuenta_id = $cuenta_cuenta_id;
-    }
-
-    function __construct($administrador_nombre, $administrador_apellido_p, $administrador_mail, $administrador_contraseña, $cuenta_cuenta_id) {
-        $this->administrador_nombre = $administrador_nombre;
-        $this->administrador_apellido_p = $administrador_apellido_p;
-        $this->administrador_mail = $administrador_mail;
-        $this->administrador_contraseña = $administrador_contraseña;
-        $this->cuenta_cuenta_id = $cuenta_cuenta_id;
-    }
-
 }
