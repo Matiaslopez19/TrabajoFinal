@@ -13,7 +13,6 @@
 		<link rel="stylesheet" href="../assets/css/main.css" />
 	</head>
 	<body>
-
 			<header id="header" class="alt">
                             <div class="logo"><a href="index.php">AutomatiCar </a></div>
 				<a href="#menu" class="toggle"><span>Menú</span></a>
@@ -26,7 +25,6 @@
                                         <li><a href="#three">Nuestra empresa</a></li>
 				</ul>
 			</nav>
-
 			<section id="banner" data-video="../images/banner">
 				<div class="inner">
 					<h1>AutomatiCar</h1>
@@ -35,18 +33,10 @@
 					<a href="#one" class="button special scrolly">Servicios</a>
 				</div>
 			</section>
-
 		<!-- One -->
-			
-
-
-
-
-
 			<section id="one" class="wrapper style2">
 				<div class="inner">
 					<div class="grid-style">
-
 						<div>
 							<div class="box">
 								<div class="image fit">
@@ -61,7 +51,6 @@
 								</div>
 							</div>
 						</div>
-
 						<div>
 							<div class="box">
 								<div class="image fit">
@@ -73,16 +62,13 @@
 									</header>
 									<hr />
                                                                         <?php ServicioDAO::findAllMantencion()?>
-								</div>
-                                                            
+								</div>      
 							</div>
 						</div>
-
 					</div>
 				</div>
 			</section>
                 			<section id="two" class="wrapper style3">
-
 			</section>
                 <section id="three" class="wrapper style2">
 				<div class="inner">
@@ -109,27 +95,17 @@
 					</div>
 				</div>
 			</section>
-
-
 			<section id="four" class="wrapper style3">
 				<div class="inner">
-
 					<header class="align-center">
 					</header>
-
 				</div>
 			</section>
-
-
-			
-
-
 			<script src="../assets/js/jquery.min.js"></script>
 			<script src="../assets/js/jquery.scrolly.min.js"></script>
 			<script src="../assets/js/jquery.scrollex.min.js"></script>
 			<script src="../assets/js/skel.min.js"></script>
 			<script src="../assets/js/util.js"></script>
 			<script src="../assets/js/main.js"></script>
-
 	</body>
 </html>
