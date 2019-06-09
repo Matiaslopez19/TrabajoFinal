@@ -10,26 +10,25 @@ class UserDAO{
     public function login($mail, $pass){
         $u= null; 
         $conexion = new Conexion();
-        $sql ="SELECT * FROM usuario WHERE USUARIO_mail='$mail' and USUARIO_clave='$pass';";
+        $sql ="SELECT * FROM cliente WHERE cli_mail='$mail' and cli_clave='$pass';";
         $result = mysqli_query($conexion->conn(), $sql);
         if($result->num_rows == 1){
              //var_dump($result);
             $row = mysqli_fetch_array($result);
-            $u = new User($row["USUARIO_id"], $row["USUARIO_nombre"], 
-                    $row["USUARIO_apellido_p"], $row["USUARIO_apellido_m"], 
-                    $row["USUARIO_mail"], $row["USUARIO_clave"],
-                    $row["CUENTA_CUENTA_id"]);
+            $u = new User($row["cli_id"], $row["cli_nombre"], 
+                    $row["cli_mail"], $row["cli_apellidos"], $row["cli_clave"],
+                    $row["cli_tipo"]);
         }else{
            echo "no hubo resultados";
             //var_dump($result);
         }
         return $u;
         }
-    public function agregarUsuario($nombre, $apellidoP, $apellidoM, $mail, $clave, $cuenta_cuentaId) {
+    public function agregarUsuario($nombre, $apellidos, $mail, $clave, $cuenta_cuentaId) {
        $u = null;
        $conexion = new Conexion();
-       $exquery="SELECT * FROM usuario WHERE USUARIO_mail='$mail';";
-       $sql = "INSERT INTO usuario (USUARIO_nombre, USUARIO_apellido_p, USUARIO_apellido_m, USUARIO_mail, USUARIO_clave, CUENTA_CUENTA_id) VALUES ('$nombre', '$apellidoP', '$apellidoM','$mail','$clave',$cuenta_cuentaId);";
+       $exquery="SELECT * FROM cliente WHERE cli_mail='$mail';";
+       $sql = "INSERT INTO cliente (cli_nombre,USUARIO_mail, cli_apellidos, cli_clave, cli_tipo) VALUES ('$nombre','$mail','$apellidos',$clave',$cuenta_cuentaId);";
        $comprobacion= mysqli_query($conexion->conn(), $exquery);
        $resultado = mysqli_fetch_object($comprobacion);
        if(is_null($resultado)){
