@@ -1,245 +1,119 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>FullCalendar by Creative Tim </title>
+<meta charset='utf-8' />
+<link href="../assets/fullcalendar/packages/core/main.css" rel="stylesheet" type="text/css"/>
+<link href="../assets/fullcalendar/packages/list/main.css" rel="stylesheet" type="text/css"/>
+<script src="../assets/fullcalendar/packages/core/main.js" type="text/javascript"></script>
+<script src="../assets/fullcalendar/packages/list/main.js" type="text/javascript"></script>
 
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-
-
-<link href='assets/css/fullcalendar.css' rel='stylesheet' />
-<link href='assets/css/fullcalendar.print.css' rel='stylesheet' media='print' />
-<script src='assets/js/jquery-1.10.2.js' type="text/javascript"></script>
-<script src='assets/js/jquery-ui.custom.min.js' type="text/javascript"></script>
-<script src='assets/js/fullcalendar.js' type="text/javascript"></script>
 <script>
-	$(document).ready(function() {
-	    var date = new Date();
-		var d = date.getDate();
-		var m = date.getMonth();
-		var y = date.getFullYear();
 
-		/*  className colors
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
 
-		className: default(transparent), important(red), chill(pink), success(green), info(blue)
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      plugins: [ 'list' ],
 
-		*/
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'listDay,listWeek,dayGridMonth'
+      },
 
+      // customize the button names,
+      // otherwise they'd all just say "list"
+      views: {
+        listDay: { buttonText: 'list day' },
+        listWeek: { buttonText: 'list week' }
+      },
 
-		/* initialize the external events
-		-----------------------------------------------------------------*/
+      defaultView: 'listWeek',
+      defaultDate: '2019-06-12',
+      navLinks: true, // can click day/week names to navigate views
+      editable: true,
+      eventLimit: true, // allow "more" link when too many events
+      events: [
+        {
+          title: 'All Day Event',
+          start: '2019-06-01'
+        },
+        {
+          title: 'Long Event',
+          start: '2019-06-07',
+          end: '2019-06-10'
+        },
+        {
+          groupId: 999,
+          title: 'Repeating Event',
+          start: '2019-06-09T16:00:00'
+        },
+        {
+          groupId: 999,
+          title: 'Repeating Event',
+          start: '2019-06-16T16:00:00'
+        },
+        {
+          title: 'Conference',
+          start: '2019-06-11',
+          end: '2019-06-13'
+        },
+        {
+          title: 'Meeting',
+          start: '2019-06-12T10:30:00',
+          end: '2019-06-12T12:30:00'
+        },
+        {
+          title: 'Lunch',
+          start: '2019-06-12T12:00:00'
+        },
+        {
+          title: 'Meeting',
+          start: '2019-06-12T14:30:00'
+        },
+        {
+          title: 'Happy Hour',
+          start: '2019-06-12T17:30:00'
+        },
+        {
+          title: 'Dinner',
+          start: '2019-06-12T20:00:00'
+        },
+        {
+          title: 'Birthday Party',
+          start: '2019-06-13T07:00:00'
+        },
+        {
+          title: 'Click for Google',
+          url: 'http://google.com/',
+          start: '2019-06-28'
+        }
+      ]
+    });
 
-		$('#external-events div.external-event').each(function() {
-
-			// create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
-			// it doesn't need to have a start or end
-			var eventObject = {
-				title: $.trim($(this).text()) // use the element's text as the event title
-			};
-
-			// store the Event Object in the DOM element so we can get to it later
-			$(this).data('eventObject', eventObject);
-
-			// make the event draggable using jQuery UI
-			$(this).draggable({
-				zIndex: 999,
-				revert: true,      // will cause the event to go back to its
-				revertDuration: 0  //  original position after the drag
-			});
-
-		});
-
-
-		/* initialize the calendar
-		-----------------------------------------------------------------*/
-
-		var calendar =  $('#calendar').fullCalendar({
-			header: {
-				left: 'title',
-				center: 'agendaDay,agendaWeek,month',
-				right: 'prev,next today'
-			},
-			editable: true,
-			firstDay: 1, //  1(Monday) this can be changed to 0(Sunday) for the USA system
-			selectable: true,
-			defaultView: 'month',
-
-			axisFormat: 'h:mm',
-			columnFormat: {
-                month: 'ddd',    // Mon
-                week: 'ddd d', // Mon 7
-                day: 'dddd M/d',  // Monday 9/7
-                agendaDay: 'dddd d'
-            },
-            titleFormat: {
-                month: 'MMMM yyyy', // September 2009
-                week: "MMMM yyyy", // September 2009
-                day: 'MMMM yyyy'                  // Tuesday, Sep 8, 2009
-            },
-			allDaySlot: false,
-			selectHelper: true,
-			select: function(start, end, allDay) {
-				var title = prompt('Event Title:');
-				if (title) {
-					calendar.fullCalendar('renderEvent',
-						{
-							title: title,
-							start: start,
-							end: end,
-							allDay: allDay
-						},
-						true // make the event "stick"
-					);
-				}
-				calendar.fullCalendar('unselect');
-			},
-			droppable: true, // this allows things to be dropped onto the calendar !!!
-			drop: function(date, allDay) { // this function is called when something is dropped
-
-				// retrieve the dropped element's stored Event Object
-				var originalEventObject = $(this).data('eventObject');
-
-				// we need to copy it, so that multiple events don't have a reference to the same object
-				var copiedEventObject = $.extend({}, originalEventObject);
-
-				// assign it the date that was reported
-				copiedEventObject.start = date;
-				copiedEventObject.allDay = allDay;
-
-				// render the event on the calendar
-				// the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
-				$('#calendar').fullCalendar('renderEvent', copiedEventObject, true);
-
-				// is the "remove after drop" checkbox checked?
-				if ($('#drop-remove').is(':checked')) {
-					// if so, remove the element from the "Draggable Events" list
-					$(this).remove();
-				}
-
-			},
-
-			events: [
-				{
-					title: 'All Day Event',
-					start: new Date(y, m, 1)
-				},
-				{
-					id: 999,
-					title: 'Repeating Event',
-					start: new Date(y, m, d-3, 16, 0),
-					allDay: false,
-					className: 'info'
-				},
-				{
-					id: 999,
-					title: 'Repeating Event',
-					start: new Date(y, m, d+4, 16, 0),
-					allDay: false,
-					className: 'info'
-				},
-				{
-					title: 'Meeting',
-					start: new Date(y, m, d, 10, 30),
-					allDay: false,
-					className: 'important'
-				},
-				{
-					title: 'Lunch',
-					start: new Date(y, m, d, 12, 0),
-					end: new Date(y, m, d, 14, 0),
-					allDay: false,
-					className: 'important'
-				},
-				{
-					title: 'Birthday Party',
-					start: new Date(y, m, d+1, 19, 0),
-					end: new Date(y, m, d+1, 22, 30),
-					allDay: false,
-				},
-				{
-					title: 'Click for Google',
-					start: new Date(y, m, 28),
-					end: new Date(y, m, 29),
-					url: 'http://google.com/',
-					className: 'success'
-				}
-			],
-		});
-
-
-	});
+    calendar.render();
+  });
 
 </script>
 <style>
 
-	body {
-		margin-top: 40px;
-		text-align: center;
-		font-size: 14px;
-		font-family: "Helvetica Nueue",Arial,Verdana,sans-serif;
-		background-color: #DDDDDD;
-		}
+  body {
+    margin: 40px 10px;
+    padding: 0;
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 14px;
+  }
 
-	#wrap {
-		width: 1100px;
-		margin: 0 auto;
-		}
-
-	#external-events {
-		float: left;
-		width: 150px;
-		padding: 0 10px;
-		text-align: left;
-		}
-
-	#external-events h4 {
-		font-size: 16px;
-		margin-top: 0;
-		padding-top: 1em;
-		}
-
-	.external-event { /* try to mimick the look of a real event */
-		margin: 10px 0;
-		padding: 2px 4px;
-		background: #3366CC;
-		color: #fff;
-		font-size: .85em;
-		cursor: pointer;
-		}
-
-	#external-events p {
-		margin: 1.5em 0;
-		font-size: 11px;
-		color: #666;
-		}
-
-	#external-events p input {
-		margin: 0;
-		vertical-align: middle;
-		}
-	#calendar {
-/* 		float: right; */
-        margin: 0 auto;
-		width: 900px;
-		background-color: #FFFFFF;
-		  border-radius: 6px;
-        box-shadow: 0 1px 2px #C3C3C3;
-		}
+  #calendar {
+    max-width: 900px;
+    margin: 0 auto;
+  }
 
 </style>
 </head>
 <body>
-<div id='wrap'>
-<div id='calendar'></div>
-<div style='clear:both'></div>
-<nav id="menu">
-    <ul class="links">
-        <li><a href="index.php">Inicio</a></li>
-	<li><a href="generic.php">Ya veremos que poner aquí</a></li>
-	<li><a href="elements.php">Lo mismo de arriba </a></li>
-        <li><a href="fullcalendar.php">FullCalendar</a></li>
-    </ul>
-</nav>
-</div>
+
+  <div id='calendar'></div>
+
 </body>
 </html>
