@@ -1,5 +1,4 @@
 <?php
-
 /* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -50,12 +49,28 @@ class Agendar{
     function getUsuario_usuario_id() {
         return $this->usuario_usuario_id;
     }
-
-    function setAgendar_id($agendar_id) {
-        $this->agendar_id = $agendar_id;
+    
+    function getAgendar_estado() {
+        return $this->agendar_estado;
     }
 
-    function setAgendar_hora($agendar_hora) {
+    function getAgendar_lugar() {
+        return $this->agendar_lugar;
+    }
+
+        function setAgendar_id($agendar_id) {
+        $this->agendar_id = $agendar_id;
+    }
+    
+    function setAgendar_estado($agendar_estado) {
+        $this->agendar_estado = $agendar_estado;
+    }
+
+    function setAgendar_lugar($agendar_lugar) {
+        $this->agendar_lugar = $agendar_lugar;
+    }
+
+        function setAgendar_hora($agendar_hora) {
         $this->agendar_hora = $agendar_hora;
     }
 
@@ -87,15 +102,14 @@ class Agendar{
         $this->usuario_usuario_id = $usuario_usuario_id;
     }
 
-    function __construct($agendar_hora, $agendar_fecha, $agendar_tipo_servicio, $agendar_patente, $agendar_comuna, $agendar_direccion, $servicios_servicios_id, $usuario_usuario_id) {
-        $this->agendar_hora = $agendar_hora;
+    function __construct($agendar_id, $agendar_estado, $agendar_fecha, $agendar_lugar, $agendar_patente, $agendar_direccion, $servicios_servicios_id, $usuario_usuario_id) {
+        $this->agendar_id = $agendar_id;
+        $this->agendar_estado = $agendar_estado;
         $this->agendar_fecha = $agendar_fecha;
-        $this->agendar_tipo_servicio = $agendar_tipo_servicio;
+        $this->agendar_lugar = $agendar_lugar;
         $this->agendar_patente = $agendar_patente;
-        $this->agendar_comuna = $agendar_comuna;
         $this->agendar_direccion = $agendar_direccion;
         $this->servicios_servicios_id = $servicios_servicios_id;
         $this->usuario_usuario_id = $usuario_usuario_id;
     }
-
 }
