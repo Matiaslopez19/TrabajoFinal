@@ -62,7 +62,7 @@
                         <div class="field half">
                             <label for="dept">¿Que servicio necesita?</label>
                             <div class="select-wrapper">
-                                <select name="dept" id="dept">
+                                <select name="dept" id="servicios">
                                     <option value="1" name="servicio">- Servicios -</option>
                                     <option value="2" name="servicio">Cambiar kit de embrague</option>
                                     <option value="3" name="servicio">Cambiar kit de distribución</option>
@@ -203,17 +203,17 @@
             }
         </script>
 
-    </script>
+    
 
 </body>
 <script type="text/javascript">
     $(function(){
-        <?php
-            print_r($_SESSION);
-        ?>
-        let serviceSelected  = <?=(isset($_SESSION['serviceid']))? $_SESSION['serviceid']  : 0;?>
-        $("#dept option:eq("+serviceSelected+")").prop("selected");
+
+        var serviceSelected  = <?=(isset($_SESSION['serviceid']))? $_SESSION['serviceid'] : 0;?>
+        
+       
+    $("#servicios option[value="+serviceSelected+"]").attr("selected",true);
       
-    })
+    });
 </script>
 </html>
