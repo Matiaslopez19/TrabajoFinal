@@ -63,26 +63,8 @@
                             <label for="dept">¿Que servicio necesita?</label>
                             <div class="select-wrapper">
                                 <select name="dept" id="servicios">
-                                    <option value="1" name="servicio">- Servicios -</option>
-                                    <option value="2" name="servicio">Cambiar kit de embrague</option>
-                                    <option value="3" name="servicio">Cambiar kit de distribución</option>
-                                    <option value="4" name="servicio">Cambiar pastillas de freno</option>
-                                    <option value="5" name="servicio">Cambiar inyectores</option>
-                                    <option value="6" name="servicio">Cambiar junta de culata</option>
-                                    <option value="7" name="servicio">Cambiar caja de cambios</option>
-                                    <option value="8" name="servicio">Cambiar amortiguadores</option>
-                                    <option value="9" name="servicio">Cambiar cuerpo de aceleración</option>
-                                    <option value="1" name="servicio">Cambiar alternador</option>
-                                    <option value="1" name="servicio">Cambiar bateria</option>
-                                    <option value="1" name="servicio">Cambiar retenes de válvulas</option>
-                                    <option value="1" name="servicio">Cambiar cables de bujías</option>
-                                    <option value="1" name="servicio">Cambiar radiador</option>
-                                    <option value="1" name="servicio">Cambiar silenciador</option>
-                                    <option value="1" name="servicio">Cambiar catalitico</option>
-                                    <option value="1" name="servicio">Cambiar aceite de motor</option>
-                                    <option value="1" name="servicio">Cambiar filtro de aceite</option>
-                                    <option value="1" name="servicio">Cambiar Bujías</option>
-
+                                    <option>--selecciona un servicio--</option>
+                                    <?= ServicioDAO::FindAllServices()?>
                                 </select>
                             </div>
                         </div>

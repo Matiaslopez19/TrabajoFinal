@@ -35,4 +35,12 @@ class ServicioDAO{
         }
         //return $se;
     }
+    public static function FindAllServices(){
+        $conexion = new Conexion();
+        $sql ="SELECT * FROM servicio WHERE ser_estado=1;";
+        $result = mysqli_query($conexion->conn(), $sql);
+        while ($row = mysqli_fetch_array($result)) {
+            echo "<option value='".$row["ser_id"]."' name='servicio' >".$row["ser_nombre"]."</option>";
+        }
+    }
 }
