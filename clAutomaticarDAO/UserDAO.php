@@ -15,9 +15,10 @@ class UserDAO{
         if($result->num_rows == 1){
              //var_dump($result);
             $row = mysqli_fetch_array($result);
-            $u = new User($row["cli_id"], $row["cli_nombre"], 
-                    $row["cli_email"], $row["cli_apellidos"], $row["cli_clave"],
-                    $row["cli_tipo"]);
+            $u  = $row;
+            //$u = new User($row["cli_id"], $row["cli_nombre"], 
+              //      $row["cli_email"], $row["cli_apellidos"], $row["cli_clave"],
+                //    $row["cli_tipo"]);
         }else{
            echo "no hubo resultados";
             var_dump($result);
