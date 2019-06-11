@@ -13,7 +13,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title><?= $user->getUSUARIO_nombre(); ?></title>
+  <title><?= $user->getCli_nombre(); ?></title>
   <!-- Bootstrap core CSS -->
   <link href="../assets/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <!-- Custom styles for this template -->
@@ -64,14 +64,14 @@
                             <div class="select-wrapper">
                                 <select name="dept" id="dept">
                                     <option value="1" name="servicio">- Servicios -</option>
-                                    <option value="1" name="servicio">Cambiar kit de embrague</option>
-                                    <option value="1" name="servicio">Cambiar kit de distribución</option>
-                                    <option value="1" name="servicio">Cambiar pastillas de freno</option>
-                                    <option value="1" name="servicio">Cambiar inyectores</option>
-                                    <option value="1" name="servicio">Cambiar junta de culata</option>
-                                    <option value="" name="servicio">Cambiar caja de cambios</option>
-                                    <option value="1" name="servicio">Cambiar amortiguadores</option>
-                                    <option value="1" name="servicio">Cambiar cuerpo de aceleración</option>
+                                    <option value="2" name="servicio">Cambiar kit de embrague</option>
+                                    <option value="3" name="servicio">Cambiar kit de distribución</option>
+                                    <option value="4" name="servicio">Cambiar pastillas de freno</option>
+                                    <option value="5" name="servicio">Cambiar inyectores</option>
+                                    <option value="6" name="servicio">Cambiar junta de culata</option>
+                                    <option value="7" name="servicio">Cambiar caja de cambios</option>
+                                    <option value="8" name="servicio">Cambiar amortiguadores</option>
+                                    <option value="9" name="servicio">Cambiar cuerpo de aceleración</option>
                                     <option value="1" name="servicio">Cambiar alternador</option>
                                     <option value="1" name="servicio">Cambiar bateria</option>
                                     <option value="1" name="servicio">Cambiar retenes de válvulas</option>
@@ -206,5 +206,14 @@
     </script>
 
 </body>
-
+<script type="text/javascript">
+    $(function(){
+        <?php
+            print_r($_COOKIE);
+        ?>
+        let serviceSelected  = <?=(isset($_COOKIE['serviceid']))? $_COOKIE['serviceid']  : 0;?>
+        $("#dept option:eq("+serviceSelected+")").prop("selected");
+      
+    })
+</script>
 </html>
