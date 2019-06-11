@@ -10,17 +10,17 @@ class UserDAO{
     public function login($mail, $pass){
         $u= null; 
         $conexion = new Conexion();
-        $sql ="SELECT * FROM cliente WHERE cli_mail='$mail' and cli_clave='$pass';";
+        $sql ="SELECT * FROM cliente WHERE cli_email='$mail' and cli_clave='$pass';";
         $result = mysqli_query($conexion->conn(), $sql);
-        if($result->num_rows == 1){
+        if($result){
              //var_dump($result);
             $row = mysqli_fetch_array($result);
             $u = new User($row["cli_id"], $row["cli_nombre"], 
-                    $row["cli_mail"], $row["cli_apellidos"], $row["cli_clave"],
+                    $row["cli_email"], $row["cli_apellidos"], $row["cli_clave"],
                     $row["cli_tipo"]);
         }else{
            echo "no hubo resultados";
-            //var_dump($result);
+            var_dump($result);
         }
         return $u;
         }
