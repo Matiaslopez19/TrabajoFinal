@@ -7,7 +7,7 @@
 }*/
 //echo $id;
 if (isset($_GET['ser'])) {
-    $id=$_GET['ser'];
+    setcookie("serviceid", $_GET['ser']);
     if (isset($_SESSION['user'])) {
         include '../clAutomaticarView/SeleccionarServicio.php#one';
     } else {

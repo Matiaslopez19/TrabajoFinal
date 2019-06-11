@@ -26,6 +26,7 @@
 				<h3>Iniciar sesión</h3>
 			</div>
 			<div class="card-body">
+                            <?php print_r($_COOKIE)?>
                             <form action="../clAutomaticarController/userController.php" method="post">
 					<div class="input-group form-group">
 						<div class="input-group-prepend">

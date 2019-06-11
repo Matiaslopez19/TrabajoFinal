@@ -6,7 +6,9 @@
  * and open the template in the editor.
  */
 include '../clAutomaticarData/Servicio.php';
-include '../clAutomaticarData/conexion.php';
+require_once '../clAutomaticarData/conexion.php';
+
+
 
 class ServicioDAO{
     public static function findAllMantencion() {
