@@ -6,7 +6,7 @@ include '../clAutomaticarDAO/UserDAO.php';
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-if (isset($_POST['2'])) { //se revise el name del boton del formulario
+if (isset($_POST['2'])) { //se revisa el name del boton del formulario
     if (!isset($_POST['username'])) { //se verifica si el campo de nombre esta lleno o vacio
         include('../clAutomaticarView/Login.php');// si no esta lleno, te redireccionara al index
     } else {
