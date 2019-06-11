@@ -10,7 +10,7 @@ class UserDAO{
     public function login($mail, $pass){
         $u= null; 
         $conexion = new Conexion();
-        $sql ="SELECT * FROM cliente WHERE cli_email='$mail' and cli_clave='$pass';";
+        $sql ="SELECT * FROM cliente WHERE cli_email ='$mail' AND cli_clave='$pass';";
         $result = mysqli_query($conexion->conn(), $sql);
         if($result){
              //var_dump($result);
@@ -50,8 +50,8 @@ class UserDAO{
     public function eliminarUsuario($mail) {
         $conexion = new Conexion();
         $exquery = "SELECT * FROM cliente WHERE cli_mail='$mail';";
-        $sql = "DELETE FROM cliente WHERE cli_mail='$mail';";
-        $comprobacion = mysqli_query($conexion, $exquery);
+        $sql = "DELETE FROM cliente WHERE cli_email='$mail';";
+        $comprobacion = mysqli_query($conexion->conn(), $exquery);
         $u = null;
         if (is_null($comprobacion)) {
             $resultado= mysqli_query($conexion, $sql);
