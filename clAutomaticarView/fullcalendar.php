@@ -25,13 +25,13 @@
       header: {
         left: 'prev,next today',
         center: 'title',
-        right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+        right: 'timeGridWeek,timeGridDay,listWeek'
       },
       defaultDate: '2019-06-12',
       navLinks: true, // can click day/week names to navigate views
       editable: true,
       selectable: true,
-      eventLimit: true, // allow "more" link when too many events
+      //eventLimit: true, // permite mantener 2 o mas horas al mismo tiempo
       events: {
         url: '../assets/fullcalendar/demos/php/get-events.php',
         failure: function() {
