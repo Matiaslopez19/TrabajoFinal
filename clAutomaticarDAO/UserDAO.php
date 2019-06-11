@@ -55,9 +55,7 @@ class UserDAO{
         $u = null;
         if (is_null($comprobacion)) {
             $resultado= mysqli_query($conexion, $sql);
-            
         }else{
-            echo '';
         }
     }
 }
