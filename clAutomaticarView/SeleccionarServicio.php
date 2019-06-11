@@ -13,7 +13,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title><?= $user->getCli_nombre(); ?></title>
+  <title>Automaticar</title>
   <!-- Bootstrap core CSS -->
   <link href="../assets/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <!-- Custom styles for this template -->
@@ -209,9 +209,9 @@
 <script type="text/javascript">
     $(function(){
         <?php
-            print_r($_COOKIE);
+            print_r($_SESSION);
         ?>
-        let serviceSelected  = <?=(isset($_COOKIE['serviceid']))? $_COOKIE['serviceid']  : 0;?>
+        let serviceSelected  = <?=(isset($_SESSION['serviceid']))? $_SESSION['serviceid']  : 0;?>
         $("#dept option:eq("+serviceSelected+")").prop("selected");
       
     })
