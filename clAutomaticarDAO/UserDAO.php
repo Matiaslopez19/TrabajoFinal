@@ -12,7 +12,7 @@ class UserDAO{
         $conexion = new Conexion();
         $sql ="SELECT * FROM cliente WHERE cli_email ='$mail' AND cli_clave='$pass';";
         $result = mysqli_query($conexion->conn(), $sql);
-        if($result){
+        if($result->num_rows == 1){
              //var_dump($result);
             $row = mysqli_fetch_array($result);
             $u = new User($row["cli_id"], $row["cli_nombre"], 
