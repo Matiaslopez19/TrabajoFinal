@@ -42,4 +42,8 @@ if (isset($_POST['2'])) { //se revisa el name del boton del formulario
             }
         }
     }
+    if (isset($_GET['salir'])) {
+        session_destroy();
+        include ('../clAutomaticarView/Login.php');
+}
 ?>
