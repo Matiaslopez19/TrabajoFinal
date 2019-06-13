@@ -16,23 +16,19 @@ require dirname(__FILE__) . '/utils.php';
 if (!isset($_GET['start']) || !isset($_GET['end'])) {
   die("Please provide a date range.");
 }
-
 // Parse the start/end parameters.
 // These are assumed to be ISO8601 strings with no time nor timeZone, like "2013-12-29".
 // Since no timeZone will be present, they will parsed as UTC.
 $range_start = parseDateTime($_GET['start']);
 $range_end = parseDateTime($_GET['end']);
-
 // Parse the timeZone parameter if it is present.
 $timeZone = null;
 if (isset($_GET['timeZone'])) {
   $timeZone = new DateTimeZone($_GET['timeZone']);
 }
-
 // Read and parse our events JSON file into an array of event data arrays.
 $json = file_get_contents(dirname(__FILE__) . '/../json/events.json');
 $input_arrays = json_decode($json, true);
-
 // Accumulate an output array of event data arrays.
 $output_arrays = array();
 foreach ($input_arrays as $array) {
