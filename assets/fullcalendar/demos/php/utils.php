@@ -20,6 +20,7 @@ class Event {
   public $start; // a DateTime
   public $end; // a DateTime, or null
   public $properties = array(); // an array of other misc properties
+  public  $id;
 
 
   // Constructs an Event object from the given array of key=>values.

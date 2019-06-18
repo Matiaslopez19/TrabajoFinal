@@ -48,7 +48,7 @@ $user = $_SESSION['user'];
                     selectable: true,
                     //eventLimit: true, // permite mantener 2 o mas horas al mismo tiempo
                     events: {
-                        url: '../assets/fullcalendar/demos/php/get-events.php',
+                        url: 'http://localhost:81/TrabajoFinal/clAutomaticarController/EventosCalendario.php',
                         failure: function () {
                             document.getElementById('script-warning').style.display = 'inline'; // show
                         }
@@ -256,9 +256,9 @@ $user = $_SESSION['user'];
                                 <input name="patente" type="text" placeholder="AA0000 - AAAA0000">
                             </div>
                             <section id = "caja">
-                                <div class="field half">
-                                    <label for="dept">Comuna</label>
+                                <div class="field half">                                    
                                     <div class="select-wrapper">
+                                        <label for="dept">Comuna</label>
                                         <select name="dept" id="dept">
                                             <option value="1" name="comuna">- Comunas -</option>
                                             <option value="1" name="comuna">Cerrillos</option>
