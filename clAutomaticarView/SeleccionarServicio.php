@@ -5,6 +5,8 @@ $user = $_SESSION['user'];
 <!DOCTYPE html>
 <html lang="en">
     <head><meta charset='utf-8' />
+        <script src='../assets/fullcalendar/packages/core/main.js'></script>
+        <script src='../assets/fullcalendar/packages/core/main.js'></script>
         <link href="../assets/fullcalendar/packages/core/main.css" rel="stylesheet" type="text/css"/>
         <link href="../assets/fullcalendar/packages/daygrid/main.css" rel="stylesheet" type="text/css"/>
         <link href="../assets/fullcalendar/packages/timegrid/main.css" rel="stylesheet" type="text/css"/>
@@ -36,7 +38,6 @@ $user = $_SESSION['user'];
                 var calendarEl = document.getElementById('calendar');
                 var calendar = new FullCalendar.Calendar(calendarEl, {
                     plugins: ['interaction', 'dayGrid', 'timeGrid'],
-                    editable: false,
                     timeZone: initialTimeZone,
                     header: {
                         left: 'prev,next today',
@@ -45,7 +46,7 @@ $user = $_SESSION['user'];
                     },
                     defaultDate: '2019-06-12',
                     navLinks: true, // can click day/week names to navigate views
-                    editable: true,
+                    editable: false, //permite modificar el lugar de los eventos en el calendario
                     selectable: true,
                     //eventLimit: true, // permite mantener 2 o mas horas al mismo tiempo
                     events: {
@@ -218,9 +219,8 @@ $user = $_SESSION['user'];
                     document.getElementById("caja").style.display = "block";
                 }
             }
+            
         </script>
-
-
         <div id="solicitud" class="modal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -230,7 +230,10 @@ $user = $_SESSION['user'];
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
+                    
                     <div class="modal-body">
+                        <div id="fecha" name="horas"></div>
+                        <input type="hidden" value='"<?=print_r($user['cli_email'])?>"' name="identificacion"/>
                         <h2 class="align-center">Seleccionar Servicio</h2>
                         <hr />
                         <form action="../clAutomaticarController/agendaController.php" method="post">
@@ -253,6 +256,8 @@ $user = $_SESSION['user'];
                                 </div>
                             </div>
                             <div class="field half">
+                                
+                                
                                 <label>Patente</label>
                                 <input name="patente" type="text" placeholder="AA0000 - AAAA0000">
                             </div>
@@ -316,7 +321,7 @@ $user = $_SESSION['user'];
                                     <label>Dirección</label>
                                     <input name="direccion" id="direccion" type="text" placeholder="Dirección">
                                 </div>
-                                <div id="fecha"></div>
+                                
                             </section>
                             <br>
                             <ul class="actions align-center">
