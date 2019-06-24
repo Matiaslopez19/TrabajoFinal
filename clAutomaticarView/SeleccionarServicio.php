@@ -36,6 +36,7 @@ $user = $_SESSION['user'];
                 var calendarEl = document.getElementById('calendar');
                 var calendar = new FullCalendar.Calendar(calendarEl, {
                     plugins: ['interaction', 'dayGrid', 'timeGrid'],
+                    editable: false,
                     timeZone: initialTimeZone,
                     header: {
                         left: 'prev,next today',
