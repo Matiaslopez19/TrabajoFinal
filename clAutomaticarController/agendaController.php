@@ -9,3 +9,6 @@ $servicio = $_POST['servicio'];
 $opcion = $_POST['opcion'];
 $patente = $_POST['patente'];
 $comuna = $_POST['comuna'];
+$lugar = $_POST[];
+$cliente= $_POST['identificacion'];
+$horario= $_POST['horas'];
