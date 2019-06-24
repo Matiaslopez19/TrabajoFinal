@@ -9,6 +9,7 @@ class Agendar{
     private $agendar_estado;
     private $agendar_fecha;
     private $agendar_lugar;
+    private $agendar_ubicacion;
     private $agendar_patente;
     private $agendar_direccion;
     private $servicios_servicios_id;
@@ -21,7 +22,14 @@ class Agendar{
     function getAgendar_hora() {
         return $this->agendar_hora;
     }
-
+    function getAgendar_ubicacion() {
+        return $this->agendar_ubicacion;
+    }
+    
+    function setAgendar_ubicacion($agendar_ubicacion) {
+        $this->agendar_ubicacion = $agendar_ubicacion;
+    }
+    
     function getAgendar_fecha() {
         return $this->agendar_fecha;
     }
@@ -102,14 +110,16 @@ class Agendar{
         $this->usuario_usuario_id = $usuario_usuario_id;
     }
 
-    function __construct($agendar_id, $agendar_estado, $agendar_fecha, $agendar_lugar, $agendar_patente, $agendar_direccion, $servicios_servicios_id, $usuario_usuario_id) {
+    function __construct($agendar_id, $agendar_estado, $agendar_fecha, $agendar_lugar, $agendar_ubicacion, $agendar_patente, $agendar_direccion, $servicios_servicios_id, $usuario_usuario_id) {
         $this->agendar_id = $agendar_id;
         $this->agendar_estado = $agendar_estado;
         $this->agendar_fecha = $agendar_fecha;
         $this->agendar_lugar = $agendar_lugar;
+        $this->agendar_ubicacion = $agendar_ubicacion;
         $this->agendar_patente = $agendar_patente;
         $this->agendar_direccion = $agendar_direccion;
         $this->servicios_servicios_id = $servicios_servicios_id;
         $this->usuario_usuario_id = $usuario_usuario_id;
     }
+
 }
