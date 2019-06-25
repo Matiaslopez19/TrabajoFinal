@@ -18,7 +18,7 @@ class AgendarDAO{
     public static function FindAllEvents($user){
         $query = "select ag_id as id,ag_fecha as start, ser_nombre as title,"
                 . " ag_fechatermino as end, if(Cliente_cli_id = '".$user['cli_id']."', 'blue','red')  AS color,"
-                . " if(Cliente_cli_id = '".$user['cli_id']."', 'true','false')  AS editable from agenda "
+                . " if(Cliente_cli_id = '".$user['cli_id']."', true,false)  AS editable from agenda "
                 . " inner join servicio on ser_id = Servicio_ser_id "
                 . " where ag_estado = 1";
        

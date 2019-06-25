@@ -9,7 +9,10 @@ $servicio = $_POST['servicio'];
 $opcion = $_POST['opcion'];
 $patente = $_POST['patente'];
 $comuna = $_POST['comuna'];
-$lugar = $_POST[];
+$lugar = $_POST['direccion'];
 $cliente= $_POST['identificacion'];
-$horario= $_POST['horas'];
+$fecha= $_POST['fecha'];
+$horaInicio=$_POST['horaInicio'];
+$horaTermino=$_POST['horatermino'];
+
 

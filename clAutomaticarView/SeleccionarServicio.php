@@ -14,6 +14,7 @@ $user = $_SESSION['user'];
         <script src="../assets/fullcalendar/packages/daygrid/main.js" type="text/javascript"></script>
         <script src="../assets/fullcalendar/packages/timegrid/main.js" type="text/javascript"></script>
         <script src="../assets/fullcalendar/packages/list/main.js" type="text/javascript"></script>
+        <script src="../assets/js/moment.min.js" type="text/javascript"></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
@@ -44,13 +45,20 @@ $user = $_SESSION['user'];
                     },
                     defaultDate: '2019-06-12',
                     navLinks: true, // can click day/week names to navigate views
-                    editable: false, //permite modificar el lugar de los eventos en el calendario
+                    //editable: true, //permite modificar el lugar de los eventos en el calendario
                     selectable: true,
                     //eventLimit: true, // permite mantener 2 o mas horas al mismo tiempo
                     events: {
                         url: 'http://localhost:81/TrabajoFinal/clAutomaticarController/EventosCalendario.php',
                         failure: function () {
                             document.getElementById('script-warning').style.display = 'inline'; // show
+                        }
+
+                    },
+                    eventMouseEnter: function (e) {
+                        if (e.event.backgroundColor == 'red') {
+                            e.event.editable = false;
+                            calendar.render();
                         }
                     },
                     loading: function (bool) {
@@ -68,10 +76,14 @@ $user = $_SESSION['user'];
                     },
                     select: function (arg) {
                         //console.log('select', calendar.formatIso(arg.start), calendar.formatIso(arg.end));
-                        
-                        $("#solicitud").modal('show');    
-                        $("#fecha").append("<span>"+calendar.formatIso(arg.start)+"</span>");   
-                        alert(calendar.formatIso(arg.start));
+
+                        $("#solicitud").modal('show');
+                        $("#fecha").empty();
+                        $("#fecha").append("<span>Día:" + moment(arg.start).format("YYYY-MM-DD") + "hora inicio:" + moment(arg.start).format("hh:mm:ss") + "hora termino:" + moment(arg.end).format("hh:mm:ss") + "</span>");
+                        //alert("Ha elegido el día: "+moment(arg.start).format("YYYY-MM-DD")+", a la hora de: "+moment(arg.start).format("hh:mm:ss")+" y con hora de termino de: "+moment(arg.end).format("hh:mm:ss"));
+                        $("#fAgenda").append(moment(arg.start).format("YYYY-MM-DD"));
+                        $("#hInicio").append(moment(arg.start).format("hh:mm:ss"));
+                        $("#hTermino").append(moment(arg.end).format("hh:mm:ss"));
                     }
                 });
 
@@ -217,7 +229,7 @@ $user = $_SESSION['user'];
                     document.getElementById("caja").style.display = "block";
                 }
             }
-            
+
         </script>
         <div id="solicitud" class="modal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
@@ -228,17 +240,20 @@ $user = $_SESSION['user'];
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    
+
                     <div class="modal-body">
                         <h2 class="align-center">Seleccionar Servicio</h2>
                         <hr />
                         <form action="../clAutomaticarController/agendaController.php" method="post">
                             <div id="fecha" name="horas"></div>
-                        <input type="hidden" value='"<?=print_r($user['cli_email'])?>"' name="identificacion"/>
+                            <input id="hInicio" type="hidden" name="horaInicio">
+                            <input id="hTermino" type="hidden" name="horatermino">
+                            <input id="fAgenda" type="hidden" name="fecha">
+                            <input type="hidden" value='"<?= print_r($user['cli_email']) ?>"' name="identificacion"/>
                             <div class="field half">
                                 <label for="dept">¿Que servicio necesita?</label>
                                 <div class="select-wrapper">
-                                    <select name="dept" id="servicios">
+                                    <select class="form-control" name="dept" id="servicios">
                                         <option>--selecciona un servicio--</option>
                                         <?= ServicioDAO::FindAllServices() ?>
                                     </select>
@@ -254,8 +269,8 @@ $user = $_SESSION['user'];
                                 </div>
                             </div>
                             <div class="field half">
-                                
-                                
+
+
                                 <label>Patente</label>
                                 <input name="patente" type="text" placeholder="AA0000 - AAAA0000">
                             </div>
@@ -263,7 +278,7 @@ $user = $_SESSION['user'];
                                 <div class="field half">                                    
                                     <div class="select-wrapper">
                                         <label for="dept">Comuna</label>
-                                        <select name="dept" id="dept">
+                                        <select class="form-control" name="dept" id="dept">
                                             <option value="1" name="comuna">- Comunas -</option>
                                             <option value="1" name="comuna">Cerrillos</option>
                                             <option value="1" name="comuna">Cerro Navia</option>
@@ -319,22 +334,16 @@ $user = $_SESSION['user'];
                                     <label>Dirección</label>
                                     <input name="direccion" id="direccion" type="text" placeholder="Dirección">
                                 </div>
-                                
+
                             </section>
                             <br>
-                            <ul class="actions align-center">
-                               <!-- <li><input type="button" class="button special" value="Atrás" onClick=" window.location.href = '.php'"></li> -->
-                            </ul>
-                            <ul class="actions align-center">
-                                <button type="submit" class="button special" name="horaA">Agendar hora</button>
-                            </ul>
-
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-primary button special" name="horaA">Agendar hora</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
                         </form>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -352,5 +361,5 @@ $user = $_SESSION['user'];
 
         });
     </script>
-    <?=var_dump($user);?>
+    <?= var_dump($user); ?>
 </html>
