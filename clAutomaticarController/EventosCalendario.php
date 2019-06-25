@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 /* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -7,6 +7,6 @@
  */
 include '../clAutomaticarDAO/AgendarDAO.php';
 
-$event = AgendarDAO::FindAllEvents();
+$event = AgendarDAO::FindAllEvents($_SESSION['user']);
 echo json_encode($event);
 

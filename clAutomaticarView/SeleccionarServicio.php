@@ -5,8 +5,6 @@ $user = $_SESSION['user'];
 <!DOCTYPE html>
 <html lang="en">
     <head><meta charset='utf-8' />
-        <script src='../assets/fullcalendar/packages/core/main.js'></script>
-        <script src='../assets/fullcalendar/packages/core/main.js'></script>
         <link href="../assets/fullcalendar/packages/core/main.css" rel="stylesheet" type="text/css"/>
         <link href="../assets/fullcalendar/packages/daygrid/main.css" rel="stylesheet" type="text/css"/>
         <link href="../assets/fullcalendar/packages/timegrid/main.css" rel="stylesheet" type="text/css"/>
@@ -232,11 +230,11 @@ $user = $_SESSION['user'];
                     </div>
                     
                     <div class="modal-body">
-                        <div id="fecha" name="horas"></div>
-                        <input type="hidden" value='"<?=print_r($user['cli_email'])?>"' name="identificacion"/>
                         <h2 class="align-center">Seleccionar Servicio</h2>
                         <hr />
                         <form action="../clAutomaticarController/agendaController.php" method="post">
+                            <div id="fecha" name="horas"></div>
+                        <input type="hidden" value='"<?=print_r($user['cli_email'])?>"' name="identificacion"/>
                             <div class="field half">
                                 <label for="dept">¿Que servicio necesita?</label>
                                 <div class="select-wrapper">
@@ -354,4 +352,5 @@ $user = $_SESSION['user'];
 
         });
     </script>
+    <?=var_dump($user);?>
 </html>
