@@ -8,12 +8,32 @@ include_once '../assets/fullcalendar/demos/php/utils.php';
  */
 
 class AgendarDAO{
-    public function AgregarAgenda($lugar, $fecha, $servicioId, $clienteId) {
+    public function AgregarAgenda($lugar, $fecha_inicio, $servicioId, $clienteId, $disponibilidadId, $fecha_termino, $estado, $patente, $ubicacion) {
         $conexion = Conexion::conn();
-        $sql="INSERT INTO agenda(ag_id, ag_estado, ag_lugar, ag_fecha, Servicio_ser_id, "
-                . "Cliente_cli_id, Disponibilidad_disp_id) VALUES "
-                . "([value-1],[value-2],[value-3],[value-4],[value-5],[value-6],[value-7])";
-        $sqlComprobacion;
+        $n;
+        $sql="INSERT INTO `agenda`(`ag_estado`, `ag_patente`, `ag_lugar`, "
+                . "`ag_ubicacion`, `ag_fecha_inicio`, `Servicio_ser_id`, `Cliente_cli_id`,"
+                . " `Disponibilidad_disp_id`, `ag_fecha_termino`) VALUES ('".$estado."',"
+                . "'".$patente."','".$lugar."','".$ubicacion."','".$fecha_inicio."',".$servicioId.","
+                . "".$clienteId.",".$disponibilidadId.",'".$fecha_termino."')";
+        $sqlComprobacion="SELECT * FROM agenda WHERE Cliente_cli_id=".$clienteId."AND ag_fecha_inicio=".$fecha_inicio.""
+                . "AND ag_fecha_Termino=".$fecha_termino.";";
+        $res= mysqli_query($conexion, $sqlComprobacion);
+        $resultadoc = mysqli_fetch_object($res);
+        if(is_null($resultadoc)){
+           $res2= mysqli_query($conexion, $sql);
+           if (!is_null($res2)) {
+               $u=TRUE;
+               echo 'ingresado sin problemas';
+           }else{
+               $u=FALSE;
+               echo 'error en los datos ingresado';
+           }
+        }else{
+         $u=false;
+         echo 'esta hora ya ha sido reservada por el usuario';
+        }
+        return $u;
     }
     public static function FindAllEvents($user){
         $query = "select ag_id as id,ag_fecha as start, ser_nombre as title,"
