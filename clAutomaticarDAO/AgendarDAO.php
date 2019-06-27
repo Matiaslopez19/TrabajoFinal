@@ -11,28 +11,31 @@ class AgendarDAO{
     public function AgregarAgenda($lugar, $fecha_inicio, $servicioId, $clienteId, $disponibilidadId, $fecha_termino, $estado, $patente, $ubicacion) {
         $conexion = Conexion::conn();
         $n;
-        $sql="INSERT INTO `agenda`(`ag_estado`, `ag_patente`, `ag_lugar`, "
+        $sql="INSERT INTO agenda (`ag_estado`, `ag_patente`, `ag_lugar`, "
                 . "`ag_ubicacion`, `ag_fecha_inicio`, `Servicio_ser_id`, `Cliente_cli_id`,"
-                . " `Disponibilidad_disp_id`, `ag_fecha_termino`) VALUES ('".$estado."',"
+                . " `Disponibilidad_disp_id`, `ag_fecha_termino`) VALUES (".$estado.","
                 . "'".$patente."','".$lugar."','".$ubicacion."','".$fecha_inicio."',".$servicioId.","
                 . "".$clienteId.",".$disponibilidadId.",'".$fecha_termino."')";
-        $sqlComprobacion="SELECT * FROM agenda WHERE Cliente_cli_id=".$clienteId."AND ag_fecha_inicio=".$fecha_inicio.""
-                . "AND ag_fecha_Termino=".$fecha_termino.";";
+        $sqlComprobacion="SELECT * FROM agenda WHERE Cliente_cli_id=".$clienteId."AND ag_fecha_inicio='".$fecha_inicio."'"
+                . "AND ag_fecha_Termino='".$fecha_termino."';";
         $res= mysqli_query($conexion, $sqlComprobacion);
         $resultadoc = mysqli_fetch_object($res);
         if(is_null($resultadoc)){
+            var_dump($resultadoc);
            $res2= mysqli_query($conexion, $sql);
+           var_dump($res2);
            if (!is_null($res2)) {
                $u=TRUE;
-               echo 'ingresado sin problemas';
+               //echo 'ingresado sin problemas';
            }else{
                $u=FALSE;
-               echo 'error en los datos ingresado';
+               //echo 'error en los datos ingresado';
            }
         }else{
          $u=false;
-         echo 'esta hora ya ha sido reservada por el usuario';
+         //echo 'esta hora ya ha sido reservada por el usuario';
         }
+        
         return $u;
     }
     public static function FindAllEvents($user){

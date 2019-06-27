@@ -81,9 +81,9 @@ $user = $_SESSION['user'];
                         $("#fecha").empty();
                         $("#fecha").append("<span>Día:" + moment(arg.start).format("YYYY-MM-DD") + "hora inicio:" + moment(arg.start).format("hh:mm:ss") + "hora termino:" + moment(arg.end).format("hh:mm:ss") + "</span>");
                         //alert("Ha elegido el día: "+moment(arg.start).format("YYYY-MM-DD")+", a la hora de: "+moment(arg.start).format("hh:mm:ss")+" y con hora de termino de: "+moment(arg.end).format("hh:mm:ss"));
-                        $("#fAgenda").append(moment(arg.start).format("YYYY-MM-DD"));
-                        $("#hInicio").append(moment(arg.start).format("hh:mm:ss"));
-                        $("#hTermino").append(moment(arg.end).format("hh:mm:ss"));
+                        $("#fAgenda").val(moment(arg.start).format("YYYY-MM-DD"));
+                        $("#hInicio").val(moment(arg.start).format("hh:mm:ss"));
+                        $("#hTermino").val(moment(arg.end).format("hh:mm:ss"));
                     }
                 });
 
@@ -253,7 +253,7 @@ $user = $_SESSION['user'];
                             <div class="field half">
                                 <label for="dept">¿Que servicio necesita?</label>
                                 <div class="select-wrapper">
-                                    <select class="form-control" name="dept" id="servicios">
+                                    <select class="form-control" name="servicio" id="servicios">
                                         <option>--selecciona un servicio--</option>
                                         <?= ServicioDAO::FindAllServices() ?>
                                     </select>
@@ -278,54 +278,35 @@ $user = $_SESSION['user'];
                                 <div class="field half">                                    
                                     <div class="select-wrapper">
                                         <label for="dept">Comuna</label>
-                                        <select class="form-control" name="dept" id="dept">
-                                            <option value="1" name="comuna">- Comunas -</option>
-                                            <option value="1" name="comuna">Cerrillos</option>
-                                            <option value="1" name="comuna">Cerro Navia</option>
-                                            <option value="1" name="comuna">Conchalí</option>
-                                            <option value="1" name="comuna">El Bosque</option>
-                                            <option value="1" name="comuna">Estación Central</option>
-                                            <option value="1" name="comuna">Huechuraba</option>
-                                            <option value="1" name="comuna">Independencia</option>
-                                            <option value="1" name="comuna">La Cisterna</option>
-                                            <option value="1" name="comuna">La Florida</option>
-                                            <option value="1" name="comuna">La Granja</option>
-                                            <option value="1" name="comuna">La Pintana</option>
-                                            <option value="1" name="comuna">La Reina</option>
-                                            <option value="1" name="comuna">Las Condes</option>
-                                            <option value="1" name="comuna">Lo Barnechea</option>
-                                            <option value="1" name="comuna">Lo Espejo</option>
-                                            <option value="1" name="comuna">Lo Prado</option>
-                                            <option value="1" name="comuna">Macul</option>
-                                            <option value="1" name="comuna">Maipú</option>
-                                            <option value="1" name="comuna">Nuñoa</option>
-                                            <option value="1" name="comuna">Padre Hurtado</option>
-                                            <option value="1" name="comuna">Pedro Aguirre Cerda</option>
-                                            <option value="1" name="comuna">Peñalolén</option>
-                                            <option value="1" name="comuna">Providencia</option>
-                                            <option value="1" name="comuna">Pudahuel</option>
-                                            <option value="1" name="comuna">Puente Alto</option>
-                                            <option value="1" name="comuna">Quilicura</option>
-                                            <option value="1" name="comuna">Quinta Normal</option>
-                                            <option value="1" name="comuna">Recoleta</option>
-                                            <option value="1" name="comuna">Renca</option>
-                                            <option value="1" name="comuna">San Bernardo</option>
-                                            <option value="1" name="comuna">San Joaquín</option>
-                                            <option value="1" name="comuna">San Miguel</option>
-                                            <option value="1" name="comuna">San Ramón</option>
-                                            <option value="1" name="comuna">Santiago</option>
-                                            <option value="1" name="comuna">Vitacura</option>
-                                            <option value="1" name="comuna">Colina</option>
-                                            <option value="1" name="comuna">Lampa</option>
-                                            <option value="1" name="comuna">Buin</option>
-                                            <option value="1" name="comuna">Peñaflor</option>
-                                            <option value="1" name="comuna">Talagante</option>
-                                            <option value="1" name="comuna">Paine</option>
-                                            <option value="1" name="comuna">Isla de Maipo</option>
-                                            <option value="1" name="comuna">El Monte</option>
-                                            <option value="1" name="comuna">Pirque</option>
-                                            <option value="1" name="comuna">Calera de Tango</option>
-                                            <option value="1" name="comuna">San José de Maipo</option>
+                                        <select class="form-control" name="comuna" id="dept">
+                                            <option value="1" >- Comunas -</option>
+                                            <option value="1" >Cerrillos</option>
+                                            <option value="1" >Cerro Navia</option>
+                                            <option value="1" >Conchalí</option>
+                                            <option value="1" >El Bosque</option>
+                                            <option value="1" >Estación Central</option>
+                                            <option value="1" >Huechuraba</option>
+                                            <option value="1" >Independencia</option>
+                                            <option value="1" >La Cisterna</option>
+                                            <option value="1" >La Florida</option>
+                                            <option value="1" >La Granja</option>
+                                            <option value="1" >La Pintana</option>
+                                            <option value="1" >La Reina</option>
+                                            <option value="1" >Las Condes</option>
+                                            <option value="1" >Lo Barnechea</option>
+                                            <option value="1" >Lo Espejo</option>
+                                            <option value="1" >Lo Prado</option>
+                                            <option value="1" >Macul</option>
+                                            <option value="1" >Maipú</option>
+                                            <option value="1" >Nuñoa</option>
+                                            <option value="1" >Padre Hurtado</option>
+                                            <option value="1" >Pedro Aguirre Cerda</option>
+                                            <option value="1" >Peñalolén</option>
+                                            <option value="1" >Providencia</option>
+                                            <option value="1" >Pudahuel</option>
+                                            <option value="1" >Puente Alto</option>
+                                            <option value="1" >Quilicura</option>
+                                            <option value="1" >Quinta Normal</option>
                                         </select>
                                     </div>
                                 </div>
