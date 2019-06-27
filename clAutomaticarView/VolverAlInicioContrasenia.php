@@ -23,7 +23,7 @@
 	<div class="d-flex justify-content-center h-100">
 		<div class="card2">
 			<div class="card-header">
-				<h3>Contraseña cambiada</h3>
+				<h3>Correo enviado</h3>
                                 <h3>En 5 segundos sera redirigido a Login</h3>                              
 			</div>		
 		</div>
