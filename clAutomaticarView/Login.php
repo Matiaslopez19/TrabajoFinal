@@ -18,7 +18,7 @@
 	<!--Custom styles-->
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body background="../images/banner.webm">
+<body background="../images/pic01.jpg">
 <div class="container">
 	<div class="d-flex justify-content-center h-100">
 		<div class="card2">
