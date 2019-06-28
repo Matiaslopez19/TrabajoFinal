@@ -11,7 +11,8 @@ $servicio = $_POST['servicio'];
 $patente = $_POST['patente'];
 $comuna = $_POST['comuna'];
 $lugar = $_POST['direccion'];
-$cliente= $_POST['identificacion'];
+//$cliente= $_POST['identificacion'];
+$cliente = 1;
 $fecha= $_POST['fecha'];
 $estado= 1;
 $disponibilidad=1;
@@ -19,16 +20,16 @@ $horaInicio=$_POST['horaInicio'];
 $horaTermino=$_POST['horatermino'];
 $fInicio = $fecha." ".$horaInicio;
 $fTermino= $fecha." ".$horaTermino;
-echo $fInicio;
-echo $fTermino;
+//echo $fInicio;
+//echo $fTermino;
 $agendarDao= new AgendarDAO();
 $ag = $agendarDao->AgregarAgenda($estado, $patente, $comuna, $lugar, $fInicio, $servicio, 
-        $cliente, $cliente, $patente, $lugar);
+        $cliente, $disponibilidad, $fTermino);
 if (!is_null($ag)) {
-    echo 'se agrego a la base';
+    //echo 'se agrego a la base';
     include '../clAutomaticarView/SeleccionarServicio.php';
 }else{
-    echo 'no se agrego';
+    //echo 'no se agrego';
     include '../clAutomaticarView/SeleccionarServicio.php';
 }
 

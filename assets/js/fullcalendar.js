@@ -176,9 +176,22 @@ $.fn.fullCalendar = function(options) {
 
 
 // function for adding/overriding defaults
-function setDefaults(d) {
-	$.extend(true, defaults, d);
-}
+setDefaults({
+    allDaySlot: true,
+    allDayText: 'Volledige dag',
+    firstHour: 8,
+    slotMinutes: 30,
+    defaultEventMinutes: 120,
+    axisFormat: 'HH:mm',
+    timeFormat: {
+        agenda: 'H:mm{ - h:mm}'
+    },
+    dragOpacity: {
+        agenda: .5
+    },
+    minTime: 0,
+    maxTime: 24
+});
 
 
 

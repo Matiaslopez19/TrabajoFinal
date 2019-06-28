@@ -8,22 +8,25 @@ include_once '../assets/fullcalendar/demos/php/utils.php';
  */
 
 class AgendarDAO{
-    public function AgregarAgenda($lugar, $fecha_inicio, $servicioId, $clienteId, $disponibilidadId, $fecha_termino, $estado, $patente, $ubicacion) {
+    public function AgregarAgenda($estado, $patente, $comuna, $lugar, $fInicio, $servicio, 
+        $cliente, $disponibilidad, $fTermino) {
         $conexion = Conexion::conn();
         $n;
-        $sql="INSERT INTO agenda (`ag_estado`, `ag_patente`, `ag_lugar`, "
-                . "`ag_ubicacion`, `ag_fecha_inicio`, `Servicio_ser_id`, `Cliente_cli_id`,"
-                . " `Disponibilidad_disp_id`, `ag_fecha_termino`) VALUES (".$estado.","
-                . "'".$patente."','".$lugar."','".$ubicacion."','".$fecha_inicio."',".$servicioId.","
-                . "".$clienteId.",".$disponibilidadId.",'".$fecha_termino."')";
-        $sqlComprobacion="SELECT * FROM agenda WHERE Cliente_cli_id=".$clienteId."AND ag_fecha_inicio='".$fecha_inicio."'"
-                . "AND ag_fecha_Termino='".$fecha_termino."';";
+        $sql="INSERT INTO agenda (ag_estado, ag_patente, ag_lugar, "
+                . "ag_ubicacion, ag_fecha_inicio, Servicio_ser_id, Cliente_cli_id,"
+                . " Disponibilidad_disp_id, ag_fecha_termino) VALUES (".$estado.","
+                . "'".$patente."','".$comuna."','".$lugar."','".$fInicio."',".$servicio.","
+                . "".$cliente.",".$disponibilidad.",'".$fTermino."');";
+        $sqlComprobacion="SELECT * FROM agenda WHERE Cliente_cli_id=".$cliente." AND ag_fecha_inicio='".$fInicio."'"
+                . "AND ag_fecha_termino='".$fTermino."';";
+        //echo $sqlComprobacion;
         $res= mysqli_query($conexion, $sqlComprobacion);
         $resultadoc = mysqli_fetch_object($res);
         if(is_null($resultadoc)){
-            var_dump($resultadoc);
+            //var_dump($resultadoc);
            $res2= mysqli_query($conexion, $sql);
-           var_dump($res2);
+           //var_dump($res2);
+           //echo $sql;
            if (!is_null($res2)) {
                $u=TRUE;
                //echo 'ingresado sin problemas';

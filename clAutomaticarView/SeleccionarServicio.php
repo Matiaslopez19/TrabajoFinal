@@ -82,8 +82,8 @@ $user = $_SESSION['user'];
                         $("#fecha").append("<span>Día:" + moment(arg.start).format("YYYY-MM-DD") + "hora inicio:" + moment(arg.start).format("hh:mm:ss") + "hora termino:" + moment(arg.end).format("hh:mm:ss") + "</span>");
                         //alert("Ha elegido el día: "+moment(arg.start).format("YYYY-MM-DD")+", a la hora de: "+moment(arg.start).format("hh:mm:ss")+" y con hora de termino de: "+moment(arg.end).format("hh:mm:ss"));
                         $("#fAgenda").val(moment(arg.start).format("YYYY-MM-DD"));
-                        $("#hInicio").val(moment(arg.start).format("hh:mm:ss"));
-                        $("#hTermino").val(moment(arg.end).format("hh:mm:ss"));
+                        $("#hInicio").val(moment(arg.start).format("H:mm:ss"));
+                        $("#hTermino").val(moment(arg.end).format("H:mm:ss"));
                     }
                 });
 
@@ -342,5 +342,4 @@ $user = $_SESSION['user'];
 
         });
     </script>
-    <?= var_dump($user); ?>
 </html>
