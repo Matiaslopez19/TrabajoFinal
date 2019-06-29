@@ -23,7 +23,7 @@ var defaults = {
 	header: {
 		left: 'title',
 		center: '',
-		right: 'today prev,next'
+		right: 'hoy prev,sig'
 	},
 	weekends: true,
 	weekNumbers: false,
@@ -54,26 +54,27 @@ var defaults = {
 		week: 'ddd M/d',
 		day: 'dddd M/d'
 	},
-	timeFormat: { // for event elements
-		'': 'h(:mm)t' // default
-	},
+	timeFormat:  // for event elements
+		'H:mm{ - h:mm}' // default
+	,
 	
 	// locale
 	isRTL: false,
 	firstDay: 0,
-	monthNames: ['January','February','March','April','May','June','July','August','September','October','November','December'],
-	monthNamesShort: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
-	dayNames: ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
-	dayNamesShort: ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],
+	 monthNames: ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
+    monthNamesShort: ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'],
+    dayNames: ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'],
+    dayNamesShort: ['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'],
+    minTime: "09:00",
 	buttonText: {
 		prev: "<span class='fc-text-arrow'>&lsaquo;</span>",
 		next: "<span class='fc-text-arrow'>&rsaquo;</span>",
 		prevYear: "<span class='fc-text-arrow'>&laquo;</span>",
 		nextYear: "<span class='fc-text-arrow'>&raquo;</span>",
-		today: 'today',
-		month: 'month',
-		week: 'week',
-		day: 'day'
+		today: 'Hoy',
+		month: 'Mes',
+		week: 'Semana',
+		day: 'Dia'
 	},
 	
 	// jquery-ui theming
@@ -95,7 +96,7 @@ var defaults = {
 // right-to-left defaults
 var rtlDefaults = {
 	header: {
-		left: 'next,prev today',
+		left: 'sig,prev hoy',
 		center: '',
 		right: 'title'
 	},
@@ -2116,11 +2117,11 @@ function BasicDayView(element, calendar) {
 }
 
 ;;
-
+/*
 setDefaults({
 	weekMode: 'fixed'
 });
-
+*/
 
 function BasicView(element, calendar, viewName) {
 	var t = this;
@@ -2763,25 +2764,26 @@ function AgendaDayView(element, calendar) {
 }
 
 ;;
-
+/*
 setDefaults({
 	allDaySlot: true,
-	allDayText: 'all-day',
-	firstHour: 6,
-	slotMinutes: 30,
-	defaultEventMinutes: 120,
-	axisFormat: 'h(:mm)tt',
-	timeFormat: {
-		agenda: 'h:mm{ - h:mm}'
-	},
-	dragOpacity: {
-		agenda: .5
-	},
-	minTime: 0,
-	maxTime: 24,
-	slotEventOverlap: true
+allDayText: 'Volledige dag',
+firstHour: 8,
+slotMinutes: 30,
+defaultEventMinutes: 120,
+axisFormat: 'HH:mm',
+timeFormat: {
+    agenda: 'H:mm{ - h:mm}'
+},
+dragOpacity: {
+    agenda: .5
+},
+minTime: 0,
+maxTime: 24,
+	//
+        //slotEventOverlap: true
 });
-
+*/
 
 // TODO: make it work in quirks mode (event corners, all-day height)
 // TODO: test liquid width, especially in IE6
