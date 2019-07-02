@@ -6,7 +6,8 @@ include '../clAutomaticarDAO/agendarDAO.php';
  * To change this template file, choose Tools | Templates
  * and open the template in the editor. cambié weás
  */ 
-$servicio = $_POST['servicio'];
+if(isset($_POST['horaA'])){
+    $servicio = $_POST['servicio'];
 //$opcion = $_POST['opcion'];
 $patente = $_POST['patente'];
 $comuna = $_POST['comuna'];
@@ -33,3 +34,11 @@ if (!is_null($ag)) {
     include '../clAutomaticarView/SeleccionarServicio.php';
 }
 
+}else if(isset($_POST['delete'])) {
+    $id=$_POST['idCliente'];
+    $eliminar= new AgendarDAO();
+    $resul = $eliminar->deleteEvent($id);
+    if(!is_null($resul)){
+        include '../clAutomaticarView/SeleccionarServicio.php';
+    }
+}

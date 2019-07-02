@@ -4481,14 +4481,14 @@ Docs & License: https://fullcalendar.io/
             center: '',
             right: 'today prev,next'
         },
-        weekends: true,
+        weekends: false,
         weekNumbers: false,
         weekNumberCalculation: 'local',
         editable: false,
         // nowIndicator: false,
         scrollTime: '06:00:00',
-        minTime: '00:00:00',
-        maxTime: '24:00:00',
+        minTime: '07:00:00',
+        maxTime: '20:00:00',
         showNonCurrentDates: true,
         // event ajax
         lazyFetching: true,
@@ -4588,15 +4588,15 @@ Docs & License: https://fullcalendar.io/
             next: 'next',
             prevYear: 'prev year',
             nextYear: 'next year',
-            year: 'year',
-            today: 'today',
-            month: 'month',
-            week: 'week',
-            day: 'day',
-            list: 'list'
+            year: 'año',
+            today: 'hoy',
+            month: 'mes',
+            week: 'semana',
+            day: 'dia',
+            list: 'lista'
         },
         weekLabel: 'W',
-        allDayText: 'all-day',
+        allDayText: 'todo el dia',
         eventLimitText: 'more',
         noEventsMessage: 'No events to display'
     };

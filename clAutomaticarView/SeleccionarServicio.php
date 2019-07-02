@@ -31,17 +31,20 @@ $user = $_SESSION['user'];
         <script>
 
             document.addEventListener('DOMContentLoaded', function () {
-                var initialTimeZone = 'local';
+                var initialTimeZone = 'es-CL';//creditos a vicente del campo y kevin leyton por la idea
                 var timeZoneSelectorEl = document.getElementById('time-zone-selector');
                 var loadingEl = document.getElementById('loading');
                 var calendarEl = document.getElementById('calendar');
                 var calendar = new FullCalendar.Calendar(calendarEl, {
                     plugins: ['interaction', 'dayGrid', 'timeGrid'],
                     timeZone: initialTimeZone,
+                    locale: 'es',
+                    eventDurationEditable: true,
                     header: {
                         left: 'prev,next today',
                         center: 'title',
-                        right: 'dayGridMonth,timeGridWeek'
+                        right: 'dayGridMonth,timeGridWeek',
+
                     },
                     defaultDate: '2019-06-12',
                     navLinks: true, // can click day/week names to navigate views
@@ -70,20 +73,27 @@ $user = $_SESSION['user'];
                     },
 
                     eventTimeFormat: {hour: 'numeric', minute: '2-digit', timeZoneName: 'short'},
-
+                    eventDragStop: function(arg){
+                        alert("horas: "+moment(arg.start).format("YYYY-MM-DD")+" y "+moment(arg.end).format(""));
+                    },
                     dateClick: function (arg) {
                         console.log('dateClick', calendar.formatIso(arg.date));
+                    },
+                    eventClick: function (e) {
+                        $("#borrar").modal('show');
+                        $("#idCliente").empty();
+                        $("#idCliente").val(e.event.id);
                     },
                     select: function (arg) {
                         //console.log('select', calendar.formatIso(arg.start), calendar.formatIso(arg.end));
 
                         $("#solicitud").modal('show');
                         $("#fecha").empty();
-                        $("#fecha").append("<span>Día:" + moment(arg.start).format("YYYY-MM-DD") + "hora inicio:" + moment(arg.start).format("hh:mm:ss") + "hora termino:" + moment(arg.end).format("hh:mm:ss") + "</span>");
+                        $("#fecha").append("<span>Día:" + moment(arg.start).format("YYYY-MM-DD") + "hora inicio:" + moment(arg.start).format("HH:mm:ss") + "hora termino:" + moment(arg.end).format("HH:mm:ss") + "</span>");
                         //alert("Ha elegido el día: "+moment(arg.start).format("YYYY-MM-DD")+", a la hora de: "+moment(arg.start).format("hh:mm:ss")+" y con hora de termino de: "+moment(arg.end).format("hh:mm:ss"));
                         $("#fAgenda").val(moment(arg.start).format("YYYY-MM-DD"));
-                        $("#hInicio").val(moment(arg.start).format("H:mm:ss"));
-                        $("#hTermino").val(moment(arg.end).format("H:mm:ss"));
+                        $("#hInicio").val(moment(arg.start).format("HH:mm:ss"));
+                        $("#hTermino").val(moment(arg.end).format("HH:mm:ss"));
                     }
                 });
 
@@ -95,7 +105,6 @@ $user = $_SESSION['user'];
 
                     timeZones.forEach(function (timeZone) {
                         var optionEl;
-
                         if (timeZone !== 'UTC') { // UTC is already in the list
                             optionEl = document.createElement('option');
                             optionEl.value = timeZone;
@@ -195,7 +204,7 @@ $user = $_SESSION['user'];
 
                 <div id='calendar'></div>
                 <div class="content">
-                    <button id="openmodal" type="button">Abrir modal</button>
+                    <!--<button id="openmodal" type="button">Abrir modal</button>-->
 
 
                 </div>
@@ -231,18 +240,39 @@ $user = $_SESSION['user'];
             }
 
         </script>
+        <div id="borrar" class="modal" tabinex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">¿está seguro que quiere eliminar esta hora?</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="../clAutomaticarController/agendaController.php" method="post">
+                            <input type="hidden" name="idCliente" id="idCliente"/>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-primary button special" name="delete">Eliminar</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div id="solicitud" class="modal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Modal title</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
 
                     <div class="modal-body">
-                        <h2 class="align-center">Seleccionar Servicio</h2>
+                        <h2 class="align-center">Formulario</h2>
                         <hr />
                         <form action="../clAutomaticarController/agendaController.php" method="post">
                             <div id="fecha" name="horas"></div>
@@ -283,30 +313,6 @@ $user = $_SESSION['user'];
                                             <option value="1" >Cerrillos</option>
                                             <option value="1" >Cerro Navia</option>
                                             <option value="1" >Conchalí</option>
-                                            <option value="1" >El Bosque</option>
-                                            <option value="1" >Estación Central</option>
-                                            <option value="1" >Huechuraba</option>
-                                            <option value="1" >Independencia</option>
-                                            <option value="1" >La Cisterna</option>
-                                            <option value="1" >La Florida</option>
-                                            <option value="1" >La Granja</option>
-                                            <option value="1" >La Pintana</option>
-                                            <option value="1" >La Reina</option>
-                                            <option value="1" >Las Condes</option>
-                                            <option value="1" >Lo Barnechea</option>
-                                            <option value="1" >Lo Espejo</option>
-                                            <option value="1" >Lo Prado</option>
-                                            <option value="1" >Macul</option>
-                                            <option value="1" >Maipú</option>
-                                            <option value="1" >Nuñoa</option>
-                                            <option value="1" >Padre Hurtado</option>
-                                            <option value="1" >Pedro Aguirre Cerda</option>
-                                            <option value="1" >Peñalolén</option>
-                                            <option value="1" >Providencia</option>
-                                            <option value="1" >Pudahuel</option>
-                                            <option value="1" >Puente Alto</option>
-                                            <option value="1" >Quilicura</option>
-                                            <option value="1" >Quinta Normal</option>
                                         </select>
                                     </div>
                                 </div>
