@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Inicio AutomatiCar</title>
+  <title>Home Administrador</title>
 
 
   <!-- Bootstrap core CSS -->
@@ -54,9 +54,7 @@
       </nav>
 
       <div class="container-fluid">
-        <h1 class="mt-4">Servicios</h1>
-        <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
-        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional, and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the menu when clicked.</p>
+        <h1 class="mt-4">Home Administrador</h1>
       </div>
     </div>
     <!-- /#page-content-wrapper -->
