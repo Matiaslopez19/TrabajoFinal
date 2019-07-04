@@ -7,7 +7,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-	<title>Login Page</title>
+	<title>AutomatiCar</title>
    <!--Made with love by Mutiullah Samim -->
    <link href="../assets/css/cssLogin.css" rel="stylesheet" type="text/css"/>
 	<!--Bootsrap 4 CDN-->
