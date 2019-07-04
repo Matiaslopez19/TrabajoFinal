@@ -16,11 +16,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
-        <title>Crear Cuenta Mecánico</title>
+        <title>AutomatiCar</title>
         <!-- Bootstrap core CSS -->
         <link href="../assets/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <!-- Custom styles for this template -->
         <link href="../assets/css/simple-sidebar.css" rel="stylesheet" type="text/css"/>
+        <link href="../assets/css/cssCrearM.css" rel="stylesheet" type="text/css"/>
         
     </head>
     <body>
@@ -58,11 +59,11 @@
                     </div>
                 </nav>
 
-                <div class="container-fluid">
-                    <h1 class="mt-4">Home Administrador</h1>
+                <div class="container-fluid" align="center">
+                    <h1 class="mt-4"></h1>
                     <div class="card">
 			<div class="card-header">
-				<h3>Crear cuenta</h3>
+				<h3>Mecánico</h3>
 			</div>
 			<div class="card-body">
                             <form action="../clAutomaticarController/userController.php" method="post">

@@ -7,7 +7,7 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>AutomatiCar</title>
     </head>
     <body>
     <center><h1>Hora agendada</h1>

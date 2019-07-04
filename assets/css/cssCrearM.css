@@ -1,0 +1,30 @@
+/* Made with love by Mutiullah Samim*/
+
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+.card{
+height: 460px;
+margin-top: auto;
+margin-bottom: auto;
+width: 600px;
+}
+
+.card2{
+height: 370px;
+margin-top: auto;
+margin-bottom: auto;
+width: 400px;
+}
+
+.card3{
+height: 250px;
+margin-top: auto;
+margin-bottom: auto;
+width: 400px;
+}
+
+.login_btn{
+color: black;
+background-color: #FFC312;
+width: 100px;
+}

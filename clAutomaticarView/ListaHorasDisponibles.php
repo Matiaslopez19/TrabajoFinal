@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Agendar Hora</title>
+  <title>AutomatiCar</title>
 
     <!-- Bootstrap core CSS -->
   <link href="../assets/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
