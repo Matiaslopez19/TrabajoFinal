@@ -30,7 +30,7 @@
             <div class="bg-light border-right" id="sidebar-wrapper">
                 <div class="sidebar-heading"><img src="../images/Logo2.PNG" alt=""/></div>
                 <div class="list-group list-group-flush">
-                    <a href="AsignarMecanico.php" class="list-group-item list-group-item-action bg-light">Asignar Mecánico</a>
+                    <a href="../clAutomaticarView/AsignarMecanico.php" class="list-group-item list-group-item-action bg-light">Asignar Mecánico</a>
                     <a href="SubirHistorial.php" class="list-group-item list-group-item-action bg-light">Subir Historial  </a>
                 </div>
             </div>

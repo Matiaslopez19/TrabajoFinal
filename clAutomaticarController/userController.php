@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 include '../clAutomaticarDAO/UserDAO.php';
 /*
@@ -20,7 +19,7 @@ if (isset($_POST['2'])) { //se revisa el name del boton del formulario
                 $_SESSION['administrador'] = $u;
                 include('../clAutomaticarView/InicioAdmin.php');
             }else{
-                include '../clAutomaticarView/Login.php';
+                include ('../clAutomaticarView/Login.php');
             }
         } else {
             $us = $userDAO->login($userName, $userPass);

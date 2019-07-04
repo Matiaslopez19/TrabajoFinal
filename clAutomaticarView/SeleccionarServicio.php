@@ -171,7 +171,6 @@ $user = $_SESSION['user'];
                 </div>
             </div>
             <!-- /#sidebar-wrapper -->
-
             <!-- Page Content -->
             <div id="page-content-wrapper">
 

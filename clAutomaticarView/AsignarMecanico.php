@@ -5,21 +5,21 @@ $adm = $_SESSION['administrador'];
 ?>
 <html lang="en">
 
-<head>
+    <head>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-  <title>Asignar Mecánico</title>
+        <title>Asignar Mecánico</title>
 
 
-  <!-- Bootstrap core CSS -->
-  <link href="../assets/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-  <!-- Custom styles for this template -->
-  <link href="../assets/css/simple-sidebar.css" rel="stylesheet" type="text/css"/>
-<script>
+        <!-- Bootstrap core CSS -->
+        <link href="../assets/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <!-- Custom styles for this template -->
+        <link href="../assets/css/simple-sidebar.css" rel="stylesheet" type="text/css"/>
+        <script>
 
             document.addEventListener('DOMContentLoaded', function () {
                 var initialTimeZone = 'es-CL';//creditos a vicente del campo y kevin leyton por la idea
@@ -44,7 +44,7 @@ $adm = $_SESSION['administrador'];
                     selectable: true,
                     //eventLimit: true, // permite mantener 2 o mas horas al mismo tiempo
                     events: {
-                        url: 'http://localhost:81/TrabajoFinal/clAutomaticarController/EventosCalendario.php',
+                        url: 'http://localhost:81/TrabajoFinal/clAutomaticarController/EventosCalendarioNoEdicion.php',
                         failure: function () {
                             document.getElementById('script-warning').style.display = 'inline'; // show
                         }
@@ -59,8 +59,8 @@ $adm = $_SESSION['administrador'];
                     },
 
                     //eventTimeFormat: {hour: 'numeric', minute: '2-digit', timeZoneName: 'short'},
-                    eventDragStop: function(e){
-                        alert("horas: "+moment(e.event.start).format("YYYY-MM-DD")+" y "+moment(e.event.end).format("HH:mm:ss"));
+                    eventDragStop: function (e) {
+                        alert("horas: " + moment(e.event.start).format("YYYY-MM-DD") + " y " + moment(e.event.end).format("HH:mm:ss"));
                     },
                     dateClick: function (arg) {
                         console.log('dateClick', calendar.formatIso(arg.date));
@@ -88,24 +88,24 @@ $adm = $_SESSION['administrador'];
                 // load the list of available timezones, build the <select> options
                 // it's HIGHLY recommended to use a different library for network requests, not this internal util func
                 /*FullCalendar.requestJson('GET', '../assets/fullcalendar/demos/php/get-time-zones.php', {}, function (timeZones) {
-
-                    timeZones.forEach(function (timeZone) {
-                        var optionEl;
-                        if (timeZone !== 'UTC') { // UTC is already in the list
-                            optionEl = document.createElement('option');
-                            optionEl.value = timeZone;
-                            optionEl.innerText = timeZone;
-                            timeZoneSelectorEl.appendChild(optionEl);
-                        }
-                    });
-                }, function () {
-                    // TODO: handle error
-                });*/
+         
+                 timeZones.forEach(function (timeZone) {
+                 var optionEl;
+                 if (timeZone !== 'UTC') { // UTC is already in the list
+                 optionEl = document.createElement('option');
+                 optionEl.value = timeZone;
+                 optionEl.innerText = timeZone;
+                 timeZoneSelectorEl.appendChild(optionEl);
+                 }
+                 });
+                 }, function () {
+                 // TODO: handle error
+                 });*/
 
                 // when the timezone selector changes, dynamically change the calendar option
                 /*timeZoneSelectorEl.addEventListener('change', function () {
-                    calendar.setOption('timeZone', this.value);
-                });*/
+                 calendar.setOption('timeZone', this.value);
+                 });*/
             });
 
         </script>
@@ -143,64 +143,64 @@ $adm = $_SESSION['administrador'];
             }
 
         </style>
-</head>
+    </head>
 
-<body>
+    <body>
 
-  <div class="d-flex" id="wrapper">
+        <div class="d-flex" id="wrapper">
 
-    <!-- Sidebar -->
-    <div class="bg-light border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading"><img src="../images/Logo2.PNG" alt=""/></div>
-      <div class="list-group list-group-flush">
-          <a href="AsignarMecanico.php" class="list-group-item list-group-item-action bg-light">Asignar Mecánico</a>
-        <a href="SubirHistorial.php" class="list-group-item list-group-item-action bg-light">Subir Historial  </a>
-      </div>
-    </div>
-    <!-- /#sidebar-wrapper -->
+            <!-- Sidebar -->
+            <div class="bg-light border-right" id="sidebar-wrapper">
+                <div class="sidebar-heading"><img src="../images/Logo2.PNG" alt=""/></div>
+                <div class="list-group list-group-flush">
+                    <a href="AsignarMecanico.php" class="list-group-item list-group-item-action bg-light">Asignar Mecánico</a>
+                    <a href="SubirHistorial.php" class="list-group-item list-group-item-action bg-light">Subir Historial  </a>
+                </div>
+            </div>
+            <!-- /#sidebar-wrapper -->
 
-    <!-- Page Content -->
-    <div id="page-content-wrapper">
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
 
-      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-                <a class="nav-link" href="InicioAdmin.php">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="login.php">Salir</a>
-            </li>
-          </ul>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="InicioAdmin.php">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="login.php">Salir</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <div class="container-fluid">
+                    <h1 class="mt-4">Mecánico</h1>
+                </div>
+            </div>
+            <!-- /#page-content-wrapper -->
+
         </div>
-      </nav>
+        <!-- /#wrapper -->
 
-      <div class="container-fluid">
-        <h1 class="mt-4">Mecánico</h1>
-      </div>
-    </div>
-    <!-- /#page-content-wrapper -->
+        <!-- Bootstrap core JavaScript -->
+        <script src="../assets/css/vendor/jquery/jquery.min.js" type="text/javascript"></script>
+        <script src="../assets/css/vendor/bootstrap/js/bootstrap.bundle.min.js" type="text/javascript"></script>
 
-  </div>
-  <!-- /#wrapper -->
+        <!-- Menu Toggle Script -->
+        <script>
+          $("#menu-toggle").click(function (e) {
+              e.preventDefault();
+              $("#wrapper").toggleClass("toggled");
+          });
+        </script>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="../assets/css/vendor/jquery/jquery.min.js" type="text/javascript"></script>
-  <script src="../assets/css/vendor/bootstrap/js/bootstrap.bundle.min.js" type="text/javascript"></script>
-
-  <!-- Menu Toggle Script -->
-  <script>
-    $("#menu-toggle").click(function(e) {
-      e.preventDefault();
-      $("#wrapper").toggleClass("toggled");
-    });
-  </script>
-
-</body>
+    </body>
 
 </html>
