@@ -16,7 +16,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
-        <title>Crear Cuenta Mecánico</title>
+        <title>AutomatiCar</title>
         <!-- Bootstrap core CSS -->
         <link href="../assets/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <!-- Custom styles for this template -->
@@ -63,7 +63,7 @@
                     <h1 class="mt-4"></h1>
                     <div class="card">
 			<div class="card-header">
-				<h3>Crear cuenta</h3>
+				<h3>Mecánico</h3>
 			</div>
 			<div class="card-body">
                             <form action="../clAutomaticarController/userController.php" method="post">
@@ -107,7 +107,7 @@
                                             <button type="submit" name="1" class="btn float-right login_btn">Siguiente</button>
 					</div>
                                         <div class="form-group">
-                                            <input type="button" value="Atrás1" class="btn float-left login_btn" onClick=" window.location.href='Login.php' ">
+                                            <input type="button" value="Atrás" class="btn float-left login_btn" onClick=" window.location.href='Login.php' ">
 					</div>
 				</form>
 			</div>
