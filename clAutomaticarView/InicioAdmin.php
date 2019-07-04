@@ -24,11 +24,10 @@
 
     <!-- Sidebar -->
     <div class="bg-light border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading">Administrador</div>
+      <div class="sidebar-heading"><img src="../images/Logo2.PNG" alt=""/></div>
       <div class="list-group list-group-flush">
-        <a href="SeleccionarServicio.html" class="list-group-item list-group-item-action bg-light">Horas Agendadas</a>
-        <a href="Historial.html" class="list-group-item list-group-item-action bg-light">Subir Historial  </a>
-        <a href="HorasAgendadas.html" class="list-group-item list-group-item-action bg-light">Horas Agendadas</a>
+          <a href="AsignarMecanico.php" class="list-group-item list-group-item-action bg-light">Asignar Mecánico</a>
+        <a href="SubirHistorial.php" class="list-group-item list-group-item-action bg-light">Subir Historial  </a>
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
@@ -37,7 +36,6 @@
     <div id="page-content-wrapper">
 
       <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-        <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -46,7 +44,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="InicioAdmin.php">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="login.php">Salir</a>
