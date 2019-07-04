@@ -107,7 +107,7 @@
                                             <button type="submit" name="1" class="btn float-right login_btn">Siguiente</button>
 					</div>
                                         <div class="form-group">
-                                            <input type="button" value="Atrás" class="btn float-left login_btn" onClick=" window.location.href='Login.php' ">
+                                            <input type="button" value="Atrás1" class="btn float-left login_btn" onClick=" window.location.href='Login.php' ">
 					</div>
 				</form>
 			</div>
