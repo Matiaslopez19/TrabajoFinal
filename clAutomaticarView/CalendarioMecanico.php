@@ -1,4 +1,5 @@
 <?php
+session_start();
 include '../clAutomaticarDAO/ServicioDAO.php';
 $user = $_SESSION['user'];
 ?>

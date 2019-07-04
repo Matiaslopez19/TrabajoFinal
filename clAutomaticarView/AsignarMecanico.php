@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <?php
+session_start();
 include '../clAutomaticarDAO/ServicioDAO.php';
 $adm = $_SESSION['administrador'];
 ?>
 <html lang="en">
 
     <head>
-
+<link href="../assets/fullcalendar/packages/core/main.css" rel="stylesheet" type="text/css"/>
+        <link href="../assets/fullcalendar/packages/daygrid/main.css" rel="stylesheet" type="text/css"/>
+        <link href="../assets/fullcalendar/packages/timegrid/main.css" rel="stylesheet" type="text/css"/>
+        <link href="../assets/fullcalendar/packages/list/main.css" rel="stylesheet" type="text/css"/>
+        <script src="../assets/fullcalendar/packages/core/main.js" type="text/javascript"></script>
+        <script src="../assets/fullcalendar/packages/interaction/main.js" type="text/javascript"></script>
+        <script src="../assets/fullcalendar/packages/daygrid/main.js" type="text/javascript"></script>
+        <script src="../assets/fullcalendar/packages/timegrid/main.js" type="text/javascript"></script>
+        <script src="../assets/fullcalendar/packages/list/main.js" type="text/javascript"></script> 
+        <script src="../assets/js/moment.min.js" type="text/javascript"></script>
+        <script src="../assets/js/moment.timeZone.js" type="text/javascript"></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
-
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
         <title>Asignar Mecánico</title>
 
 
@@ -46,16 +64,16 @@ $adm = $_SESSION['administrador'];
                     events: {
                         url: 'http://localhost:81/TrabajoFinal/clAutomaticarController/EventosCalendarioNoEdicion.php',
                         failure: function () {
-                            document.getElementById('script-warning').style.display = 'inline'; // show
+                            //document.getElementById('script-warning').style.display = 'inline'; // show
                         }
 
                     },
                     loading: function (bool) {
-                        if (bool) {
+                        /*if (bool) {
                             loadingEl.style.display = 'inline'; // show
                         } else {
                             loadingEl.style.display = 'none'; // hide
-                        }
+                        }*/
                     },
 
                     //eventTimeFormat: {hour: 'numeric', minute: '2-digit', timeZoneName: 'short'},
@@ -182,6 +200,7 @@ $adm = $_SESSION['administrador'];
 
                 <div class="container-fluid">
                     <h1 class="mt-4">Mecánico</h1>
+                      <div id='calendar'></div>
                 </div>
             </div>
             <!-- /#page-content-wrapper -->

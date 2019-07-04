@@ -75,7 +75,9 @@ class AgendarDAO{
     }
     public static function FindAllEventsNormal() {
         $query="SELECT ag_id as id, ag_fecha_inicio as start, ser_nombre as title,"
-                . " ag_fecha_termino as end inner join Servicio on ser_id= Servicio_ser_id";
+                . " ag_fecha_termino as end from agenda inner join Servicio on ser_id= Servicio_ser_id "
+                . " where ag_estado = 1";
+        //echo $query;
         $conexion= Conexion::conn();
         $res = mysqli_query($conexion,$query);
         while($row = mysqli_fetch_assoc($res)){
@@ -86,6 +88,7 @@ class AgendarDAO{
               $output_arrays[] = $event->toArray();
             //}
         }
+       
         return $output_arrays;
     }
 }

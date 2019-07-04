@@ -16,7 +16,8 @@ if (isset($_POST['2'])) { //se revisa el name del boton del formulario
         if ($userName == "sebalokoshoon98@gmail.com") {
             $us = $userDAO->LoginAdmin($userName, $userPass);
             if (!is_null($us)) {
-                $_SESSION['administrador'] = $u;
+                $_SESSION['administrador'] = $us;
+                var_dump($_SESSION['administrador']);
                 include('../clAutomaticarView/InicioAdmin.php');
             }else{
                 include ('../clAutomaticarView/Login.php');
