@@ -9,7 +9,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Subir Historial</title>
+        <title>AutomatiCar</title>
 
         <!-- Bootstrap core CSS -->
         <link href="../assets/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -28,6 +28,7 @@
       <div class="list-group list-group-flush">
           <a href="AsignarMecanico.php" class="list-group-item list-group-item-action bg-light">Asignar Mecánico</a>
         <a href="SubirHistorial.php" class="list-group-item list-group-item-action bg-light">Subir Historial  </a>
+        <a href="CrearCuentaM.php" class="list-group-item list-group-item-action bg-light">Crear Cuenta Mecánico</a>
       </div>
     </div>
             <!-- /#sidebar-wrapper -->
