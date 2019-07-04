@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Home Administrador</title>
+  <title>Home Mecánico</title>
 
 
   <!-- Bootstrap core CSS -->
@@ -26,8 +26,7 @@
     <div class="bg-light border-right" id="sidebar-wrapper">
       <div class="sidebar-heading"><img src="../images/Logo2.PNG" alt=""/></div>
       <div class="list-group list-group-flush">
-          <a href="AsignarMecanico.php" class="list-group-item list-group-item-action bg-light">Asignar Mecánico</a>
-        <a href="SubirHistorial.php" class="list-group-item list-group-item-action bg-light">Subir Historial  </a>
+          <a href="CalendarioMecanico.php" class="list-group-item list-group-item-action bg-light">Horas Asignadas</a>
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
@@ -44,7 +43,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-                <a class="nav-link" href="InicioAdmin.php">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="InicioMecanico.php">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="login.php">Salir</a>
@@ -54,7 +53,7 @@
       </nav>
 
       <div class="container-fluid">
-        <h1 class="mt-4">Home Administrador</h1>
+        <h1 class="mt-4">Home Mecánico</h1>
       </div>
     </div>
     <!-- /#page-content-wrapper -->

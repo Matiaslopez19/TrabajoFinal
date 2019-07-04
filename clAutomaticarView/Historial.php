@@ -9,7 +9,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Historial</title>
+        <title>Descargar Historial</title>
 
         <!-- Bootstrap core CSS -->
         <link href="../assets/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -24,11 +24,10 @@
 
             <!-- Sidebar -->
             <div class="bg-light border-right" id="sidebar-wrapper">
-                <div class="sidebar-heading">AutomatiCar</div>
+                <div class="sidebar-heading"><img src="../images/Logo2.PNG" alt=""/></div>              
                 <div class="list-group list-group-flush">
                     <a href="SeleccionarServicio.php" class="list-group-item list-group-item-action bg-light">Agendar Hora</a>
                     <a href="Historial.php" class="list-group-item list-group-item-action bg-light">Descargar Historial</a>
-                    <a href="HorasAgendadas.php" class="list-group-item list-group-item-action bg-light">Horas Agendadas</a>
                 </div>
             </div>
             <!-- /#sidebar-wrapper -->
@@ -56,19 +55,18 @@
                 </nav>
 
                 <div class="content">
-
-
-                    <h2 class="align-center">Historial</h2>
-                    <hr />
+                    <div class="container-fluid">
+                        <h1 class="mt-4">Historial</h1>
+                    </div>
                     <form action="#" method="post">
                         <div class="field half">
                             <label>Ingrese patente del vehículo</label>
-                            <input name="patente" id="email" type="email" placeholder="AA0000 - AAAA0000">
+                            <input name="patente" id="email" type="email" placeholder="AA0000 - AAAA00">
                         </div>
                         <br>
 
                         <ul class="actions align-center">
-                            <li><input value="Buscar y descargar" class="button special" type="submit"></li>
+                            <input value="Buscar y descargar" class="button special" type="submit">
                         </ul>
                         <ul class="actions align-center">
                            <!-- <li><input type="button" class="button special" value="Atrás" onClick=" window.location.href = '.php'"></li> -->
