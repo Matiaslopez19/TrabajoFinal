@@ -21,6 +21,7 @@
         <link href="../assets/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <!-- Custom styles for this template -->
         <link href="../assets/css/simple-sidebar.css" rel="stylesheet" type="text/css"/>
+        <link href="../assets/css/cssCrearM.css" rel="stylesheet" type="text/css"/>
         
     </head>
     <body>
@@ -58,8 +59,8 @@
                     </div>
                 </nav>
 
-                <div class="container-fluid">
-                    <h1 class="mt-4">Home Administrador</h1>
+                <div class="container-fluid" align="center">
+                    <h1 class="mt-4"></h1>
                     <div class="card">
 			<div class="card-header">
 				<h3>Crear cuenta</h3>
