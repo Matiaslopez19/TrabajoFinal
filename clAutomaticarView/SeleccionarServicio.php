@@ -13,8 +13,9 @@ $user = $_SESSION['user'];
         <script src="../assets/fullcalendar/packages/interaction/main.js" type="text/javascript"></script>
         <script src="../assets/fullcalendar/packages/daygrid/main.js" type="text/javascript"></script>
         <script src="../assets/fullcalendar/packages/timegrid/main.js" type="text/javascript"></script>
-        <script src="../assets/fullcalendar/packages/list/main.js" type="text/javascript"></script>
+        <script src="../assets/fullcalendar/packages/list/main.js" type="text/javascript"></script> 
         <script src="../assets/js/moment.min.js" type="text/javascript"></script>
+        <script src="../assets/js/moment.timeZone.js" type="text/javascript"></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
@@ -31,10 +32,11 @@ $user = $_SESSION['user'];
         <script>
 
             document.addEventListener('DOMContentLoaded', function () {
-                var initialTimeZone = 'es-CL';//creditos a vicente del campo y kevin leyton por la idea
+                var initialTimeZone = 'GTM-4';//creditos a vicente del campo y kevin leyton por la idea
                 var timeZoneSelectorEl = document.getElementById('time-zone-selector');
                 var loadingEl = document.getElementById('loading');
                 var calendarEl = document.getElementById('calendar');
+                //var momento = moment.tz('America/Santiago'); 
                 var calendar = new FullCalendar.Calendar(calendarEl, {
                     plugins: ['interaction', 'dayGrid', 'timeGrid'],
                     timeZone: initialTimeZone,
@@ -72,9 +74,9 @@ $user = $_SESSION['user'];
                         }
                     },
 
-                    eventTimeFormat: {hour: 'numeric', minute: '2-digit', timeZoneName: 'short'},
-                    eventDragStop: function(arg){
-                        alert("horas: "+moment(arg.start).format("YYYY-MM-DD")+" y "+moment(arg.end).format(""));
+                    //eventTimeFormat: {hour: 'numeric', minute: '2-digit', timeZoneName: 'short'},
+                    eventDragStop: function(e){
+                        alert("horas: "+moment(e.event.start).format("YYYY-MM-DD")+" y "+moment(e.event.end).format("HH:mm:ss"));
                     },
                     dateClick: function (arg) {
                         console.log('dateClick', calendar.formatIso(arg.date));
@@ -101,7 +103,7 @@ $user = $_SESSION['user'];
 
                 // load the list of available timezones, build the <select> options
                 // it's HIGHLY recommended to use a different library for network requests, not this internal util func
-                FullCalendar.requestJson('GET', '../assets/fullcalendar/demos/php/get-time-zones.php', {}, function (timeZones) {
+                /*FullCalendar.requestJson('GET', '../assets/fullcalendar/demos/php/get-time-zones.php', {}, function (timeZones) {
 
                     timeZones.forEach(function (timeZone) {
                         var optionEl;
@@ -114,12 +116,12 @@ $user = $_SESSION['user'];
                     });
                 }, function () {
                     // TODO: handle error
-                });
+                });*/
 
                 // when the timezone selector changes, dynamically change the calendar option
-                timeZoneSelectorEl.addEventListener('change', function () {
+                /*timeZoneSelectorEl.addEventListener('change', function () {
                     calendar.setOption('timeZone', this.value);
-                });
+                });*/
             });
 
         </script>
