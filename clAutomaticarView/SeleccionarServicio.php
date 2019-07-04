@@ -32,7 +32,7 @@ $user = $_SESSION['user'];
         <script>
 
             document.addEventListener('DOMContentLoaded', function () {
-                var initialTimeZone = 'GTM-4';//creditos a vicente del campo y kevin leyton por la idea
+                var initialTimeZone = 'es-CL';//creditos a vicente del campo y kevin leyton por la idea
                 var timeZoneSelectorEl = document.getElementById('time-zone-selector');
                 var loadingEl = document.getElementById('loading');
                 var calendarEl = document.getElementById('calendar');

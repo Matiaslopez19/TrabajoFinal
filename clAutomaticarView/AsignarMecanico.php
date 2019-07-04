@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php
+include '../clAutomaticarDAO/ServicioDAO.php';
+$adm = $_SESSION['administrador'];
+?>
 <html lang="en">
 
 <head>
@@ -15,7 +19,130 @@
   <link href="../assets/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <!-- Custom styles for this template -->
   <link href="../assets/css/simple-sidebar.css" rel="stylesheet" type="text/css"/>
+<script>
 
+            document.addEventListener('DOMContentLoaded', function () {
+                var initialTimeZone = 'es-CL';//creditos a vicente del campo y kevin leyton por la idea
+                var timeZoneSelectorEl = document.getElementById('time-zone-selector');
+                var loadingEl = document.getElementById('loading');
+                var calendarEl = document.getElementById('calendar');
+                //var momento = moment.tz('America/Santiago'); 
+                var calendar = new FullCalendar.Calendar(calendarEl, {
+                    plugins: ['interaction', 'dayGrid', 'timeGrid'],
+                    timeZone: initialTimeZone,
+                    locale: 'es',
+                    eventDurationEditable: false,
+                    header: {
+                        left: 'prev,next today',
+                        center: 'title',
+                        right: 'dayGridMonth,timeGridWeek',
+
+                    },
+                    defaultDate: '2019-06-12',
+                    navLinks: true, // can click day/week names to navigate views
+                    editable: false, //permite modificar el lugar de los eventos en el calendario
+                    selectable: true,
+                    //eventLimit: true, // permite mantener 2 o mas horas al mismo tiempo
+                    events: {
+                        url: 'http://localhost:81/TrabajoFinal/clAutomaticarController/EventosCalendario.php',
+                        failure: function () {
+                            document.getElementById('script-warning').style.display = 'inline'; // show
+                        }
+
+                    },
+                    loading: function (bool) {
+                        if (bool) {
+                            loadingEl.style.display = 'inline'; // show
+                        } else {
+                            loadingEl.style.display = 'none'; // hide
+                        }
+                    },
+
+                    //eventTimeFormat: {hour: 'numeric', minute: '2-digit', timeZoneName: 'short'},
+                    eventDragStop: function(e){
+                        alert("horas: "+moment(e.event.start).format("YYYY-MM-DD")+" y "+moment(e.event.end).format("HH:mm:ss"));
+                    },
+                    dateClick: function (arg) {
+                        console.log('dateClick', calendar.formatIso(arg.date));
+                    },
+                    eventClick: function (e) {
+                        $("#borrar").modal('show');
+                        $("#idCliente").empty();
+                        $("#idCliente").val(e.event.id);
+                    },
+                    select: function (arg) {
+                        //console.log('select', calendar.formatIso(arg.start), calendar.formatIso(arg.end));
+
+                        $("#solicitud").modal('show');
+                        $("#fecha").empty();
+                        $("#fecha").append("<span>Día:" + moment(arg.start).format("YYYY-MM-DD") + "hora inicio:" + moment(arg.start).format("HH:mm:ss") + "hora termino:" + moment(arg.end).format("HH:mm:ss") + "</span>");
+                        //alert("Ha elegido el día: "+moment(arg.start).format("YYYY-MM-DD")+", a la hora de: "+moment(arg.start).format("hh:mm:ss")+" y con hora de termino de: "+moment(arg.end).format("hh:mm:ss"));
+                        $("#fAgenda").val(moment(arg.start).format("YYYY-MM-DD"));
+                        $("#hInicio").val(moment(arg.start).format("HH:mm:ss"));
+                        $("#hTermino").val(moment(arg.end).format("HH:mm:ss"));
+                    }
+                });
+
+                calendar.render();
+
+                // load the list of available timezones, build the <select> options
+                // it's HIGHLY recommended to use a different library for network requests, not this internal util func
+                /*FullCalendar.requestJson('GET', '../assets/fullcalendar/demos/php/get-time-zones.php', {}, function (timeZones) {
+
+                    timeZones.forEach(function (timeZone) {
+                        var optionEl;
+                        if (timeZone !== 'UTC') { // UTC is already in the list
+                            optionEl = document.createElement('option');
+                            optionEl.value = timeZone;
+                            optionEl.innerText = timeZone;
+                            timeZoneSelectorEl.appendChild(optionEl);
+                        }
+                    });
+                }, function () {
+                    // TODO: handle error
+                });*/
+
+                // when the timezone selector changes, dynamically change the calendar option
+                /*timeZoneSelectorEl.addEventListener('change', function () {
+                    calendar.setOption('timeZone', this.value);
+                });*/
+            });
+
+        </script>
+        <style>
+
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+                font-size: 14px;
+            }
+
+            #top {
+                background: #eee;
+                border-bottom: 1px solid #ddd;
+                padding: 0 10px;
+                line-height: 40px;
+                font-size: 12px;
+            }
+            .left { float: left }
+            .right { float: right }
+            .clear { clear: both }
+
+            #script-warning, #loading { display: none }
+            #script-warning { font-weight: bold; color: red }
+
+            #calendar {
+                max-width: 900px;
+                margin: 40px auto;
+                padding: 0 10px;
+            }
+
+            .tzo {
+                color: #000;
+            }
+
+        </style>
 </head>
 
 <body>

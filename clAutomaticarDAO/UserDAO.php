@@ -7,6 +7,20 @@ include '../clAutomaticarData/conexion.php';
  * and open the template in the editor.
  */
 class UserDAO{
+    public function  LoginAdmin($mail, $pass){
+        $u=null;
+        $conexion = new Conexion();
+        $sql="SELECT * FROM administrador WHERE adm_usuario='$mail' AND adm_clave='$pass'";
+        $result= mysqli_query($conexion->conn(), $sql);
+        if ($result->num_rows == 1) {
+            $row = mysqli_fetch_array($result);
+            $u= $row;
+        }else{
+            
+        }
+        return $u;
+    }
+
     public function login($mail, $pass){
         $u= null; 
         $conexion = new Conexion();
@@ -20,8 +34,7 @@ class UserDAO{
               //      $row["cli_email"], $row["cli_apellidos"], $row["cli_clave"],
                 //    $row["cli_tipo"]);
         }else{
-           echo "no hubo resultados";
-            var_dump($result);
+
         }
         return $u;
         }

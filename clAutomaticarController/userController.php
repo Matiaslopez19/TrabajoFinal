@@ -21,6 +21,7 @@ if (isset($_POST['2'])) { //se revisa el name del boton del formulario
         } else {
             include('../clAutomaticarView/Login.php');
         }
+        
     }
 } else if (isset($_POST['1'])) {
         $nombre = $_POST['nombre'];
