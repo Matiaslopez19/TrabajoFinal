@@ -23,7 +23,7 @@ $user = $_SESSION['user'];
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
-        <title>Automaticar</title>
+        <title>Agendar Hora</title>
         <!-- Bootstrap core CSS -->
         <link href="../assets/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <!-- Custom styles for this template -->
@@ -166,7 +166,6 @@ $user = $_SESSION['user'];
                 <div class="list-group list-group-flush">
                     <a href="../clAutomaticarView/SeleccionarServicio.php" class="list-group-item list-group-item-action bg-light">Agendar Hora</a>
                     <a href="Historial.php" class="list-group-item list-group-item-action bg-light">Descargar Historial</a>
-                    <a href="HorasAgendadas.php" class="list-group-item list-group-item-action bg-light">Horas Agendadas</a>
                 </div>
             </div>
             <!-- /#sidebar-wrapper -->
