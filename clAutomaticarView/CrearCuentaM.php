@@ -1,3 +1,7 @@
+<?php
+include '../clAutomaticarDAO/ServicioDAO.php';
+$user = $_SESSION['user'];
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -53,7 +57,7 @@
                                 <a class="nav-link" href="InicioAdmin.php">Home <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="login.php">Salir</a>
+                                <a class="nav-link" href="../clAutomaticarView/Login.php?salir=salir">Salir</a>
                             </li>
                         </ul>
                     </div>
@@ -125,11 +129,17 @@
         <script src="../assets/css/vendor/bootstrap/js/bootstrap.bundle.min.js" type="text/javascript"></script>
 
         <!-- Menu Toggle Script -->
-        <script>
-            $("#menu-toggle").click(function (e) {
-                e.preventDefault();
-                $("#wrapper").toggleClass("toggled");
-            });
+        <script type="text/javascript">
+        $(function () {
+            $("#openmodal").click(function () {
+                $('#solicitud').modal('show');
+            })
+            var serviceSelected = <?= (isset($_SESSION['serviceid'])) ? $_SESSION['serviceid'] : 0; ?>
+
+
+            $("#servicios option[value=" + serviceSelected + "]").attr("selected", true);
+
+        });
         </script>
 
     </body>
