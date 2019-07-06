@@ -24,7 +24,7 @@ $user = $_SESSION['user'];
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
-        <title>Horas Asignadas</title>
+        <title>AutomatiCar</title>
         <!-- Bootstrap core CSS -->
         <link href="../assets/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <!-- Custom styles for this template -->
@@ -163,7 +163,7 @@ $user = $_SESSION['user'];
         <div class="d-flex" id="wrapper">
             <!-- Sidebar -->
             <div class="bg-light border-right" id="sidebar-wrapper">
-                <div class="sidebar-heading"><img src="../images/Logo2.PNG" alt=""/></div>         
+                <div class="sidebar-heading"><a href="index.php"><img src="../images/Logo2.PNG" alt=""/></a></div>         
                 <div class="list-group list-group-flush">
                     <a href="../clAutomaticarView/CalendarioMecanico.php" class="list-group-item list-group-item-action bg-light">Horas Asignadas</a>
                 </div>

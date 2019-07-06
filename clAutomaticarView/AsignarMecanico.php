@@ -7,7 +7,7 @@ $adm = $_SESSION['administrador'];
 <html lang="en">
 
     <head>
-<link href="../assets/fullcalendar/packages/core/main.css" rel="stylesheet" type="text/css"/>
+        <link href="../assets/fullcalendar/packages/core/main.css" rel="stylesheet" type="text/css"/>
         <link href="../assets/fullcalendar/packages/daygrid/main.css" rel="stylesheet" type="text/css"/>
         <link href="../assets/fullcalendar/packages/timegrid/main.css" rel="stylesheet" type="text/css"/>
         <link href="../assets/fullcalendar/packages/list/main.css" rel="stylesheet" type="text/css"/>
@@ -30,7 +30,7 @@ $adm = $_SESSION['administrador'];
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
-        <title>Asignar Mecánico</title>
+        <title>AutomatiCar</title>
 
 
         <!-- Bootstrap core CSS -->
@@ -169,7 +169,7 @@ $adm = $_SESSION['administrador'];
 
             <!-- Sidebar -->
             <div class="bg-light border-right" id="sidebar-wrapper">
-                <div class="sidebar-heading"><img src="../images/Logo2.PNG" alt=""/></div>
+                <div class="sidebar-heading"><a href="index.php"><img src="../images/Logo2.PNG" alt=""/></a></div>
                 <div class="list-group list-group-flush">
                     <a href="AsignarMecanico.php" class="list-group-item list-group-item-action bg-light">Asignar Mecánico</a>
                     <a href="SubirHistorial.php" class="list-group-item list-group-item-action bg-light">Subir Historial  </a>

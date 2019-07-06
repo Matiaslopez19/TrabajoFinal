@@ -9,7 +9,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Descargar Historial</title>
+        <title>AutomatiCar</title>
 
         <!-- Bootstrap core CSS -->
         <link href="../assets/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -24,7 +24,7 @@
 
             <!-- Sidebar -->
             <div class="bg-light border-right" id="sidebar-wrapper">
-                <div class="sidebar-heading"><img src="../images/Logo2.PNG" alt=""/></div>              
+                <div class="sidebar-heading"><a href="index.php"><img src="../images/Logo2.PNG" alt=""/></a></div>              
                 <div class="list-group list-group-flush">
                     <a href="SeleccionarServicio.php" class="list-group-item list-group-item-action bg-light">Agendar Hora</a>
                     <a href="Historial.php" class="list-group-item list-group-item-action bg-light">Descargar Historial</a>

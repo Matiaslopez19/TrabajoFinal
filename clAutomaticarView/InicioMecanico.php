@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Home Mecánico</title>
+  <title>AutomatiCar</title>
 
 
   <!-- Bootstrap core CSS -->
@@ -24,7 +24,7 @@
 
     <!-- Sidebar -->
     <div class="bg-light border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading"><img src="../images/Logo2.PNG" alt=""/></div>
+      <div class="sidebar-heading"><a href="index.php"><img src="../images/Logo2.PNG" alt=""/></a></div>
       <div class="list-group list-group-flush">
           <a href="CalendarioMecanico.php" class="list-group-item list-group-item-action bg-light">Horas Asignadas</a>
       </div>

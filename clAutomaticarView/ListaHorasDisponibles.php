@@ -24,7 +24,7 @@
 
     <!-- Sidebar -->
     <div class="bg-light border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading">Autom,atiCar</div>
+      <div class="sidebar-heading">AutomatiCar</div>
       <div class="list-group list-group-flush">
           <a href="ListaHorasDisponibles.php" class="list-group-item list-group-item-action bg-light">Agendar Hora</a>
           <a href="Historial.php" class="list-group-item list-group-item-action bg-light">Descargar Historial</a>
