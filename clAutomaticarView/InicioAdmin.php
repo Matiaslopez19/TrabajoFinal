@@ -34,8 +34,10 @@ $user = $_SESSION['user'];
             <div class="bg-light border-right" id="sidebar-wrapper">
                 <div class="sidebar-heading"><a href="index.php"><img src="../images/Captura.png" width="183px" height="130px"/></a></div>
                 <div class="list-group list-group-flush">
-                    <a href="../clAutomaticarView/AsignarMecanico.php" class="list-group-item list-group-item-action bg-light">Asignar Mecánico</a>
+                    <a href="../clAutomaticarView/AsignarMecanico.php" class="list-group-item list-group-item-action bg-light">Asignar Trabajador</a>
                     <a href="SubirHistorial.php" class="list-group-item list-group-item-action bg-light">Subir Historial  </a>
+                    <a href="CrearCuentaM.php" class="list-group-item list-group-item-action bg-light">Crear Cuenta Trabajador</a>
+                    <a href="EliminarTrabajador.php" class="list-group-item list-group-item-action bg-light">Eliminar Trabajador</a>
                 </div>
             </div>
             <!-- /#sidebar-wrapper -->

@@ -3,8 +3,9 @@ include '../clAutomaticarDAO/ServicioDAO.php';
 $user = $_SESSION['user'];
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
+        <meta charset="UTF-8">
         <link href="../assets/fullcalendar/packages/core/main.css" rel="stylesheet" type="text/css"/>
         <link href="../assets/fullcalendar/packages/daygrid/main.css" rel="stylesheet" type="text/css"/>
         <link href="../assets/fullcalendar/packages/timegrid/main.css" rel="stylesheet" type="text/css"/>
@@ -16,7 +17,6 @@ $user = $_SESSION['user'];
         <script src="../assets/fullcalendar/packages/list/main.js" type="text/javascript"></script> 
         <script src="../assets/js/moment.min.js" type="text/javascript"></script>
         <script src="../assets/js/moment.timeZone.js" type="text/javascript"></script>
-        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
@@ -35,9 +35,10 @@ $user = $_SESSION['user'];
             <div class="bg-light border-right" id="sidebar-wrapper">
                 <div class="sidebar-heading"><a href="index.php"><img src="../images/Captura.png" width="183px" height="130px"/></a></div>
                 <div class="list-group list-group-flush">
-                    <a href="AsignarMecanico.php" class="list-group-item list-group-item-action bg-light">Asignar Mecánico</a>
+                    <a href="AsignarMecanico.php" class="list-group-item list-group-item-action bg-light">Asignar Trabajador</a>
                     <a href="SubirHistorial.php" class="list-group-item list-group-item-action bg-light">Subir Historial</a>
-                    <a href="CrearCuentaM.php" class="list-group-item list-group-item-action bg-light">Crear Cuenta Mecánico</a>
+                    <a href="CrearCuentaM.php" class="list-group-item list-group-item-action bg-light">Crear Cuenta Trabajador</a>
+                    <a href="EliminarTrabajador.php" class="list-group-item list-group-item-action bg-light">Eliminar Trabajador</a>
                 </div>
             </div>
             <!-- /#sidebar-wrapper -->
@@ -67,7 +68,7 @@ $user = $_SESSION['user'];
                     <h1 class="mt-4"></h1>
                     <div class="card">
 			<div class="card-header">
-				<h3>Mecánico</h3>
+				<h3>Crear Cuenta</h3>
 			</div>
 			<div class="card-body">
                             <form action="../clAutomaticarController/userController.php" method="post">
@@ -109,9 +110,6 @@ $user = $_SESSION['user'];
 					</div>
 					<div class="form-group">
                                             <button type="submit" name="1" class="btn float-right login_btn">Siguiente</button>
-					</div>
-                                        <div class="form-group">
-                                            <input type="button" value="Atrás" class="btn float-left login_btn" onClick=" window.location.href='Login.php' ">
 					</div>
 				</form>
 			</div>

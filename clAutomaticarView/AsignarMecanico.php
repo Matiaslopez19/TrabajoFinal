@@ -171,8 +171,11 @@ $adm = $_SESSION['administrador'];
             <div class="bg-light border-right" id="sidebar-wrapper">
                 <div class="sidebar-heading"><a href="index.php"><img src="../images/Captura.png" width="183px" height="130px"/></a></div>
                 <div class="list-group list-group-flush">
-                    <a href="AsignarMecanico.php" class="list-group-item list-group-item-action bg-light">Asignar Mecánico</a>
-                    <a href="SubirHistorial.php" class="list-group-item list-group-item-action bg-light">Subir Historial  </a>
+                    <a href="AsignarMecanico.php" class="list-group-item list-group-item-action bg-light">Asignar Trabajador</a>
+                    <a href="SubirHistorial.php" class="list-group-item list-group-item-action bg-light">Subir Historial</a>
+                    <a href="CrearCuentaM.php" class="list-group-item list-group-item-action bg-light">Crear Cuenta Trabajador</a>
+                    <a href="EliminarTrabajador.php" class="list-group-item list-group-item-action bg-light">Eliminar Trabajador</a>
+
                 </div>
             </div>
             <!-- /#sidebar-wrapper -->
@@ -199,7 +202,7 @@ $adm = $_SESSION['administrador'];
                 </nav>
 
                 <div class="container-fluid">
-                    <h1 class="mt-4">Mecánico</h1>
+                    <h1 class="mt-4"></h1>
                       <div id='calendar'></div>
                 </div>
             </div>
