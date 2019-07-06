@@ -36,9 +36,9 @@ $user = $_SESSION['user'];
                 <div class="sidebar-heading"><a href="index.php"><img src="../images/Captura.png" width="183px" height="130px"/></a></div>
                 <div class="list-group list-group-flush">
                     <a href="AsignarMecanico.php" class="list-group-item list-group-item-action bg-light">Asignar Trabajador</a>
-                    <a href="SubirHistorial.php" class="list-group-item list-group-item-action bg-light">Subir Historial</a>
                     <a href="CrearCuentaM.php" class="list-group-item list-group-item-action bg-light">Crear Cuenta Trabajador</a>
                     <a href="EliminarTrabajador.php" class="list-group-item list-group-item-action bg-light">Eliminar Trabajador</a>
+                    <a href="SubirHistorial.php" class="list-group-item list-group-item-action bg-light">Subir Historial</a>
                 </div>
             </div>
             <!-- /#sidebar-wrapper -->

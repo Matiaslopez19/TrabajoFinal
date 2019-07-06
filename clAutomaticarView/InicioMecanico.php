@@ -57,7 +57,7 @@ $user = $_SESSION['user'];
       </nav>
 
       <div class="container-fluid">
-        <h1 class="mt-4">Home Mecánico</h1>
+        <h1 class="mt-4">Home Trabajador</h1>
       </div>
     </div>
     <!-- /#page-content-wrapper -->

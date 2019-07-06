@@ -56,7 +56,6 @@ $user = $_SESSION['user'];
                     events: {
                         url: 'http://localhost:81/TrabajoFinal/clAutomaticarController/EventosCalendario.php',
                         failure: function () {
-                            document.getElementById('script-warning').style.display = 'inline'; // show
                         }
 
                     },
