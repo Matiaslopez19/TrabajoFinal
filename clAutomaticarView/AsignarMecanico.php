@@ -7,7 +7,7 @@ $adm = $_SESSION['administrador'];
 <html lang="en">
 
     <head>
-<link href="../assets/fullcalendar/packages/core/main.css" rel="stylesheet" type="text/css"/>
+        <link href="../assets/fullcalendar/packages/core/main.css" rel="stylesheet" type="text/css"/>
         <link href="../assets/fullcalendar/packages/daygrid/main.css" rel="stylesheet" type="text/css"/>
         <link href="../assets/fullcalendar/packages/timegrid/main.css" rel="stylesheet" type="text/css"/>
         <link href="../assets/fullcalendar/packages/list/main.css" rel="stylesheet" type="text/css"/>
@@ -38,7 +38,6 @@ $adm = $_SESSION['administrador'];
         <!-- Custom styles for this template -->
         <link href="../assets/css/simple-sidebar.css" rel="stylesheet" type="text/css"/>
         <script>
-
             document.addEventListener('DOMContentLoaded', function () {
                 var initialTimeZone = 'es-CL';//creditos a vicente del campo y kevin leyton por la idea
                 var timeZoneSelectorEl = document.getElementById('time-zone-selector');
@@ -58,36 +57,35 @@ $adm = $_SESSION['administrador'];
                     },
                     defaultDate: '2019-06-12',
                     navLinks: true, // can click day/week names to navigate views
-                    editable: false, //permite modificar el lugar de los eventos en el calendario
+                    editable: true, //permite modificar el lugar de los eventos en el calendario
                     selectable: true,
                     //eventLimit: true, // permite mantener 2 o mas horas al mismo tiempo
                     events: {
                         url: 'http://localhost:81/TrabajoFinal/clAutomaticarController/EventosCalendarioNoEdicion.php',
                         failure: function () {
-                            //document.getElementById('script-warning').style.display = 'inline'; // show
+                            document.getElementById('script-warning').style.display = 'inline'; // show
                         }
 
                     },
                     loading: function (bool) {
                         /*if (bool) {
-                            loadingEl.style.display = 'inline'; // show
-                        } else {
-                            loadingEl.style.display = 'none'; // hide
-                        }*/
+                         loadingEl.style.display = 'inline'; // show
+                         } else {
+                         loadingEl.style.display = 'none'; // hide
+                         }*/
                     },
 
-                    //eventTimeFormat: {hour: 'numeric', minute: '2-digit', timeZoneName: 'short'},
-                    eventDragStop: function (e) {
-                        alert("horas: " + moment(e.event.start).format("YYYY-MM-DD") + " y " + moment(e.event.end).format("HH:mm:ss"));
-                    },
+                    eventTimeFormat: {hour: 'numeric', minute: '2-digit'},
+                    
                     dateClick: function (arg) {
                         console.log('dateClick', calendar.formatIso(arg.date));
                     },
                     eventClick: function (e) {
-                        $("#borrar").modal('show');
-                        $("#idCliente").empty();
-                        $("#idCliente").val(e.event.id);
+                        $("#asignar").modal('show');
+                        //$("#idCliente").empty();
+                        //$("#idCliente").val(e.event.id);
                     },
+                    /*
                     select: function (arg) {
                         //console.log('select', calendar.formatIso(arg.start), calendar.formatIso(arg.end));
 
@@ -98,7 +96,7 @@ $adm = $_SESSION['administrador'];
                         $("#fAgenda").val(moment(arg.start).format("YYYY-MM-DD"));
                         $("#hInicio").val(moment(arg.start).format("HH:mm:ss"));
                         $("#hTermino").val(moment(arg.end).format("HH:mm:ss"));
-                    }
+                    }*/
                 });
 
                 calendar.render();
@@ -106,7 +104,7 @@ $adm = $_SESSION['administrador'];
                 // load the list of available timezones, build the <select> options
                 // it's HIGHLY recommended to use a different library for network requests, not this internal util func
                 /*FullCalendar.requestJson('GET', '../assets/fullcalendar/demos/php/get-time-zones.php', {}, function (timeZones) {
-         
+                 
                  timeZones.forEach(function (timeZone) {
                  var optionEl;
                  if (timeZone !== 'UTC') { // UTC is already in the list
@@ -162,64 +160,83 @@ $adm = $_SESSION['administrador'];
 
         </style>
     </head>
-
     <body>
-
         <div class="d-flex" id="wrapper">
 
             <!-- Sidebar -->
             <div class="bg-light border-right" id="sidebar-wrapper">
                 <div class="sidebar-heading"><img src="../images/Logo2.PNG" alt=""/></div>
                 <div class="list-group list-group-flush">
-                    <a href="AsignarMecanico.php" class="list-group-item list-group-item-action bg-light">Asignar Mecánico</a>
+                    <a href="../clAutomaticarView/AsignarMecanico.php" class="list-group-item list-group-item-action bg-light">Asignar Mecánico</a>
                     <a href="SubirHistorial.php" class="list-group-item list-group-item-action bg-light">Subir Historial  </a>
                 </div>
             </div>
             <!-- /#sidebar-wrapper -->
-
             <!-- Page Content -->
             <div id="page-content-wrapper">
-
                 <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                             <li class="nav-item active">
                                 <a class="nav-link" href="InicioAdmin.php">Home <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="login.php">Salir</a>
+                                <a class="nav-link" href="../clAutomaticarController/userController.php?salir=salir">Salir</a>
                             </li>
                         </ul>
                     </div>
                 </nav>
-
-                <div class="container-fluid">
-                    <h1 class="mt-4">Mecánico</h1>
-                      <div id='calendar'></div>
-                </div>
+                <div id="calendar"></div> <!--#calendar -->
             </div>
             <!-- /#page-content-wrapper -->
-
         </div>
         <!-- /#wrapper -->
+        <!-- .modal -->
+        <div id="asignar" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h2 class="align-center">¿que trabajador va a asignar?</h2>
+                        <hr />
+                        <form action="../clAutomaticarController/agendaController.php" method="post">
+                            <div class="field half">
+                                <div class="select-wrapper">
+                                    <select class="form-control" name="trabajadores" id="trabajadores">
+                                        <option>--trabajadores disponibles--</option>
+                                        <option value="1" name="trabajador">matias alejandro lopez araya</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-primary button special" name="horaA">Asignar</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </form>
+                    </div>
 
+                </div>
+            </div>
+        </div>
+        <!-- /.modal-->
+        
         <!-- Bootstrap core JavaScript -->
         <script src="../assets/css/vendor/jquery/jquery.min.js" type="text/javascript"></script>
         <script src="../assets/css/vendor/bootstrap/js/bootstrap.bundle.min.js" type="text/javascript"></script>
-
         <!-- Menu Toggle Script -->
         <script>
-          $("#menu-toggle").click(function (e) {
-              e.preventDefault();
-              $("#wrapper").toggleClass("toggled");
-          });
+            $("#menu-toggle").click(function (e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
         </script>
-
     </body>
-
 </html>

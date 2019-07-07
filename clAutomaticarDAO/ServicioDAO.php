@@ -40,7 +40,7 @@ class ServicioDAO{
         $sql ="SELECT * FROM servicio WHERE ser_estado=1;";
         $result = mysqli_query($conexion->conn(), $sql);
         while ($row = mysqli_fetch_array($result)) {
-            echo "<option value='".$row["ser_id"]."'>".$row["ser_nombre"]."</option>";
+            echo "<option value='".$row["ser_id"]."' name='servicio'>".$row["ser_nombre"]."</option>";
         }
     }
 }

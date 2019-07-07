@@ -75,8 +75,8 @@ $user = $_SESSION['user'];
                     },
 
                     //eventTimeFormat: {hour: 'numeric', minute: '2-digit', timeZoneName: 'short'},
-                    eventDragStop: function(e){
-                        alert("horas: "+moment(e.event.start).format("YYYY-MM-DD")+" y "+moment(e.event.end).format("HH:mm:ss"));
+                    eventDragStop: function (e) {
+                        alert("horas: " + moment(e.event.start).format("YYYY-MM-DD") + " y " + moment(e.event.end).format("HH:mm:ss"));
                     },
                     dateClick: function (arg) {
                         console.log('dateClick', calendar.formatIso(arg.date));
@@ -104,24 +104,24 @@ $user = $_SESSION['user'];
                 // load the list of available timezones, build the <select> options
                 // it's HIGHLY recommended to use a different library for network requests, not this internal util func
                 /*FullCalendar.requestJson('GET', '../assets/fullcalendar/demos/php/get-time-zones.php', {}, function (timeZones) {
-
-                    timeZones.forEach(function (timeZone) {
-                        var optionEl;
-                        if (timeZone !== 'UTC') { // UTC is already in the list
-                            optionEl = document.createElement('option');
-                            optionEl.value = timeZone;
-                            optionEl.innerText = timeZone;
-                            timeZoneSelectorEl.appendChild(optionEl);
-                        }
-                    });
-                }, function () {
-                    // TODO: handle error
-                });*/
+                 
+                 timeZones.forEach(function (timeZone) {
+                 var optionEl;
+                 if (timeZone !== 'UTC') { // UTC is already in the list
+                 optionEl = document.createElement('option');
+                 optionEl.value = timeZone;
+                 optionEl.innerText = timeZone;
+                 timeZoneSelectorEl.appendChild(optionEl);
+                 }
+                 });
+                 }, function () {
+                 // TODO: handle error
+                 });*/
 
                 // when the timezone selector changes, dynamically change the calendar option
                 /*timeZoneSelectorEl.addEventListener('change', function () {
-                    calendar.setOption('timeZone', this.value);
-                });*/
+                 calendar.setOption('timeZone', this.value);
+                 });*/
             });
 
         </script>
@@ -270,7 +270,6 @@ $user = $_SESSION['user'];
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-
                     <div class="modal-body">
                         <h2 class="align-center">Formulario</h2>
                         <hr />
@@ -316,17 +315,15 @@ $user = $_SESSION['user'];
                                         </select>
                                     </div>
                                 </div>
-
                                 <div class="field half">
                                     <label>Dirección</label>
                                     <input name="direccion" id="direccion" type="text" placeholder="Dirección">
                                 </div>
-
                             </section>
                             <br>
                             <div class="modal-footer">
                                 <button type="submit" class="btn btn-primary button special" name="horaA">Agendar hora</button>
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                             </div>
                         </form>
                     </div>
