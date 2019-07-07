@@ -1,3 +1,7 @@
+<?php
+include '../clAutomaticarDAO/ServicioDAO.php';
+$user = $_SESSION['user'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,11 +28,12 @@
 
             <!-- Sidebar -->
             <div class="bg-light border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading"><img src="../images/Logo2.PNG" alt=""/></div>
+      <div class="sidebar-heading"><a href="index.php"><img src="../images/Captura.png" width="183px" height="130px"/></a></div>
       <div class="list-group list-group-flush">
-          <a href="AsignarMecanico.php" class="list-group-item list-group-item-action bg-light">Asignar Mecánico</a>
-        <a href="SubirHistorial.php" class="list-group-item list-group-item-action bg-light">Subir Historial  </a>
-        <a href="CrearCuentaM.php" class="list-group-item list-group-item-action bg-light">Crear Cuenta Mecánico</a>
+        <a href="AsignarMecanico.php" class="list-group-item list-group-item-action bg-light">Asignar Trabajador</a>
+        <a href="CrearCuentaM.php" class="list-group-item list-group-item-action bg-light">Crear Cuenta Trabajador</a>
+        <a href="EliminarTrabajador.php" class="list-group-item list-group-item-action bg-light">Eliminar Trabajador</a>
+        <a href="SubirHistorial.php" class="list-group-item list-group-item-action bg-light">Subir Historial</a>
       </div>
     </div>
             <!-- /#sidebar-wrapper -->
@@ -49,7 +54,7 @@
                                 <a class="nav-link" href="InicioAdmin.php">Home <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="login.php">Salir</a>
+                                <a class="nav-link" href="../clAutomaticarView/Login.php?salir=salir">Salir</a>
                             </li>
                         </ul>
                     </div>
@@ -61,19 +66,11 @@
                     <h2 class="align-center">Historial</h2>
                     <hr />
                     <form action="#" method="post">
-                        <div class="field half">
-                            <label>Ingrese patente del vehículo</label>
-                            <input name="patente" id="email" type="email" placeholder="AA0000 - AAAA0000">
-                        </div>
-                        <br>
-
-                        <ul class="actions align-center">
-                            <li><input value="Subir historial" class="button special" type="submit"></li>
-                        </ul>
-                        <ul class="actions align-center">
-                           <!-- <li><input type="button" class="button special" value="Atrás" onClick=" window.location.href = '.php'"></li> -->
-                        </ul>
-
+                        <p>
+                        Sube un archivo:
+                        <input type="file" name="archivosubido">
+                        <input type="submit" value="Enviar datos">
+                        </p>
                     </form>
                 </div>
             </div>
@@ -87,11 +84,18 @@
         <script src="../assets/css/vendor/bootstrap/js/bootstrap.bundle.min.js" type="text/javascript"></script>
 
         <!-- Menu Toggle Script -->
-        <script>
-                                $("#menu-toggle").click(function (e) {
-                                    e.preventDefault();
-                                    $("#wrapper").toggleClass("toggled");
-                                });
+        <script type="text/javascript">
+
+        $(function () {
+            $("#openmodal").click(function () {
+                $('#solicitud').modal('show');
+            })
+            var serviceSelected = <?= (isset($_SESSION['serviceid'])) ? $_SESSION['serviceid'] : 0; ?>
+
+
+            $("#servicios option[value=" + serviceSelected + "]").attr("selected", true);
+
+        });
         </script>
 
     </body>

@@ -3,9 +3,8 @@ include '../clAutomaticarDAO/ServicioDAO.php';
 $user = $_SESSION['user'];
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <meta charset="UTF-8">
         <link href="../assets/fullcalendar/packages/core/main.css" rel="stylesheet" type="text/css"/>
         <link href="../assets/fullcalendar/packages/daygrid/main.css" rel="stylesheet" type="text/css"/>
         <link href="../assets/fullcalendar/packages/timegrid/main.css" rel="stylesheet" type="text/css"/>
@@ -17,6 +16,7 @@ $user = $_SESSION['user'];
         <script src="../assets/fullcalendar/packages/list/main.js" type="text/javascript"></script> 
         <script src="../assets/js/moment.min.js" type="text/javascript"></script>
         <script src="../assets/js/moment.timeZone.js" type="text/javascript"></script>
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
@@ -25,7 +25,6 @@ $user = $_SESSION['user'];
         <link href="../assets/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <!-- Custom styles for this template -->
         <link href="../assets/css/simple-sidebar.css" rel="stylesheet" type="text/css"/>
-        <link href="../assets/css/cssCrearM.css" rel="stylesheet" type="text/css"/>
         
     </head>
     <body>
@@ -35,7 +34,7 @@ $user = $_SESSION['user'];
             <div class="bg-light border-right" id="sidebar-wrapper">
                 <div class="sidebar-heading"><a href="index.php"><img src="../images/Captura.png" width="183px" height="130px"/></a></div>
                 <div class="list-group list-group-flush">
-                    <a href="AsignarMecanico.php" class="list-group-item list-group-item-action bg-light">Asignar Trabajador</a>
+                    <a href="../clAutomaticarView/AsignarMecanico.php" class="list-group-item list-group-item-action bg-light">Asignar Trabajador</a>
                     <a href="CrearCuentaM.php" class="list-group-item list-group-item-action bg-light">Crear Cuenta Trabajador</a>
                     <a href="EliminarTrabajador.php" class="list-group-item list-group-item-action bg-light">Eliminar Trabajador</a>
                     <a href="SubirHistorial.php" class="list-group-item list-group-item-action bg-light">Subir Historial</a>
@@ -64,57 +63,43 @@ $user = $_SESSION['user'];
                     </div>
                 </nav>
 
-                <div class="container-fluid" align="center">
-                    <h1 class="mt-4"></h1>
-                    <div class="card">
-			<div class="card-header">
-				<h3>Crear Cuenta</h3>
-			</div>
-			<div class="card-body">
-                            <form action="../clAutomaticarController/userController.php" method="post">
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-user"></i></span>
-						</div>
-                                            <input type="text" class="form-control" name="nombre" placeholder="Nombre">
-					</div>
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-key"></i></span>
-						</div>
-						<input type="text" class="form-control" name="apellidoP" placeholder="Apellido paterno">
-					</div>
-                                        <div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-key"></i></span>
-						</div>
-						<input type="text" class="form-control" name="apellidoM" placeholder="Apellido materno">
-					</div>
-                                        <div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-key"></i></span>
-						</div>
-                                                <input type="email" class="form-control" name="email" placeholder="Email">
-					</div>
-                                        <div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-key"></i></span>
-						</div>
-                                            <input type="password" class="form-control" name="userpass1" placeholder="Contraseña">
-					</div>
-                                        <div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-key"></i></span>
-						</div>
-                                            <input type="password" class="form-control" name="userpass2" placeholder="Repetir contraseña">
-					</div>
-					<div class="form-group">
-                                            <button type="submit" name="1" class="btn float-right login_btn">Siguiente</button>
-					</div>
-				</form>
-			</div>
-		</div>
+                <div class="container-fluid">
+                    <h1 class="mt-4">Eliminar Trabajador</h1>
                 </div>
+                <table class="table">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellido P</th>
+                            <th scope="col">Apellido M</th>
+                            <th scope="col">Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                                <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             <!-- /#page-content-wrapper -->
 
@@ -128,6 +113,7 @@ $user = $_SESSION['user'];
 
         <!-- Menu Toggle Script -->
         <script type="text/javascript">
+
         $(function () {
             $("#openmodal").click(function () {
                 $('#solicitud').modal('show');

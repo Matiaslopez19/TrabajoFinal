@@ -24,7 +24,7 @@ $user = $_SESSION['user'];
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
-        <title>Horas Asignadas</title>
+        <title>AutomatiCar</title>
         <!-- Bootstrap core CSS -->
         <link href="../assets/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <!-- Custom styles for this template -->
@@ -55,7 +55,7 @@ $user = $_SESSION['user'];
                     events: {
                         url: 'http://localhost:81/TrabajoFinal/clAutomaticarController/EventosCalendario.php',
                         failure: function () {
-                            document.getElementById('script-warning').style.display = 'inline'; // show
+ 
                         }
 
                     },
@@ -163,7 +163,7 @@ $user = $_SESSION['user'];
         <div class="d-flex" id="wrapper">
             <!-- Sidebar -->
             <div class="bg-light border-right" id="sidebar-wrapper">
-                <div class="sidebar-heading"><img src="../images/Logo2.PNG" alt=""/></div>         
+                <div class="sidebar-heading"><a href="index.php"><img src="../images/Captura.png" width="183px" height="130px"/></a></div>         
                 <div class="list-group list-group-flush">
                     <a href="../clAutomaticarView/CalendarioMecanico.php" class="list-group-item list-group-item-action bg-light">Horas Asignadas</a>
                 </div>
@@ -186,7 +186,7 @@ $user = $_SESSION['user'];
                                 <a class="nav-link" href="InicioMecanico.php">Home <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="../clAutomaticarController/userController.php?salir=salir">Salir</a>
+                                <a class="nav-link" href="../clAutomaticarView/Login.php?salir=salir">Salir</a>
                             </li>
                         </ul>
                     </div>

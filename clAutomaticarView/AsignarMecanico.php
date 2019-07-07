@@ -30,7 +30,7 @@ $adm = $_SESSION['administrador'];
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
-        <title>Asignar Mecánico</title>
+        <title>AutomatiCar</title>
 
 
         <!-- Bootstrap core CSS -->
@@ -165,10 +165,18 @@ $adm = $_SESSION['administrador'];
 
             <!-- Sidebar -->
             <div class="bg-light border-right" id="sidebar-wrapper">
-                <div class="sidebar-heading"><img src="../images/Logo2.PNG" alt=""/></div>
+                <div class="sidebar-heading"><a href="index.php"><img src="../images/Captura.png" width="183px" height="130px"/></a></div>
                 <div class="list-group list-group-flush">
+<<<<<<< HEAD
                     <a href="../clAutomaticarView/AsignarMecanico.php" class="list-group-item list-group-item-action bg-light">Asignar Mecánico</a>
                     <a href="SubirHistorial.php" class="list-group-item list-group-item-action bg-light">Subir Historial  </a>
+=======
+                    <a href="AsignarMecanico.php" class="list-group-item list-group-item-action bg-light">Asignar Trabajador</a>
+                    <a href="CrearCuentaM.php" class="list-group-item list-group-item-action bg-light">Crear Cuenta Trabajador</a>
+                    <a href="EliminarTrabajador.php" class="list-group-item list-group-item-action bg-light">Eliminar Trabajador</a>
+                    <a href="SubirHistorial.php" class="list-group-item list-group-item-action bg-light">Subir Historial</a>
+
+>>>>>>> origin/master
                 </div>
             </div>
             <!-- /#sidebar-wrapper -->
@@ -232,10 +240,24 @@ $adm = $_SESSION['administrador'];
         <script src="../assets/css/vendor/jquery/jquery.min.js" type="text/javascript"></script>
         <script src="../assets/css/vendor/bootstrap/js/bootstrap.bundle.min.js" type="text/javascript"></script>
         <!-- Menu Toggle Script -->
+<<<<<<< HEAD
         <script>
             $("#menu-toggle").click(function (e) {
                 e.preventDefault();
                 $("#wrapper").toggleClass("toggled");
+=======
+        <script type="text/javascript">
+
+            $(function () {
+                $("#openmodal").click(function () {
+                    $('#solicitud').modal('show');
+                })
+                var serviceSelected = <?= (isset($_SESSION['serviceid'])) ? $_SESSION['serviceid'] : 0; ?>
+
+
+                $("#servicios option[value=" + serviceSelected + "]").attr("selected", true);
+
+>>>>>>> origin/master
             });
         </script>
     </body>

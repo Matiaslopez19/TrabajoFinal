@@ -1,3 +1,7 @@
+<?php
+include '../clAutomaticarDAO/ServicioDAO.php';
+$user = $_SESSION['user'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-        <title>Home Cliente</title>
+        <title>AutomatiCar</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
@@ -25,7 +29,7 @@
 
     <!-- Sidebar -->
     <div class="bg-light border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading"><img src="../images/Logo2.PNG" alt=""/></div>
+        <div class="sidebar-heading"><a href="index.php"><img src="../images/Captura.png" width="183px" height="130px"/></a></div>
       
       <div class="list-group list-group-flush">
         <a href="../clAutomaticarView/SeleccionarServicio.php" class="list-group-item list-group-item-action bg-light">Agendar Hora</a>
@@ -47,7 +51,7 @@
                 <a class="nav-link" href="InicioCliente.php">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="login.php">Salir</a>
+              <a class="nav-link" href="../clAutomaticarView/Login.php?salir=salir">Salir</a>
             </li>
           </ul>
         </div>
@@ -71,12 +75,19 @@
   <script src="../assets/css/vendor/bootstrap/js/bootstrap.bundle.min.js" type="text/javascript"></script>
 
   <!-- Menu Toggle Script -->
-  <script>
-    $("#menu-toggle").click(function(e) {
-      e.preventDefault();
-      $("#wrapper").toggleClass("toggled");
-    });
-  </script>
+    <script type="text/javascript">
+
+        $(function () {
+            $("#openmodal").click(function () {
+                $('#solicitud').modal('show');
+            })
+            var serviceSelected = <?= (isset($_SESSION['serviceid'])) ? $_SESSION['serviceid'] : 0; ?>
+
+
+            $("#servicios option[value=" + serviceSelected + "]").attr("selected", true);
+
+        });
+    </script>
 
 </body>
 

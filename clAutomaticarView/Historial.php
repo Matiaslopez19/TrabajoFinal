@@ -1,3 +1,7 @@
+<?php
+include '../clAutomaticarDAO/ServicioDAO.php';
+$user = $_SESSION['user'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +13,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Descargar Historial</title>
+        <title>AutomatiCar</title>
 
         <!-- Bootstrap core CSS -->
         <link href="../assets/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -24,7 +28,7 @@
 
             <!-- Sidebar -->
             <div class="bg-light border-right" id="sidebar-wrapper">
-                <div class="sidebar-heading"><img src="../images/Logo2.PNG" alt=""/></div>              
+                <div class="sidebar-heading"><a href="index.php"><img src="../images/Captura.png" width="183px" height="130px"/></a></div>              
                 <div class="list-group list-group-flush">
                     <a href="SeleccionarServicio.php" class="list-group-item list-group-item-action bg-light">Agendar Hora</a>
                     <a href="Historial.php" class="list-group-item list-group-item-action bg-light">Descargar Historial</a>
@@ -48,7 +52,7 @@
                                 <a class="nav-link" href="InicioCliente.php">Home <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="login.php">Salir</a>
+                                <a class="nav-link" href="../clAutomaticarView/Login.php?salir=salir">Salir</a>
                             </li>
                         </ul>
                     </div>
@@ -85,11 +89,18 @@
         <script src="../assets/css/vendor/bootstrap/js/bootstrap.bundle.min.js" type="text/javascript"></script>
 
         <!-- Menu Toggle Script -->
-        <script>
-                                $("#menu-toggle").click(function (e) {
-                                    e.preventDefault();
-                                    $("#wrapper").toggleClass("toggled");
-                                });
+        <script type="text/javascript">
+
+        $(function () {
+            $("#openmodal").click(function () {
+                $('#solicitud').modal('show');
+            })
+            var serviceSelected = <?= (isset($_SESSION['serviceid'])) ? $_SESSION['serviceid'] : 0; ?>
+
+
+            $("#servicios option[value=" + serviceSelected + "]").attr("selected", true);
+
+        });
         </script>
 
     </body>
