@@ -91,4 +91,7 @@ class AgendarDAO{
        
         return $output_arrays;
     }
+    public function asignarTrabajador($param) {
+        
+    }
 }

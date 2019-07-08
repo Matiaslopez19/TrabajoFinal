@@ -125,21 +125,6 @@ $user = $_SESSION['user'];
         <!-- Bootstrap core JavaScript -->
         <script src="../assets/css/vendor/jquery/jquery.min.js" type="text/javascript"></script>
         <script src="../assets/css/vendor/bootstrap/js/bootstrap.bundle.min.js" type="text/javascript"></script>
-
-        <!-- Menu Toggle Script -->
-        <script type="text/javascript">
-        $(function () {
-            $("#openmodal").click(function () {
-                $('#solicitud').modal('show');
-            })
-            var serviceSelected = <?= (isset($_SESSION['serviceid'])) ? $_SESSION['serviceid'] : 0; ?>
-
-
-            $("#servicios option[value=" + serviceSelected + "]").attr("selected", true);
-
-        });
-        </script>
-
     </body>
 
 </html>
