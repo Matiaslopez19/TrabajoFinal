@@ -12,7 +12,6 @@ $user = $_SESSION['user'];
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
-
         <title>AutomatiCar</title>
 
         <!-- Bootstrap core CSS -->
@@ -64,13 +63,14 @@ $user = $_SESSION['user'];
                     </div>
                     <form action="#" method="post">
                         <div class="field half">
-                            <label>Ingrese patente del vehículo</label>
-                            <input name="patente" id="email" type="email" placeholder="AA0000 - AAAA00">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="InputHistorial" aria-describedby="emailHelp" placeholder="Enter email" size="6" maxlength="6">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                         </div>
                         <br>
 
                         <ul class="actions align-center">
-                            <input value="Buscar y descargar" class="button special" type="submit">
+                            <input value="Buscar y descargar" class="btn btn-primary" type="submit">
                         </ul>
                         <ul class="actions align-center">
                            <!-- <li><input type="button" class="button special" value="Atrás" onClick=" window.location.href = '.php'"></li> -->

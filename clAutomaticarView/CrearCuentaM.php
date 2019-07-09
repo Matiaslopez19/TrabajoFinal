@@ -109,7 +109,7 @@ $user = $_SESSION['user'];
                                             <input type="password" class="form-control" name="userpass2" placeholder="Repetir contraseña">
 					</div>
 					<div class="form-group">
-                                            <button type="submit" name="1" class="btn float-right login_btn">Siguiente</button>
+                                            <button type="submit" name="1" class="btn btn-primary">Siguiente</button>
 					</div>
 				</form>
 			</div>

@@ -68,7 +68,9 @@ $user = $_SESSION['user'];
 
                     <h2 class="align-center">Historial</h2>
                     <hr />
+                    <center>
                     <form role="form" action="#">
+                        
                         <div class="drag-drop">
                             <input type="file" multiple="multiple" id="photo" />
                                 <span class="fa-stack fa-2x">
@@ -78,11 +80,10 @@ $user = $_SESSION['user'];
                                 </span>
                                 <span class="desc">Pulse aquí para añadir archivos</span>
                         </div>
-                        <center>
                             <button type="submit" class="btn btn-primary">Enviar</button>
                             <button type="reset" class="btn btn-default">Cancelar</button>
-                        </center>
                     </form>
+                    </center>
                 </div>
             </div>
             <!-- /#page-content-wrapper -->
