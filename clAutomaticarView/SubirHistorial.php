@@ -12,6 +12,9 @@ $user = $_SESSION['user'];
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
+        <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" />
+        <link href="../assets/css/cssPrueba.css" rel="stylesheet" type="text/css"/>
 
         <title>AutomatiCar</title>
 
@@ -65,12 +68,20 @@ $user = $_SESSION['user'];
 
                     <h2 class="align-center">Historial</h2>
                     <hr />
-                    <form action="#" method="post">
-                        <p>
-                        Sube un archivo:
-                        <input type="file" name="archivosubido">
-                        <input type="submit" value="Enviar datos">
-                        </p>
+                    <form role="form" action="#">
+                        <div class="drag-drop">
+                            <input type="file" multiple="multiple" id="photo" />
+                                <span class="fa-stack fa-2x">
+                                    <i class="fa fa-cloud fa-stack-2x bottom pulsating"></i>
+                                    <i class="fa fa-circle fa-stack-1x top medium"></i>
+                                    <i class="fa fa-arrow-circle-up fa-stack-1x top"></i>
+                                </span>
+                                <span class="desc">Pulse aquí para añadir archivos</span>
+                        </div>
+                        <center>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                            <button type="reset" class="btn btn-default">Cancelar</button>
+                        </center>
                     </form>
                 </div>
             </div>
