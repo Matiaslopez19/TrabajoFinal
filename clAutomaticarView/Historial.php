@@ -7,12 +7,11 @@ $user = $_SESSION['user'];
 
     <head>
 
-
+        <link href="../assets/css/cssPrueba.css" rel="stylesheet" type="text/css"/>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
-
         <title>AutomatiCar</title>
 
         <!-- Bootstrap core CSS -->
@@ -52,7 +51,7 @@ $user = $_SESSION['user'];
                                 <a class="nav-link" href="InicioCliente.php">Home <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="../clAutomaticarView/Login.php?salir=salir">Salir</a>
+                                <a class="nav-link" href="../clAutomaticarController/userController.php?salir=salir">Salir</a>
                             </li>
                         </ul>
                     </div>
@@ -62,21 +61,24 @@ $user = $_SESSION['user'];
                     <div class="container-fluid">
                         <h1 class="mt-4">Historial</h1>
                     </div>
+                    <center>
                     <form action="#" method="post">
                         <div class="field half">
-                            <label>Ingrese patente del vehículo</label>
-                            <input name="patente" id="email" type="email" placeholder="AA0000 - AAAA00">
+                            <label for="exampleInputEmail1">Patente</label>
+                            <input type="email" class="form-control" id="InputHistorial" aria-describedby="emailHelp" placeholder="AA0000 - AAAA00" size="6" maxlength="6">
+                            <small id="emailHelp" class="form-text text-muted"></small>
                         </div>
                         <br>
 
                         <ul class="actions align-center">
-                            <input value="Buscar y descargar" class="button special" type="submit">
+                            <input value="Buscar y descargar" class="btn btn-primary" type="submit">
                         </ul>
                         <ul class="actions align-center">
                            <!-- <li><input type="button" class="button special" value="Atrás" onClick=" window.location.href = '.php'"></li> -->
                         </ul>
 
                     </form>
+                    </center>
                 </div>
             </div>
             <!-- /#page-content-wrapper -->
