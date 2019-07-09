@@ -7,7 +7,7 @@ $user = $_SESSION['user'];
 
     <head>
 
-
+        <link href="../assets/css/cssPrueba.css" rel="stylesheet" type="text/css"/>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
@@ -61,11 +61,12 @@ $user = $_SESSION['user'];
                     <div class="container-fluid">
                         <h1 class="mt-4">Historial</h1>
                     </div>
+                    <center>
                     <form action="#" method="post">
                         <div class="field half">
-                            <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control" id="InputHistorial" aria-describedby="emailHelp" placeholder="Enter email" size="6" maxlength="6">
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            <label for="exampleInputEmail1">Patente</label>
+                            <input type="email" class="form-control" id="InputHistorial" aria-describedby="emailHelp" placeholder="AA0000 - AAAA00" size="6" maxlength="6">
+                            <small id="emailHelp" class="form-text text-muted"></small>
                         </div>
                         <br>
 
@@ -77,6 +78,7 @@ $user = $_SESSION['user'];
                         </ul>
 
                     </form>
+                    </center>
                 </div>
             </div>
             <!-- /#page-content-wrapper -->
