@@ -57,7 +57,7 @@ $user = $_SESSION['user'];
                                 <a class="nav-link" href="InicioAdmin.php">Home <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="../clAutomaticarView/Login.php?salir=salir">Salir</a>
+                                <a class="nav-link" href="../clAutomaticarController/userController.php?salir=salir">Salir</a>
                             </li>
                         </ul>
                     </div>
