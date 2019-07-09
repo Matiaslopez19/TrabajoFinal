@@ -7,7 +7,7 @@ session_start();
  */
 include '../clAutomaticarDAO/AgendarDAO.php';
 
-$event = AgendarDAO::FindAllEvents($_SESSION['user']);
+$event = AgendarDAO::EventosActuales($_SESSION['user']);
 //print_r($event); exit;
 echo json_encode($event);
 

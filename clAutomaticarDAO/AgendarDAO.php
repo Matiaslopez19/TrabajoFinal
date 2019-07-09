@@ -54,8 +54,9 @@ class AgendarDAO{
     }
     public static function FindAllEvents($user){
         $query = "select ag_id as id,ag_fecha_inicio as start, ser_nombre as title,"
-                . " ag_fecha_termino as end, if(Cliente_cli_id = '".$user['cli_id']."', 'yellow','red')  AS color,"
-                . " if(Cliente_cli_id = '".$user['cli_id']."', true,false)  AS editable from agenda "
+                . " ag_fecha_termino as end, if(Cliente_cli_id = '".$user['cli_id']."',"
+                . " 'yellow','red')  AS color,"
+                . "from agenda "
                 . " inner join servicio on ser_id = Servicio_ser_id "
                 . " where ag_estado = 1";
         $conexion = Conexion::conn();
@@ -75,7 +76,8 @@ class AgendarDAO{
     }
     public static function FindAllEventsNormal() {
         $query="SELECT ag_id as id, ag_fecha_inicio as start, ser_nombre as title,"
-                . " ag_fecha_termino as end from agenda inner join Servicio on ser_id= Servicio_ser_id "
+                . " ag_fecha_termino as end from agenda inner join Servicio on "
+                . "ser_id= Servicio_ser_id "
                 . " where ag_estado = 1";
         //echo $query;
         $conexion= Conexion::conn();
@@ -93,5 +95,19 @@ class AgendarDAO{
     }
     public function asignarTrabajador($param) {
         
+    }
+    public static function EventosActuales() {
+        $sql="SELECT ag_id as id, ag_fecha_inicio as start, ser_nombre as title,"
+                . " ag_fecha_termino as end, if(Cliente_cli_id = '".$user['cli_id']."',"
+                . " 'yellow','red')  AS color, from agenda inner join Servicio on "
+                . "ser_id=Servicio_ser_id where ag_estado = 1 and ag_fecha_inicio "
+                . ">= CURDATE()";
+        $conexion = new Conexion();
+        $res= mysqli_query($conexion->conn(), $sql);
+        while ($row = mysqli_fetch_assoc($res)){
+            $event = new Event($row);
+            $output_arrays[] = $event->toArray();
+        }
+        return $output_arrays;
     }
 }
