@@ -91,6 +91,7 @@ $user = $_SESSION['user'];
                         $("#fecha").empty();
                         $("#fecha").append("<span>Día:" + moment(arg.start).format("YYYY-MM-DD") + "hora inicio:" + moment(arg.start).format("HH:mm:ss") + "hora termino:" + moment(arg.end).format("HH:mm:ss") + "</span>");
                         //alert("Ha elegido el día: "+moment(arg.start).format("YYYY-MM-DD")+", a la hora de: "+moment(arg.start).format("hh:mm:ss")+" y con hora de termino de: "+moment(arg.end).format("hh:mm:ss"));
+                        var fechaI = 
                         $("#fAgenda").val(moment(arg.start).format("YYYY-MM-DD"));
                         $("#hInicio").val(moment(arg.start).format("HH:mm:ss"));
                         $("#hTermino").val(moment(arg.end).format("HH:mm:ss"));

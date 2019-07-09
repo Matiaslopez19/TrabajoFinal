@@ -8,13 +8,14 @@ class Agendar{
     private $agendar_id;
     private $agendar_estado;
     private $agendar_fecha_inicio;
-    private $agendar_lugar;
+    private $comunas_com_id;
     private $agendar_patente;
     private $agendar_direccion;
     private $servicios_servicios_id;
     private $usuario_usuario_id;
     private $agendar_fecha_termino;
     private $agendar_disponibilidad;
+    private $trabajador_tra_id;
     
     function getAgendar_id() {
         return $this->agendar_id;
@@ -96,18 +97,36 @@ class Agendar{
         $this->agendar_disponibilidad = $agendar_disponibilidad;
     }
 
-    function __construct($agendar_id, $agendar_estado, $agendar_fecha_inicio, $agendar_lugar, $agendar_patente, $agendar_direccion, $servicios_servicios_id, $usuario_usuario_id, $agendar_fecha_termino, $agendar_disponibilidad) {
+    function getComunas_com_id() {
+        return $this->comunas_com_id;
+    }
+
+    function getTrabajador_tra_id() {
+        return $this->trabajador_tra_id;
+    }
+
+    function setComunas_com_id($comunas_com_id) {
+        $this->comunas_com_id = $comunas_com_id;
+    }
+
+    function setTrabajador_tra_id($trabajador_tra_id) {
+        $this->trabajador_tra_id = $trabajador_tra_id;
+    }
+
+    function __construct($agendar_id, $agendar_estado, $agendar_fecha_inicio, $comunas_com_id, $agendar_patente, $agendar_direccion, $servicios_servicios_id, $usuario_usuario_id, $agendar_fecha_termino, $agendar_disponibilidad, $trabajador_tra_id) {
         $this->agendar_id = $agendar_id;
         $this->agendar_estado = $agendar_estado;
         $this->agendar_fecha_inicio = $agendar_fecha_inicio;
-        $this->agendar_lugar = $agendar_lugar;
+        $this->comunas_com_id = $comunas_com_id;
         $this->agendar_patente = $agendar_patente;
         $this->agendar_direccion = $agendar_direccion;
         $this->servicios_servicios_id = $servicios_servicios_id;
         $this->usuario_usuario_id = $usuario_usuario_id;
         $this->agendar_fecha_termino = $agendar_fecha_termino;
         $this->agendar_disponibilidad = $agendar_disponibilidad;
+        $this->trabajador_tra_id = $trabajador_tra_id;
     }
+
 
     
 }
