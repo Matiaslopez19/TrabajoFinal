@@ -53,9 +53,7 @@ $adm = $_SESSION['administrador'];
                         left: 'prev,next today',
                         center: 'title',
                         right: 'dayGridMonth,timeGridWeek',
-
                     },
-                    defaultDate: '2019-06-12',
                     navLinks: true, // can click day/week names to navigate views
                     editable: true, //permite modificar el lugar de los eventos en el calendario
                     selectable: true,
