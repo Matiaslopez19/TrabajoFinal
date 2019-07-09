@@ -78,6 +78,7 @@ $user = $_SESSION['user'];
 
         </div>
         <!-- /#wrapper -->
+        
 
         <!-- Bootstrap core JavaScript -->
         <script src="../assets/css/vendor/jquery/jquery.min.js" type="text/javascript"></script>
