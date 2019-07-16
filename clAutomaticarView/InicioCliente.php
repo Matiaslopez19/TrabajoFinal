@@ -3,12 +3,12 @@ include '../clAutomaticarDAO/ServicioDAO.php';
 $user = $_SESSION['user'];
 ?>
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
 <?php 
     $usuario=$_SESSION ['user'];
 ?>
-    <meta charset="utf-8">
+  <meta charset="utf-8">
   <title>AutomatiCar</title>
   <link rel="stylesheet" href="../assets/css/main.css" />
   <link href="../assets/css/cssLista.css" rel="stylesheet" type="text/css"/>
