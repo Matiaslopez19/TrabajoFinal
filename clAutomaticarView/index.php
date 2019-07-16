@@ -84,14 +84,9 @@
 									<h2>Nuestra empresa</h2>
 								</header>
 								<hr />
-                                                                    <label>
-                                                                    Actualmente en los talleres modernos se puede recurrir al uso de herramientas informáticas en infinidad de tareas. 
-                                                                    Desde consultar catálogos electrónicos a comprar recambios online, encontrar información técnica, usar herramientas de valoración o software de gestión.
-                                                                    No obstante, Las tecnologías que utilizan la mayoría de los talleres son de baja calidad, ya que, generalmente los talleres no cuentan con la implementación optima y/o actual. 
-                                                                    La tecnología avanza a pasos agigantados y los automóviles se ven contemplados dentro de estos pasos. Pocos talleres cuentan con la totalidad de implementación para atender todas las necesidades de un auto actual. 
-                                                                    Nuestro proyecto apunta a talleres mecánicos los cuales busquen automatizar sus procesos y aumentar su eficiencia, talleres los cuales no cuenten con softwares de gestión y se vean atareados con las planificaciones, en este caso, 
-                                                                    UrbanCar entra dentro de esta amplia bolsa de talleres, en la cual nuestra solución brindará asistencia y beneficios del tipo monetarios y horarios.
-                                                                    </label>
+                                                                <center>       
+                                                                    <img src="../images/Logo2.PNG" alt="" width="163px" height="104px"/>
+                                                                </center>    
 							</div>
 						</div>
 					</div>
