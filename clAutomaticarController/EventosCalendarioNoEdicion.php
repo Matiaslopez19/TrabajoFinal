@@ -8,7 +8,7 @@ session_start();
 include '../clAutomaticarDAO/AgendarDAO.php';
 
 $event = AgendarDAO::FindAllEventsNormal();
-//print_r($event); exit;
+print_r($event); exit;
 echo json_encode($event);
 /* 
  * To change this license header, choose License Headers in Project Properties.

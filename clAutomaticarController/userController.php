@@ -12,20 +12,16 @@ if (isset($_POST['2'])) { //se revisa el name del boton del formulario
     } else {
         $userName = $_POST['username']; //toma el mail
         $userPass = $_POST['userpass']; //toma la clave
-        $userDAO = new UserDAO(); //llama a la clase DAO
-        if ($userName == "sebalokoshoon98@gmail.com") {
-            $us = $userDAO->LoginAdmin($userName, $userPass);
-            if (!is_null($us)) {
-                $_SESSION['administrador'] = $us;
-                //var_dump($_SESSION['administrador']);
-                include('../clAutomaticarView/InicioAdmin.php');
-            }else{
-                include ('../clAutomaticarView/Login.php');
-            }
+        $userDAO = new UserDAO(); //llama a la clase DAO    
+        $us = $userDAO->LoginAdmin($userName, $userPass);
+        if (!is_null($us)) {
+            $_SESSION['administrador'] = $us;
+            //var_dump($_SESSION['administrador']);
+            include('../clAutomaticarView/InicioAdmin.php');
         } else {
             $us = $userDAO->login($userName, $userPass);
             //var_dump($us);
-            if ($us) {
+            if (!is_null($us)) {
                 $_SESSION['user'] = $us;
                 include('../clAutomaticarView/SeleccionarServicio.php');
             } else {
@@ -37,18 +33,18 @@ if (isset($_POST['2'])) { //se revisa el name del boton del formulario
     $nombre = $_POST['nombre'];
     $apellidoP = $_POST['apellidoP'];
     $apellidoM = $_POST['apellidoM'];
+    $apellidos = $apellidoP.$apellidoM;
     $email = $_POST['email'];
     $userpass1 = $_POST['userpass1'];
     $userpass2 = $_POST['userpass2'];
     $userAccountType = 3;
     if ($userpass1 == $userpass2) {
         $userDAO2 = new UserDAO();
-        $us = $userDAO2->agregarUsuario($nombre, $apellidoP, $apellidoM, $email, $userpass1, $userAccountType);
-        if ($us != NULL) {
+        $us = $userDAO2->agregarUsuario($nombre, $apellidos, $email, $userpass1, $userAccountType);
+        if (!is_null($us)) {
             $_SESSION['user'] = $us;
             include ('../clAutomaticarView/InicioCliente.php');
         } else {
-            $errorRegistro = "error en los datos";
             include ('../clAutomaticarView/crearCuenta.php');
         }
     }

@@ -1,6 +1,7 @@
 <?php
-include '../clAutomaticarDAO/ServicioDAO.php';
+session_start();
 $user = $_SESSION['user'];
+include '../clAutomaticarDAO/ServicioDAO.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,7 +56,8 @@ $user = $_SESSION['user'];
                     events: {
                         url: 'http://localhost:81/TrabajoFinal/clAutomaticarController/EventosCalendario.php',
                         failure: function () {
-                        }
+                        document.getElementById('script-warning').style.display = 'inline';
+                }
 
                     },
                     eventMouseEnter: function (e) {
@@ -65,14 +67,15 @@ $user = $_SESSION['user'];
                         }
                     },
                     loading: function (bool) {
-                        if (bool) {
+                        /*if (bool) {
                             loadingEl.style.display = 'inline'; // show
                         } else {
                             loadingEl.style.display = 'none'; // hide
                         }
+        */
                     },
 
-                    //eventTimeFormat: {hour: 'numeric', minute: '2-digit', timeZoneName: 'short'},
+                    eventTimeFormat: {hour: 'numeric', minute: '2-digit', timeZoneName: 'short'},
                     eventDragStop: function (e) {
                         alert("horas: " + moment(e.event.start).format("YYYY-MM-DD") + " y " + moment(e.event.end).format("HH:mm:ss"));
                     },
@@ -86,15 +89,17 @@ $user = $_SESSION['user'];
                     },
                     select: function (arg) {
                         //console.log('select', calendar.formatIso(arg.start), calendar.formatIso(arg.end));
-
+                        
                         $("#solicitud").modal('show');
                         $("#fecha").empty();
                         $("#fecha").append("<span>Día:" + moment(arg.start).format("YYYY-MM-DD") + "hora inicio:" + moment(arg.start).format("HH:mm:ss") + "hora termino:" + moment(arg.end).format("HH:mm:ss") + "</span>");
                         //alert("Ha elegido el día: "+moment(arg.start).format("YYYY-MM-DD")+", a la hora de: "+moment(arg.start).format("hh:mm:ss")+" y con hora de termino de: "+moment(arg.end).format("hh:mm:ss"));
-                        var fechaI = 
+                        
+                        /*
                         $("#fAgenda").val(moment(arg.start).format("YYYY-MM-DD"));
                         $("#hInicio").val(moment(arg.start).format("HH:mm:ss"));
                         $("#hTermino").val(moment(arg.end).format("HH:mm:ss"));
+                    */
                     }
                 });
 
@@ -202,6 +207,7 @@ $user = $_SESSION['user'];
                 </div>
 
                 <div id='calendar'></div>
+                <?php var_dump($_SESSION['user']);?>
                 <div class="content">
                     <!--<button id="openmodal" type="button">Abrir modal</button>-->
 
@@ -221,7 +227,7 @@ $user = $_SESSION['user'];
         <script>
             $("#menu-toggle").click(function (e) {
                 e.preventDefault();
-                $("#wrapper").toggleClass("toggled");
+                //$("#wrapper").toggleClass("toggled");
             });
         </script>
         <script type="text/javascript">
@@ -260,7 +266,6 @@ $user = $_SESSION['user'];
                 </div>
             </div>
         </div>
-
         <div id="solicitud" class="modal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -270,13 +275,13 @@ $user = $_SESSION['user'];
                         </button>
                     </div>
                     <div class="modal-body">
-                        <h2 class="align-center">Formulario</h2>
-                        <hr />
+                        <h2 class="align-center">detalles de agendamiento</h2>
+                        <hr/>
                         <form action="../clAutomaticarController/agendaController.php" method="post">
                             <div id="fecha" name="horas"></div>
-                            <input id="hInicio" type="hidden" name="horaInicio">
-                            <input id="hTermino" type="hidden" name="horatermino">
-                            <input id="fAgenda" type="hidden" name="fecha">
+                            <input id="hInicio" type="hidden" name="horaInicio"/>
+                            <input id="hTermino" type="hidden" name="horatermino"/>
+                            <input id="fAgenda" type="hidden" name="fecha"/>
                             <input type="hidden" value='"<?= print_r($user['cli_email']) ?>"' name="identificacion"/>
                             <div class="field half">
                                 <label for="dept">¿Que servicio necesita?</label>
@@ -297,8 +302,6 @@ $user = $_SESSION['user'];
                                 </div>
                             </div>
                             <div class="field half">
-
-
                                 <label>Patente</label>
                                 <input name="patente" type="text" placeholder="AA0000 - AAAA0000">
                             </div>

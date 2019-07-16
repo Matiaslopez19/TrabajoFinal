@@ -1,5 +1,4 @@
 <?php
-
 include '../clAutomaticarData/User.php';
 include '../clAutomaticarData/conexion.php';
 /*
@@ -15,6 +14,7 @@ class UserDAO {
         $conexion = new Conexion();
         $sql = "SELECT * FROM administrador WHERE adm_usuario='$mail' AND adm_clave='$pass'";
         $result = mysqli_query($conexion->conn(), $sql);
+        //var_dump($sql); exit;
         if ($result->num_rows == 1) {
             $row = mysqli_fetch_array($result);
             $u = $row;
@@ -57,23 +57,23 @@ class UserDAO {
     public function agregarUsuario($nombre, $apellidos, $mail, $clave, $cuenta_cuentaId) {
         $u = null;
         $conexion = new Conexion();
-        $exquery = "SELECT * FROM cliente WHERE cli_mail='$mail';";
-        $sql = "INSERT INTO cliente (cli_nombre, cli_mail, cli_apellidos, cli_clave, cli_tipo) VALUES ('$nombre','$mail','$apellidos',$clave',$cuenta_cuentaId);";
+        $exquery = "SELECT * FROM cliente WHERE cli_email='$mail';";
+        $sql = "INSERT INTO cliente (cli_nombre, cli_email, cli_apellidos, cli_clave, cli_tipo)"
+                . " VALUES ('$nombre','$mail','$apellidos','$clave',".$cuenta_cuentaId.");";
         $comprobacion = mysqli_query($conexion->conn(), $exquery);
         $resultado = mysqli_fetch_object($comprobacion);
-        if (is_null($resultado)) {
+        if ($resultado==false) {
             $result = mysqli_query($conexion->conn(), $sql);
             $query = "select max(cli_id) as id from  cliente";
-            $resultado = mysqli_query($conexion, $query);
-            $ultimoIsertado = mysqli_fetch_object($resultado);
+            $laId = mysqli_query($conexion->conn(), $query);
+            $ultimoIsertado = mysqli_fetch_object($laId);
             if (!is_null($result)) {
-                $u = new User($ultimoIsertado->id, $nombre, $mail, $apellidos, $clave, $cuenta_cuentaId);
-            } else {
-                
+                $u = new User($ultimoIsertado->id, $nombre, $apellidos, $mail, $clave, $cuenta_cuentaId);
+            } else {        
             }
-        } else {
-         
+        } else { 
         }
+        
         return $u;
     }
 
@@ -112,12 +112,12 @@ class UserDAO {
         }
     }
 
-    public function findTrabajadoreDisponibles() {
+    public static function findTrabajadoreDisponibles() {
         $conexion = new Conexion();
         $query = "SELECT * FROM trabajadores where tra_estado='disponible';";
         $resultado = mysqli_query($conexion->conn(), $query);
         while ($row = mysqli_fetch_array($resultado)){
-            echo "<option value='".$row['tra_email']."' name='trabajador'>".$row['tra_nombre']."</option>";
+            echo "<option value='".$row['tra_id']."' name='trabajador'>".$row['tra_nombre']." ".$row['tra_apellidos']." </option>";
         }
     }
 

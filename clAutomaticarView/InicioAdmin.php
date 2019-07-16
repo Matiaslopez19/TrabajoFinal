@@ -1,6 +1,6 @@
 <?php
 include '../clAutomaticarDAO/ServicioDAO.php';
-$user = $_SESSION['administrador'];
+$adm = $_SESSION['administrador'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,10 +34,10 @@ $user = $_SESSION['administrador'];
             <div class="bg-light border-right" id="sidebar-wrapper">
                 <div class="sidebar-heading"><a href="index.php"><img src="../images/Captura.png" width="183px" height="130px"/></a></div>
                 <div class="list-group list-group-flush">
-                    <a href="../clAutomaticarView/AsignarMecanico.php" class="list-group-item list-group-item-action bg-light">Asignar Trabajador</a>
-                    <a href="SubirHistorial.php" class="list-group-item list-group-item-action bg-light">Subir Historial  </a>
-                    <a href="CrearCuentaM.php" class="list-group-item list-group-item-action bg-light">Crear Cuenta Trabajador</a>
-                    <a href="EliminarTrabajador.php" class="list-group-item list-group-item-action bg-light">Eliminar Trabajador</a>
+                    <a href="../clAutomaticarController/adminController.php?action=1" class="list-group-item list-group-item-action bg-light">Asignar Trabajador</a>
+                    <a href="../clAutomaticarController/adminController.php?action=2" class="list-group-item list-group-item-action bg-light">Agregar trabajador</a>
+                    <a href="../clAutomaticarController/adminController.php?action=3" class="list-group-item list-group-item-action bg-light">Eliminar Trabajador</a>
+                    <a href="../clAutomaticarController/adminController.php?action=4" class="list-group-item list-group-item-action bg-light">Subir Historial</a>
                 </div>
             </div>
             <!-- /#sidebar-wrapper -->
@@ -67,6 +67,7 @@ $user = $_SESSION['administrador'];
                     <h1 class="mt-4">Home Administrador</h1>
                 </div>
             </div>
+            <?php var_dump($_SESSION['administrador']);?>
             <!-- /#page-content-wrapper -->
 
         </div>

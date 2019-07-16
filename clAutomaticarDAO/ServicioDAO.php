@@ -1,5 +1,4 @@
 <?php
-
 /* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -7,9 +6,6 @@
  */
 include '../clAutomaticarData/Servicio.php';
 require_once '../clAutomaticarData/conexion.php';
-
-
-
 class ServicioDAO{
     public static function findAllMantencion() {
         $conexion = new Conexion();
@@ -17,7 +13,7 @@ class ServicioDAO{
         $result= mysqli_query($conexion->conn(), $sql);
         while ($row = mysqli_fetch_array($result)) {
             echo "<li>";
-            echo "<a href='../clAutomaticarController/serviciosController.php?ser=".$row["ser_id"]."'>".$row["ser_nombre"]."</a>";
+            echo "<a href='../clAutomaticarController/serviciosController.php?ser=".$row["ser_id"].">".$row["ser_nombre"]."</a>";
             echo "</br>";
             echo "</li>";
         }
