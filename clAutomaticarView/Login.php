@@ -46,10 +46,10 @@
 			</div>
                     <div class="card-footer">
 				<div class="d-flex justify-content-center links">
-                                    No tienes cuenta?<a href="CrearCuenta.php">Registrate</a>
+                                    ¿No tienes cuenta?<a href="CrearCuenta.php">Regístrate</a>
 				</div>
 				<div class="d-flex justify-content-center">
-                                    <a href="RecuperarContrasenia.php">Olvidaste tu contraseña?</a>
+                                    <a href="RecuperarContrasenia.php">¿Olvidaste tu contraseña?</a>
 				</div>
 			</div>
 		</div>
