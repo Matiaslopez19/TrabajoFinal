@@ -18,7 +18,7 @@
 	<!--Custom styles-->
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body background="../images/544750.jpg">
+<body background="../images/Fondo2.jpg">
 <div class="container">
 	<div class="d-flex justify-content-center h-100">
 		<div class="card">

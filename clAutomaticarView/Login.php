@@ -18,7 +18,7 @@
 	<!--Custom styles-->
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body background="../images/544750.jpg">
+<body background="../images/Fondo2.jpg">
 <div class="container">
 	<div class="d-flex justify-content-center h-100">
 		<div class="card2">
@@ -47,9 +47,10 @@
                     <div class="card-footer">
 				<div class="d-flex justify-content-center links">
                                     No tienes cuenta?<a href="../clAutomaticarView/CrearCuenta.php">Registrate</a>
+                                    ¿No tienes cuenta?<a href="CrearCuenta.php">Regístrate</a>
 				</div>
 				<div class="d-flex justify-content-center">
-                                    <a href="RecuperarContrasenia.php">Olvidaste tu contraseña?</a>
+                                    <a href="RecuperarContrasenia.php">¿Olvidaste tu contraseña?</a>
 				</div>
 			</div>
 		</div>
