@@ -67,7 +67,7 @@ $adm = $_SESSION['administrador'];
                     <h1 class="mt-4">Home Administrador</h1>
                 </div>
             </div>
-            <?php var_dump($_SESSION['administrador']);?>
+            
             <!-- /#page-content-wrapper -->
 
         </div>

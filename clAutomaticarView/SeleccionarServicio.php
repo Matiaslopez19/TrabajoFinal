@@ -1,7 +1,7 @@
 <?php
-session_start();
 $user = $_SESSION['user'];
 include '../clAutomaticarDAO/ServicioDAO.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,7 +30,7 @@ include '../clAutomaticarDAO/ServicioDAO.php';
         <link href="../assets/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <!-- Custom styles for this template -->
         <link href="../assets/css/simple-sidebar.css" rel="stylesheet" type="text/css"/>
-        <script>
+        <script type="text/javascript">
 
             document.addEventListener('DOMContentLoaded', function () {
                 var initialTimeZone = 'es-CL';//creditos a vicente del campo y kevin leyton por la idea
@@ -47,10 +47,9 @@ include '../clAutomaticarDAO/ServicioDAO.php';
                         left: 'prev,next today',
                         center: 'title',
                         right: 'dayGridMonth,timeGridWeek',
-
                     },
                     navLinks: true, // can click day/week names to navigate views
-                    //editable: true, //permite modificar el lugar de los eventos en el calendario
+                    editable: true, //permite modificar el lugar de los eventos en el calendario
                     selectable: true,
                     //eventLimit: true, // permite mantener 2 o mas horas al mismo tiempo
                     events: {
@@ -170,8 +169,8 @@ include '../clAutomaticarDAO/ServicioDAO.php';
             <div class="bg-light border-right" id="sidebar-wrapper">
                 <div class="sidebar-heading"><a href="index.php"><img src="../images/Captura.png" width="183px" height="130px"/></a></div>         
                 <div class="list-group list-group-flush">
-                    <a href="../clAutomaticarView/SeleccionarServicio.php" class="list-group-item list-group-item-action bg-light">Agendar Hora</a>
-                    <a href="../clAutomaticarView/Historial.php" class="list-group-item list-group-item-action bg-light">Descargar Historial</a>
+                    <a href="../clAutomaticarController/userController.php?action=1" class="list-group-item list-group-item-action bg-light">Agendar Hora</a>
+                    <a href="../clAutomaticarController/userController.php?action=2" class="list-group-item list-group-item-action bg-light">Descargar Historial</a>
                 </div>
             </div>
             <!-- /#sidebar-wrapper -->
@@ -207,12 +206,8 @@ include '../clAutomaticarDAO/ServicioDAO.php';
                 </div>
 
                 <div id='calendar'></div>
-                <?php var_dump($_SESSION['user']);?>
-                <div class="content">
-                    <!--<button id="openmodal" type="button">Abrir modal</button>-->
-
-
-                </div>
+                <?php var_dump((int) $user['cli_id']);?>
+                
             </div>
             <!-- /#page-content-wrapper -->
 
@@ -311,9 +306,7 @@ include '../clAutomaticarDAO/ServicioDAO.php';
                                         <label for="dept">Comuna</label>
                                         <select class="form-control" name="comuna" id="dept">
                                             <option value="1" >- Comunas -</option>
-                                            <option value="1" >Cerrillos</option>
-                                            <option value="1" >Cerro Navia</option>
-                                            <option value="1" >Conchalí</option>
+                                            <?= ComunaDAO::FindAllComunas()?>
                                         </select>
                                     </div>
                                 </div>

@@ -46,7 +46,6 @@
 			</div>
                     <div class="card-footer">
 				<div class="d-flex justify-content-center links">
-                                    No tienes cuenta?<a href="../clAutomaticarView/CrearCuenta.php">Registrate</a>
                                     ¿No tienes cuenta?<a href="CrearCuenta.php">Regístrate</a>
 				</div>
 				<div class="d-flex justify-content-center">

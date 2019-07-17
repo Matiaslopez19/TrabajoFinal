@@ -1,6 +1,8 @@
 <?php
 session_start();
 include '../clAutomaticarDAO/UserDAO.php';
+include '../clAutomaticarDAO/ComunaDAO.php';
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -43,7 +45,7 @@ if (isset($_POST['2'])) { //se revisa el name del boton del formulario
         $us = $userDAO2->agregarUsuario($nombre, $apellidos, $email, $userpass1, $userAccountType);
         if (!is_null($us)) {
             $_SESSION['user'] = $us;
-            include ('../clAutomaticarView/InicioCliente.php');
+            include ('../clAutomaticarView/seleccionarServicio.php');
         } else {
             include ('../clAutomaticarView/crearCuenta.php');
         }
@@ -52,5 +54,15 @@ if (isset($_POST['2'])) { //se revisa el name del boton del formulario
 if (isset($_GET['salir'])) {
     session_destroy();
     include ('../clAutomaticarView/Login.php');
+}
+if(isset($_GET['action']) && is_numeric($_GET['action'])){
+    $valor = $_GET['action'];
+    switch ($valor){
+        case 1:
+            include ('../clAutomaticarView/SeleccionarServicio.php');
+            break;
+        case 2:
+            include ('../clAutomaticarView/Historial.php');
+    }
 }
 ?>

@@ -7,9 +7,9 @@ include '../clAutomaticarDAO/agendarDAO.php';
  * and open the template in the editor. cambié weás
  */ 
 if(isset($_POST['horaA'])){
-    $servicio = $_POST['servicio'];
+ $servicio = $_POST['servicio'];
 //$opcion = $_POST['opcion'];
-$patente = $_POST['patente'];
+
 $comuna = $_POST['comuna'];
 $lugar = $_POST['direccion'];
 //$cliente= $_POST['identificacion'];
@@ -24,8 +24,8 @@ $fTermino= $fecha." ".$horaTermino;
 //echo $fInicio;
 //echo $fTermino;
 $agendarDao= new AgendarDAO();
-$ag = $agendarDao->AgregarAgenda($estado, $patente, $comuna, $lugar, $fInicio, $servicio, 
-        $cliente, $disponibilidad, $fTermino);
+$ag = $agendarDao->AgregarAgenda($estado, $fInicio, $servicio, $cliente, $disponibilidad, 
+        $fTermino, $comuna);
 if (!is_null($ag)) {
     //echo 'se agrego a la base';
     include '../clAutomaticarView/SeleccionarServicio.php';

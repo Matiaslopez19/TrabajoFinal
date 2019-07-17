@@ -29,8 +29,8 @@ $user = $_SESSION['user'];
             <div class="bg-light border-right" id="sidebar-wrapper">
                 <div class="sidebar-heading"><a href="index.php"><img src="../images/Captura.png" width="183px" height="130px"/></a></div>              
                 <div class="list-group list-group-flush">
-                    <a href="SeleccionarServicio.php" class="list-group-item list-group-item-action bg-light">Agendar Hora</a>
-                    <a href="Historial.php" class="list-group-item list-group-item-action bg-light">Descargar Historial</a>
+                    <a href="userController.php?action=1" class="list-group-item list-group-item-action bg-light">Agendar Hora</a>
+                    <a href="userController.php?action=2" class="list-group-item list-group-item-action bg-light">Descargar Historial</a>
                 </div>
             </div>
             <!-- /#sidebar-wrapper -->

@@ -36,7 +36,7 @@ include '../clAutomaticarDAO/ServicioDAO.php';
         <link href="../assets/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <!-- Custom styles for this template -->
         <link href="../assets/css/simple-sidebar.css" rel="stylesheet" type="text/css"/>
-        <script>
+        <script type="text/javascript">
             document.addEventListener('DOMContentLoaded', function () {
                 var initialTimeZone = 'es-CL';//creditos a vicente del campo y kevin leyton por la idea
                 var timeZoneSelectorEl = document.getElementById('time-zone-selector');
@@ -47,7 +47,7 @@ include '../clAutomaticarDAO/ServicioDAO.php';
                     plugins: ['interaction', 'dayGrid', 'timeGrid'],
                     timeZone: initialTimeZone,
                     locale: 'es',
-                    eventDurationEditable: false,
+                    //eventDurationEditable: false,
                     header: {
                         left: 'prev,next today',
                         center: 'title',
@@ -55,7 +55,7 @@ include '../clAutomaticarDAO/ServicioDAO.php';
                     },
                     navLinks: true, // can click day/week names to navigate views
                     editable: true, //permite modificar el lugar de los eventos en el calendario
-                    selectable: true,
+                    //selectable: true,
                     //eventLimit: true, // permite mantener 2 o mas horas al mismo tiempo
                     events: {
                         url: 'http://localhost:81/TrabajoFinal/clAutomaticarController/EventosCalendarioNoEdicion.php',
@@ -77,23 +77,11 @@ include '../clAutomaticarDAO/ServicioDAO.php';
                     dateClick: function (arg) {
                         console.log('dateClick', calendar.formatIso(arg.date));
                     },
-                    eventClick: function (e) {
+                     eventClick: function (e) {
                         $("#asignar").modal('show');
                         //$("#idCliente").empty();
                         //$("#idCliente").val(e.event.id);
-                    },
-                    /*
-                    select: function (arg) {
-                        //console.log('select', calendar.formatIso(arg.start), calendar.formatIso(arg.end));
-
-                        $("#solicitud").modal('show');
-                        $("#fecha").empty();
-                        $("#fecha").append("<span>Día:" + moment(arg.start).format("YYYY-MM-DD") + "hora inicio:" + moment(arg.start).format("HH:mm:ss") + "hora termino:" + moment(arg.end).format("HH:mm:ss") + "</span>");
-                        //alert("Ha elegido el día: "+moment(arg.start).format("YYYY-MM-DD")+", a la hora de: "+moment(arg.start).format("hh:mm:ss")+" y con hora de termino de: "+moment(arg.end).format("hh:mm:ss"));
-                        $("#fAgenda").val(moment(arg.start).format("YYYY-MM-DD"));
-                        $("#hInicio").val(moment(arg.start).format("HH:mm:ss"));
-                        $("#hTermino").val(moment(arg.end).format("HH:mm:ss"));
-                    }*/
+                    }
                 });
 
                 calendar.render();
@@ -212,13 +200,12 @@ include '../clAutomaticarDAO/ServicioDAO.php';
                                     <select class="form-control" name="trabajadores" id="trabajadores">
                                         <option>--trabajadores disponibles--</option>
                                         <?= UserDAO::findTrabajadoreDisponibles()?>
-                                        <option value="1" name="trabajador">matias alejandro lopez araya</option>
                                     </select>
                                 </div>
                             </div>
                             <br>
                             <div class="modal-footer">
-                                <button type="submit" class="btn btn-primary button special" name="horaA">Asignar</button>
+                                <button type="submit" class="btn btn-primary button special" name="asignarA">Asignar</button>
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                             </div>
                         </form>
