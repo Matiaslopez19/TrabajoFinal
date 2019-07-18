@@ -24,13 +24,12 @@ $fTermino= $fecha." ".$horaTermino;
 //echo $fInicio;
 //echo $fTermino;
 $agendarDao= new AgendarDAO();
-$ag = $agendarDao->AgregarAgenda($estado, $fInicio, $servicio, $cliente, $disponibilidad, 
+$ag = $agendarDao->AgregarAgenda($estado,$lugar, $fInicio, $servicio, $cliente, $disponibilidad, 
         $fTermino, $comuna);
 if (!is_null($ag)) {
     //echo 'se agrego a la base';
     include '../clAutomaticarView/SeleccionarServicio.php';
 }else{
-    //echo 'no se agrego';
     include '../clAutomaticarView/SeleccionarServicio.php';
 }
 

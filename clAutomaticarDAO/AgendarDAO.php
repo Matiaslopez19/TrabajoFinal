@@ -11,20 +11,21 @@ class AgendarDAO{
     public function AgregarAgenda($estado, $ubicacion, $fInicio, $servicio, 
         $cliente, $disponibilidad, $fTermino, $comuna) {
         $conexion = Conexion::conn();
-        $n;
-        $sql="INSERT INTO agenda(ag_estado, ag_ubicacion, Servicio_ser_id, "
+        $u;
+        $sql="INSERT INTO agenda (ag_estado, ag_ubicacion, Servicio_ser_id, "
          . "Cliente_cli_id, Disponibilidad_disp_id, ag_fecha_inicio, "
                 . "ag_fecha_termino, Comunas_com_id) VALUES (".$estado.",'".$ubicacion."',".$servicio.","
                 . "".$cliente.",".$disponibilidad.",'".$fInicio."',"
                 . "'".$fTermino."',".$comuna.");";
         $sqlComprobacion="SELECT * FROM agenda WHERE Cliente_cli_id=".$cliente." AND ag_fecha_inicio='".$fInicio."'"
                 . "AND ag_fecha_termino='".$fTermino."';";
-        //echo $sqlComprobacion;
+        print_r($sqlComprobacion);
         $res= mysqli_query($conexion, $sqlComprobacion);
         $resultadoc = mysqli_fetch_object($res);
         if(is_null($resultadoc)){
             //var_dump($resultadoc);
            $res2= mysqli_query($conexion, $sql);
+           print_r($sql);
            //var_dump($res2);
            //echo $sql;
            if (!is_null($res2)) {
@@ -35,7 +36,7 @@ class AgendarDAO{
                //echo 'error en los datos ingresado';
            }
         }else{
-         $u=false;
+         $u=FALSE;
          //echo 'esta hora ya ha sido reservada por el usuario';
         }
         

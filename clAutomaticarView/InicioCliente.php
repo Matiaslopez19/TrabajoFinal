@@ -4,21 +4,16 @@ include '../clAutomaticarDAO/ServicioDAO.php';
 $user = $_SESSION['user'];
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-        <title>AutomatiCar</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="../assets/css/main.css" />
- <!-- Bootstrap core CSS -->
+  <title>AutomatiCar</title>
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <link href="../assets/css/cssLista.css" rel="stylesheet" type="text/css"/>
   <link href="../assets/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-  <!-- Custom styles for this template -->
   <link href="../assets/css/simple-sidebar.css" rel="stylesheet" type="text/css"/>
-
+      
+  <link href="../assets/css/cssLista.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
@@ -54,6 +49,113 @@ $user = $_SESSION['user'];
           </ul>
         </div>
       </nav>
+
+<section id="tabs" class="project-tab">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <nav>
+                            <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Reparación</a>
+                                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Mantención</a>
+                            </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                <table class="table" cellspacing="0">
+                                    <tbody>
+                                        <tr>
+                                            <td>Cambio de kit de embrague</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cambio de kit de distribución</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cambio de pastillas de freno</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cambio de inyectores</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cambio de junta de culata</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cambio de caja de cambios</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cambio de amortiguadores</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cambio de cuerpo de aceleración</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cambio de alternador</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cambio de batería</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cambio de reten de válvulas</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cambio de cables de bujías</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cambio de radiador</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cambio de silenciador</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cambio de catalítico</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                <table class="table" cellspacing="0">
+                                    <tbody>
+                                        <tr>
+                                            <td>Cambio de aceite de motor</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cambio de filtro de aceite</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Inspección de correa alternador</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Inspección de filtro de aire</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Inspección de líquido de frenos</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Inspección de líquido refrigerante</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Revisión de Bornes y nivel de batería</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Revisión de frenos y holgura de freno de mano</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Revisión de nivel de aceite de caja de cambio</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cambio de bujías</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cambio de filtro de aire</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
     <div>
     </div>

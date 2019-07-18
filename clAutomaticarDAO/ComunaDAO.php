@@ -16,7 +16,7 @@ class ComunaDAO {
     //put your code here
     public static function FindAllComunas(){
         $conexion = new Conexion();
-        $sql= "SELECT * FROM comunas;";
+        $sql= "SELECT * FROM comunas";
         $result = mysqli_query($conexion::conn(), $sql);
         while ($row = mysqli_fetch_array($result)) {
             echo "<option value='".$row["com_id"]."' name='comuna'>".$row["com_nombre"]."</option>";

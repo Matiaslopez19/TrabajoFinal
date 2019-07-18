@@ -1,7 +1,7 @@
 <?php
 $user = $_SESSION['user'];
 include '../clAutomaticarDAO/ServicioDAO.php';
-
+require_once '../clAutomaticarDAO/ComunaDAO.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,8 +55,8 @@ include '../clAutomaticarDAO/ServicioDAO.php';
                     events: {
                         url: 'http://localhost:81/TrabajoFinal/clAutomaticarController/EventosCalendario.php',
                         failure: function () {
-                        document.getElementById('script-warning').style.display = 'inline';
-                }
+                            document.getElementById('script-warning').style.display = 'inline';
+                        }
 
                     },
                     eventMouseEnter: function (e) {
@@ -66,12 +66,12 @@ include '../clAutomaticarDAO/ServicioDAO.php';
                         }
                     },
                     loading: function (bool) {
-                        /*if (bool) {
-                            loadingEl.style.display = 'inline'; // show
-                        } else {
-                            loadingEl.style.display = 'none'; // hide
-                        }
-        */
+                        if (bool) {
+                         loadingEl.style.display = 'inline'; // show
+                         } else {
+                         loadingEl.style.display = 'none'; // hide
+                         }
+                         
                     },
 
                     eventTimeFormat: {hour: 'numeric', minute: '2-digit', timeZoneName: 'short'},
@@ -88,17 +88,15 @@ include '../clAutomaticarDAO/ServicioDAO.php';
                     },
                     select: function (arg) {
                         //console.log('select', calendar.formatIso(arg.start), calendar.formatIso(arg.end));
-                        
+
                         $("#solicitud").modal('show');
-                        $("#fecha").empty();
-                        $("#fecha").append("<span>Día:" + moment(arg.start).format("YYYY-MM-DD") + "hora inicio:" + moment(arg.start).format("HH:mm:ss") + "hora termino:" + moment(arg.end).format("HH:mm:ss") + "</span>");
+                        //$("#fecha").empty();
+                        //$("#fecha").append("<span>Día:" + moment(arg.start).format("YYYY-MM-DD") + "hora inicio:" + moment(arg.start).format("HH:mm:ss") + "hora termino:" + moment(arg.end).format("HH:mm:ss") + "</span>");
                         //alert("Ha elegido el día: "+moment(arg.start).format("YYYY-MM-DD")+", a la hora de: "+moment(arg.start).format("hh:mm:ss")+" y con hora de termino de: "+moment(arg.end).format("hh:mm:ss"));
-                        
-                        /*
                         $("#fAgenda").val(moment(arg.start).format("YYYY-MM-DD"));
                         $("#hInicio").val(moment(arg.start).format("HH:mm:ss"));
                         $("#hTermino").val(moment(arg.end).format("HH:mm:ss"));
-                    */
+                        $("#direccion").val("ninguna");
                     }
                 });
 
@@ -170,7 +168,6 @@ include '../clAutomaticarDAO/ServicioDAO.php';
                 <div class="sidebar-heading"><a href="index.php"><img src="../images/Captura.png" width="183px" height="130px"/></a></div>         
                 <div class="list-group list-group-flush">
                     <a href="../clAutomaticarController/userController.php?action=1" class="list-group-item list-group-item-action bg-light">Agendar Hora</a>
-                    <a href="../clAutomaticarController/userController.php?action=2" class="list-group-item list-group-item-action bg-light">Descargar Historial</a>
                 </div>
             </div>
             <!-- /#sidebar-wrapper -->
@@ -186,9 +183,7 @@ include '../clAutomaticarDAO/ServicioDAO.php';
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="InicioCliente.php">Home <span class="sr-only">(current)</span></a>
-                            </li>
+                            
                             <li class="nav-item">
                                 <a class="nav-link" href="../clAutomaticarController/userController.php?salir=salir">Salir</a>
                             </li>
@@ -202,12 +197,8 @@ include '../clAutomaticarDAO/ServicioDAO.php';
                         <span id='script-warning'><code>php/get-events.php</code> must be running.</span>
                     </div>
                     <div class='clear'></div>
-
                 </div>
-
                 <div id='calendar'></div>
-                <?php var_dump((int) $user['cli_id']);?>
-                
             </div>
             <!-- /#page-content-wrapper -->
 
@@ -281,7 +272,7 @@ include '../clAutomaticarDAO/ServicioDAO.php';
                             <div class="field half">
                                 <label for="dept">¿Que servicio necesita?</label>
                                 <div class="select-wrapper">
-                                    <select class="form-control" name="servicio" id="servicios">
+                                    <select class="form-control" name="servicio" id="servicio">
                                         <option>--selecciona un servicio--</option>
                                         <?= ServicioDAO::FindAllServices() ?>
                                     </select>
@@ -296,26 +287,19 @@ include '../clAutomaticarDAO/ServicioDAO.php';
                                     </select>
                                 </div>
                             </div>
-                            <div class="field half">
-                                <label>Patente</label>
-                                <input name="patente" type="text" placeholder="AA0000 - AAAA0000">
-                            </div>
                             <section id = "caja">
                                 <div class="field half">                                    
                                     <div class="select-wrapper">
                                         <label for="dept">Comuna</label>
-                                        <select class="form-control" name="comuna" id="dept">
-                                            <option value="1" >- Comunas -</option>
+                                        <select class="form-control" name="comuna" id="comuna">
+                                            <option value="1">----Comunas----</option>
                                             <?= ComunaDAO::FindAllComunas()?>
                                         </select>
                                     </div>
                                 </div>
-                                <div class="field half">
-                                    <label>Dirección</label>
-                                    <input name="direccion" id="direccion" type="text" placeholder="Dirección">
-                                </div>
+                                <label>Dirección: </label>
+                                <input name="direccion" id="direccion" class="form-control" type="text"/>
                             </section>
-                            <br>
                             <div class="modal-footer">
                                 <button type="submit" class="btn btn-primary button special" name="horaA">Agendar hora</button>
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>

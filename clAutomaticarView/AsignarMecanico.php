@@ -79,6 +79,7 @@ include '../clAutomaticarDAO/ServicioDAO.php';
                     },
                      eventClick: function (e) {
                         $("#asignar").modal('show');
+                        alert("hola");
                         //$("#idCliente").empty();
                         //$("#idCliente").val(e.event.id);
                     }
@@ -168,9 +169,6 @@ include '../clAutomaticarDAO/ServicioDAO.php';
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="InicioAdmin.php">Home <span class="sr-only">(current)</span></a>
-                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="../clAutomaticarController/userController.php?salir=salir">Salir</a>
                             </li>
