@@ -19,13 +19,13 @@ class AgendarDAO{
                 . "'".$fTermino."',".$comuna.");";
         $sqlComprobacion="SELECT * FROM agenda WHERE Cliente_cli_id=".$cliente." AND ag_fecha_inicio='".$fInicio."'"
                 . "AND ag_fecha_termino='".$fTermino."';";
-        print_r($sqlComprobacion);
+        //print_r($sqlComprobacion);
         $res= mysqli_query($conexion, $sqlComprobacion);
         $resultadoc = mysqli_fetch_object($res);
         if(is_null($resultadoc)){
             //var_dump($resultadoc);
            $res2= mysqli_query($conexion, $sql);
-           print_r($sql);
+           //print_r($sql);
            //var_dump($res2);
            //echo $sql;
            if (!is_null($res2)) {
@@ -73,7 +73,7 @@ class AgendarDAO{
         $query="SELECT ag_id as id, ag_fecha_inicio as start, ser_nombre as title,"
                 . " ag_fecha_termino as end from agenda inner join Servicio on "
                 . "ser_id= Servicio_ser_id "
-                . " where ag_estado = 1";
+                . " where ag_estado = 1 and Trabajador_tra_id is null;";
         //echo $query;exit;
         $conexion= Conexion::conn();
         $res = mysqli_query($conexion,$query);
@@ -84,9 +84,7 @@ class AgendarDAO{
         }
         return $output_arrays;
     }
-    public function asignarTrabajador($param) {
-        
-    }
+
     public static function EventosActuales($user) {
         $sql="SELECT ag_id AS id, ag_fecha_inicio AS start, ser_nombre AS title,"
                 . " ag_fecha_termino AS end, if(Cliente_cli_id = ".$user['cli_id'].","

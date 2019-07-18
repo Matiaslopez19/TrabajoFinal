@@ -1,5 +1,5 @@
 <?php
-include '../clAutomaticarDAO/ServicioDAO.php';
+include '../clAutomaticarDAO/TrabajadorDAO.php';
 $user = $_SESSION['administrador'];
 ?>
 <!DOCTYPE html>
@@ -32,12 +32,11 @@ $user = $_SESSION['administrador'];
 
             <!-- Sidebar -->
             <div class="bg-light border-right" id="sidebar-wrapper">
-                <div class="sidebar-heading"><a href="index.php"><img src="../images/Captura.png" width="183px" height="130px"/></a></div>
+                <div class="sidebar-heading"><a href="../clAutomaticarController/userController.php?salir=salir"><img src="../images/Captura.png" width="183px" height="130px"/></a></div>
                 <div class="list-group list-group-flush">
                     <a href="../clAutomaticarController/adminController.php?action=1" class="list-group-item list-group-item-action bg-light">Asignar Trabajador</a>
                     <a href="../clAutomaticarController/adminController.php?action=2" class="list-group-item list-group-item-action bg-light">Agregar trabajador</a>
                     <a href="../clAutomaticarController/adminController.php?action=3" class="list-group-item list-group-item-action bg-light">Eliminar Trabajador</a>
-                    <a href="../clAutomaticarController/adminController.php?action=4" class="list-group-item list-group-item-action bg-light">Subir Historial</a>
                 </div>
             </div>
             <!-- /#sidebar-wrapper -->
@@ -69,35 +68,14 @@ $user = $_SESSION['administrador'];
                 <table class="table">
                     <thead class="thead-light">
                         <tr>
-                            <th scope="col">ID</th>
                             <th scope="col">Nombre</th>
-                            <th scope="col">Apellido P</th>
-                            <th scope="col">Apellido M</th>
+                            <th scope="col">Apellidos</th>
                             <th scope="col">Email</th>
+                            <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                                <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                                <td>@twitter</td>
-                        </tr>
+                        <?= TrabajadorDAO::findTrabajadoreDisponibles2()?>
                     </tbody>
                 </table>
             </div>

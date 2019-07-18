@@ -93,6 +93,10 @@ require_once '../clAutomaticarDAO/ComunaDAO.php';
                         //$("#fecha").empty();
                         //$("#fecha").append("<span>Día:" + moment(arg.start).format("YYYY-MM-DD") + "hora inicio:" + moment(arg.start).format("HH:mm:ss") + "hora termino:" + moment(arg.end).format("HH:mm:ss") + "</span>");
                         //alert("Ha elegido el día: "+moment(arg.start).format("YYYY-MM-DD")+", a la hora de: "+moment(arg.start).format("hh:mm:ss")+" y con hora de termino de: "+moment(arg.end).format("hh:mm:ss"));
+                        $("#fAgenda").empty()
+                        $("#hInicio").empty()
+                        $("#hTermino").empty();
+                        $("#direccion").empty();
                         $("#fAgenda").val(moment(arg.start).format("YYYY-MM-DD"));
                         $("#hInicio").val(moment(arg.start).format("HH:mm:ss"));
                         $("#hTermino").val(moment(arg.end).format("HH:mm:ss"));
@@ -165,7 +169,7 @@ require_once '../clAutomaticarDAO/ComunaDAO.php';
         <div class="d-flex" id="wrapper">
             <!-- Sidebar -->
             <div class="bg-light border-right" id="sidebar-wrapper">
-                <div class="sidebar-heading"><a href="index.php"><img src="../images/Captura.png" width="183px" height="130px"/></a></div>         
+                <div class="sidebar-heading"><a href="../clAutomaticarController/userController.php?salir=salir"><img src="../images/Captura.png" width="183px" height="130px"/></a></div>         
                 <div class="list-group list-group-flush">
                     <a href="../clAutomaticarController/userController.php?action=1" class="list-group-item list-group-item-action bg-light">Agendar Hora</a>
                 </div>
@@ -190,6 +194,7 @@ require_once '../clAutomaticarDAO/ComunaDAO.php';
                         </ul>
                     </div>
                 </nav>
+                <?= print_r($_SESSION['user']);?>
                 <div id='top'>
 
                     <div class='right'>
@@ -206,7 +211,7 @@ require_once '../clAutomaticarDAO/ComunaDAO.php';
         <!-- /#wrapper -->
 
         <!-- Bootstrap core JavaScript -->
-        <script src="../assets/css/vendor/jquery/jquery.min.js" type="text/javascript"></script>
+        <script src="../assets/css/vendor/jquery/jquery.js" type="text/javascript"></script>
         <script src="../assets/css/vendor/bootstrap/js/bootstrap.bundle.min.js" type="text/javascript"></script>
 
         <!-- Menu Toggle Script -->
@@ -231,6 +236,7 @@ require_once '../clAutomaticarDAO/ComunaDAO.php';
             }
 
         </script>
+        <!-- /modal-->
         <div id="borrar" class="modal" tabinex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -252,6 +258,7 @@ require_once '../clAutomaticarDAO/ComunaDAO.php';
                 </div>
             </div>
         </div>
+        <!-- /.modal-->
         <div id="solicitud" class="modal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">

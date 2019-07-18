@@ -162,7 +162,7 @@ $user = $_SESSION['user'];
         <div class="d-flex" id="wrapper">
             <!-- Sidebar -->
             <div class="bg-light border-right" id="sidebar-wrapper">
-                <div class="sidebar-heading"><a href="index.php"><img src="../images/Captura.png" width="183px" height="130px"/></a></div>         
+                <div class="sidebar-heading"><a href="../clAutomaticarController/userController.php?salir=salir"><img src="../images/Captura.png" width="183px" height="130px"/></a></div>         
                 <div class="list-group list-group-flush">
                     <a href="../clAutomaticarView/CalendarioMecanico.php" class="list-group-item list-group-item-action bg-light">Horas Asignadas</a>
                 </div>
@@ -181,11 +181,9 @@ $user = $_SESSION['user'];
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="InicioMecanico.php">Home <span class="sr-only">(current)</span></a>
-                            </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="../clAutomaticarController/userController.php?salir=salir">Salir</a>                            </li>
+                                <a class="nav-link" href="../clAutomaticarController/userController.php?salir=salir">Salir</a>                            
+                            </li>
                         </ul>
                     </div>
                 </nav>
@@ -258,7 +256,7 @@ $user = $_SESSION['user'];
                 </div>
             </div>
         </div>
-
+        <!--
         <div id="solicitud" class="modal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -331,6 +329,7 @@ $user = $_SESSION['user'];
                 </div>
             </div>
         </div>
+        -->
     </body>
     <script type="text/javascript">
 

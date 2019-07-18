@@ -45,6 +45,7 @@ if (isset($_POST['2'])) { //se revisa el name del boton del formulario
         $us = $userDAO2->agregarUsuario($nombre, $apellidos, $email, $userpass1, $userAccountType);
         if (!is_null($us)) {
             $_SESSION['user'] = $us;
+            
             include ('../clAutomaticarView/seleccionarServicio.php');
         } else {
             include ('../clAutomaticarView/crearCuenta.php');

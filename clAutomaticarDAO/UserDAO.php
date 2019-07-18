@@ -63,7 +63,7 @@ class UserDAO {
         $comprobacion = mysqli_query($conexion->conn(), $exquery);
         $resultado = mysqli_fetch_object($comprobacion);
         if ($resultado==false) {
-            $result = mysqli_query($conexion->conn(), $sql);
+            $result = mysqli_query($conexion::conn(), $sql);
             $query = "select max(cli_id) as id from  cliente";
             $laId = mysqli_query($conexion->conn(), $query);
             $ultimoIsertado = mysqli_fetch_object($laId);
@@ -112,14 +112,7 @@ class UserDAO {
         }
     }
 
-    public static function findTrabajadoreDisponibles() {
-        $conexion = new Conexion();
-        $query = "SELECT * FROM trabajadores where tra_estado='disponible';";
-        $resultado = mysqli_query($conexion->conn(), $query);
-        while ($row = mysqli_fetch_array($resultado)){
-            echo "<option value='".$row['tra_id']."' name='trabajador'>".$row['tra_nombre']." ".$row['tra_apellidos']." </option>";
-        }
-    }
+    
 
 }
 

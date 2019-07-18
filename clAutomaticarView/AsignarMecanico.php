@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 $adm = $_SESSION['administrador'];
-include '../clAutomaticarDAO/ServicioDAO.php';
+include '../clAutomaticarDAO/TrabajadorDAO.php';
 ?>
 <html lang="en">
 
@@ -25,13 +25,7 @@ include '../clAutomaticarDAO/ServicioDAO.php';
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="">
-        <meta name="author" content="">
         <title>AutomatiCar</title>
-
-
         <!-- Bootstrap core CSS -->
         <link href="../assets/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <!-- Custom styles for this template -->
@@ -55,8 +49,8 @@ include '../clAutomaticarDAO/ServicioDAO.php';
                     },
                     navLinks: true, // can click day/week names to navigate views
                     editable: true, //permite modificar el lugar de los eventos en el calendario
-                    //selectable: true,
-                    //eventLimit: true, // permite mantener 2 o mas horas al mismo tiempo
+                    selectable: true,
+                    eventLimit: true, // permite mantener 2 o mas horas al mismo tiempo
                     events: {
                         url: 'http://localhost:81/TrabajoFinal/clAutomaticarController/EventosCalendarioNoEdicion.php',
                         failure: function () {
@@ -78,8 +72,9 @@ include '../clAutomaticarDAO/ServicioDAO.php';
                         console.log('dateClick', calendar.formatIso(arg.date));
                     },
                      eventClick: function (e) {
-                        $("#asignar").modal('show');
-                        alert("hola");
+                   
+                       $("#asignar").modal('show'); 
+                       
                         //$("#idCliente").empty();
                         //$("#idCliente").val(e.event.id);
                     }
@@ -151,12 +146,11 @@ include '../clAutomaticarDAO/ServicioDAO.php';
 
             <!-- Sidebar -->
             <div class="bg-light border-right" id="sidebar-wrapper">
-                <div class="sidebar-heading"><a href="index.php"><img src="../images/Captura.png" width="183px" height="130px"/></a></div>
+                <div class="sidebar-heading"><a href="../clAutomaticarController/userController.php?salir=salir"><img src="../images/Captura.png" width="183px" height="130px"/></a></div>
                 <div class="list-group list-group-flush">
                     <a href="../clAutomaticarController/adminController.php?action=1" class="list-group-item list-group-item-action bg-light">Asignar Trabajador</a>
                     <a href="../clAutomaticarController/adminController.php?action=2" class="list-group-item list-group-item-action bg-light">Agregar trabajador</a>
                     <a href="../clAutomaticarController/adminController.php?action=3" class="list-group-item list-group-item-action bg-light">Eliminar Trabajador</a>
-                    <a href="../clAutomaticarController/adminController.php?action=4" class="list-group-item list-group-item-action bg-light">Subir Historial</a>
                 </div>
             </div>
             
@@ -176,12 +170,16 @@ include '../clAutomaticarDAO/ServicioDAO.php';
                     </div>
                 </nav>
                 <div id="calendar"></div> <!--#calendar -->
+                <div id="palabras">
+                    
+                </div>
             </div>
             <!-- /#page-content-wrapper -->
         </div>
         <!-- /#wrapper -->
+        
         <!-- .modal -->
-        <div id="asignar" class="modal" tabindex="-1" role="dialog">
+        <div id="asignar" class="modal" tabindex="-1">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -191,37 +189,35 @@ include '../clAutomaticarDAO/ServicioDAO.php';
                     </div>
                     <div class="modal-body">
                         <h2 class="align-center">¿que trabajador va a asignar?</h2>
-                        <hr />
                         <form action="../clAutomaticarController/agendaController.php" method="post">
                             <div class="field half">
                                 <div class="select-wrapper">
                                     <select class="form-control" name="trabajadores" id="trabajadores">
                                         <option>--trabajadores disponibles--</option>
-                                        <?= UserDAO::findTrabajadoreDisponibles()?>
+                                        <?= TrabajadorDAO::findTrabajadoreDisponibles()?>
                                     </select>
                                 </div>
                             </div>
-                            <br>
+                            <br/>
                             <div class="modal-footer">
                                 <button type="submit" class="btn btn-primary button special" name="asignarA">Asignar</button>
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                             </div>
                         </form>
                     </div>
-
                 </div>
             </div>
         </div>
         <!-- /.modal-->
         
         <!-- Bootstrap core JavaScript -->
-        <script src="../assets/css/vendor/jquery/jquery.min.js" type="text/javascript"></script>
+        <script src="../assets/css/vendor/jquery/jquery.js" type="text/javascript"></script>
         <script src="../assets/css/vendor/bootstrap/js/bootstrap.bundle.min.js" type="text/javascript"></script>
         <!-- Menu Toggle Script -->
         <script>
             $("#menu-toggle").click(function (e) {
                 e.preventDefault();
-                $("#wrapper").toggleClass("toggled");
+                //$("#wrapper").toggleClass("toggled");
             }
         </script>
     </body>

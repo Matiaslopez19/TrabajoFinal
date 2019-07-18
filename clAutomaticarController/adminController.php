@@ -36,9 +36,6 @@ if(isset($_GET['action']) && is_numeric($_GET['action'])){
         case 3:
             include('../clAutomaticarView/EliminarTrabajador.php');
             break;
-        case 4:
-            include('../clAutomaticarView/SubirHistorial.php');
-            break;
         default :
             header('Location: http://localhost:81/TrabajoFinal/clAutomaticarController/userController.php');
     }

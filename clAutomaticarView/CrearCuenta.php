@@ -15,8 +15,8 @@
         <!--Fontawesome CDN-->
         <!--integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" crossorigin="anonymous"/>
-	<!--Custom styles-->
-	<link rel="stylesheet" type="text/css" href="styles.css">
+	<!--Custom styles
+	<link rel="stylesheet" type="text/css" href="../styles.css">-->
 </head>
 <body background="../images/Fondo2.jpg">
 <div class="container">
@@ -67,7 +67,7 @@
                                             <button type="submit" name="1" class="btn float-right login_btn">Siguiente</button>
 					</div>
                                         <div class="form-group">
-                                            <input type="button" value="Atrás" class="btn float-left login_btn" onClick=" window.location.href='Login.php' ">
+                                            <input type="button" value="Atrás" class="btn float-left login_btn" onClick=" window.location.href='../clAutomaticarView/Login.php' ">
 					</div>
 				</form>
 			</div>

@@ -33,12 +33,11 @@ include '../clAutomaticarDAO/ServicioDAO.php';
 
             <!-- Sidebar -->
             <div class="bg-light border-right" id="sidebar-wrapper">
-                <div class="sidebar-heading"><a href="index.php"><img src="../images/Captura.png" width="183px" height="130px"/></a></div>
+                <div class="sidebar-heading"><a href="../clAutomaticarController/userController.php?salir=salir"><img src="../images/Captura.png" width="183px" height="130px"/></a></div>
                 <div class="list-group list-group-flush">
                     <a href="../clAutomaticarController/adminController.php?action=1" class="list-group-item list-group-item-action bg-light">Asignar Trabajador</a>
                     <a href="../clAutomaticarController/adminController.php?action=2" class="list-group-item list-group-item-action bg-light">Agregar trabajador</a>
                     <a href="../clAutomaticarController/adminController.php?action=3" class="list-group-item list-group-item-action bg-light">Eliminar Trabajador</a>
-                    <a href="../clAutomaticarController/adminController.php?action=4" class="list-group-item list-group-item-action bg-light">Subir Historial</a>
                 </div>
             </div>
             <!-- /#sidebar-wrapper -->
@@ -71,7 +70,7 @@ include '../clAutomaticarDAO/ServicioDAO.php';
 				<h3>Crear Cuenta</h3>
 			</div>
 			<div class="card-body">
-                            <form action="../clAutomaticarController/userController.php" method="post">
+                            <form action="../clAutomaticarController/trabajadorController.php" method="post">
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
@@ -109,7 +108,7 @@ include '../clAutomaticarDAO/ServicioDAO.php';
                                             <input type="password" class="form-control" name="userpass2" placeholder="Repetir contraseña">
 					</div>
 					<div class="form-group">
-                                            <button type="submit" name="1" class="btn btn-primary">Siguiente</button>
+                                            <button type="submit" name="agregar" class="btn btn-primary">Siguiente</button>
 					</div>
 				</form>
 			</div>

@@ -21,8 +21,13 @@ $horaInicio=$_POST['horaInicio'];
 $horaTermino=$_POST['horatermino'];
 $fInicio = $fecha." ".$horaInicio;
 $fTermino= $fecha." ".$horaTermino;
-//echo $fInicio;
-//echo $fTermino;
+//$fInicio= new DateTime();
+//$fTermino= new DateTime();
+//$fInicio->modify("+4 hours");
+//$fTermino->modify("+4 hours");
+
+//print_r($fInicio);
+//print_r($fTermino);exit;
 $agendarDao= new AgendarDAO();
 $ag = $agendarDao->AgregarAgenda($estado,$lugar, $fInicio, $servicio, $cliente, $disponibilidad, 
         $fTermino, $comuna);
@@ -32,7 +37,6 @@ if (!is_null($ag)) {
 }else{
     include '../clAutomaticarView/SeleccionarServicio.php';
 }
-
 }else if(isset($_POST['delete'])) {
     $id=$_POST['idCliente'];
     $eliminar= new AgendarDAO();
@@ -40,4 +44,6 @@ if (!is_null($ag)) {
     if(!is_null($resul)){
         include '../clAutomaticarView/SeleccionarServicio.php';
     }
+}else if(isset ($_POST['asignarA'])){
+    
 }
