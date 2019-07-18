@@ -50,12 +50,13 @@ class TrabajadorDAO {
         $query = "SELECT * FROM trabajador where tra_estado=1;";
         $resultado = mysqli_query($conexion::conn(), $query);
         while ($row = mysqli_fetch_array($resultado)){
-            echo "<tr><form action='../clAutomaticarContorller/agendaController.php'><input type='hidden' value=".$row['tra_id']." name='id'><td>".$row['tra_nombre']."</td><td>"
+            echo "<tr><form action='../clAutomaticarController/trabajadorController.php' action='post'><input type='hidden' value=".$row['tra_id']." name='id'><td>".$row['tra_nombre']."</td><td>"
                     . "".$row['tra_apellidos']."</td><td>".$row['tra_email']."</td><td><button type='submit' class='btn btn-primary button special' name='eliminar'>Eliminar</button></td></form></tr>";
         }
     }
     public function EliminarTrabajador($id){
         $sql="DELETE FROM trabajador WHERE tra_id=".$id.";";
+        print_r($sql);
         $conexion = Conexion::conn();
         $comprobacion = null;
         $resultado= mysqli_query($conexion, $sql);
